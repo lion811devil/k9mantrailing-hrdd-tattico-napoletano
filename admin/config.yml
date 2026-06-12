@@ -7,8 +7,8 @@ local_backend: false
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: "https://k9-mantrailing-hrdd-tattico-napoletano.netlify.app"
-display_url: "https://k9-mantrailing-hrdd-tattico-napoletano.netlify.app"
+site_url: "https://k9mantrailing-hrdd-tattico-napoletano.netlify.app"
+display_url: "https://k9mantrailing-hrdd-tattico-napoletano.netlify.app"
 logo_url: "/logo.png"
 
 collections:
