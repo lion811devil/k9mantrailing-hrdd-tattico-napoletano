@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>K9 Mantrailing HRDD Tattico Napoletano</title>
+  <meta name="description" content="Mantrailing, HRDD, formazione cinofila e unità operative con Napoletano Giovanni." />
+  <meta name="theme-color" content="#ff7a00" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/logo.png" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <style>
+    :root{--bg:#070707;--panel:#111;--text:#f7f1e7;--muted:#c9bca8;--gold:#f7b733;--orange:#ff7a00;--line:rgba(255,255,255,.14)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top,#2b1700,#070707 42%);color:var(--text);line-height:1.55}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1160px,92vw);margin:auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.84);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .navin{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+    .brand img{width:54px;height:54px;object-fit:contain}
+    .links{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+    .links a{text-decoration:none;color:var(--muted)}
+    .hero{padding:70px 0 45px}
+    .heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+    .badge{display:inline-block;border:1px solid rgba(247,183,51,.5);padding:8px 12px;border-radius:999px;color:var(--gold);font-weight:700;background:rgba(247,183,51,.08)}
+    h1{font-size:clamp(38px,6.2vw,82px);line-height:.95;margin:18px 0 16px;text-transform:uppercase;text-shadow:0 0 26px rgba(255,122,0,.45)}
+    .lead{font-size:clamp(18px,2vw,24px);color:var(--muted);max-width:720px}
+    .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .btn{padding:13px 18px;border-radius:14px;text-decoration:none;font-weight:800;border:1px solid var(--line);background:#191919}
+    .btn.primary{background:linear-gradient(135deg,var(--orange),var(--gold));color:#120800;border:0}
+    .heroLogo{background:linear-gradient(145deg,rgba(255,122,0,.18),rgba(255,255,255,.03));border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+    section{padding:42px 0}
+    .sectionTitle{font-size:34px;margin:0 0 18px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:22px;padding:22px}
+    .card h3{margin:0 0 8px;color:var(--gold)}
+    .muted{color:var(--muted)}
+    .dogs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .dog{background:#111;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .dog img{width:100%;height:210px;object-fit:cover;background:#222}
+    .dogBody{padding:18px}
+    .dog b{color:var(--gold);font-size:20px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .gallery figure{margin:0;background:#111;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .gallery img{height:220px;width:100%;object-fit:cover}
+    .gallery figcaption{padding:14px;color:var(--muted)}
+    .contact{background:linear-gradient(135deg,rgba(255,122,0,.20),rgba(26,143,69,.12));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .footer{padding:28px 0;color:var(--muted);font-size:14px}
+    @media(max-width:850px){.heroGrid,.grid3,.grid2{grid-template-columns:1fr}.dogs,.gallery{grid-template-columns:1fr 1fr}.links{display:none}}
+    @media(max-width:520px){.dogs,.gallery{grid-template-columns:1fr}h1{font-size:42px}.hero{padding-top:42px}}
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="wrap navin">
+      <div class="brand">
+        <img id="navLogo" src="/logo.png" alt="Logo">
+        <span id="navName">K9 Mantrailing HRDD</span>
+      </div>
+      <div class="links">
+        <a href="#chi">Chi sono</a>
+        <a href="#attivita">Attività</a>
+        <a href="#cani">Cani</a>
+        <a href="#media">Media</a>
+        <a href="#contatti">Contatti</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="app">
+    <header class="hero">
+      <div class="wrap heroGrid">
+        <div>
+          <span class="badge">Unità cinofila • Mantrailing • HRDD</span>
+          <h1 id="brandName">K9 Mantrailing HRDD Tattico Napoletano</h1>
+          <p class="lead" id="brandDesc"></p>
+          <div class="cta">
+            <a class="btn primary" id="whatsappBtn" href="#">Contatta su WhatsApp</a>
+          </div>
+        </div>
+        <div class="heroLogo">
+          <img id="heroLogo" src="/logo.png" alt="Marchio ufficiale">
+        </div>
+      </div>
+    </header>
+
+    <section id="chi">
+      <div class="wrap grid2">
+        <div class="card">
+          <h2 class="sectionTitle">Napoletano Giovanni</h2>
+          <p id="roles" class="muted"></p>
+          <p id="bio"></p>
+        </div>
+        <div class="card">
+          <h2 class="sectionTitle">Focus operativo</h2>
+          <p><b>Mantrailing</b></p>
+          <p id="mantrailing" class="muted"></p>
+          <p><b>HRDD</b></p>
+          <p id="hrdd" class="muted"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="attivita">
+      <div class="wrap">
+        <h2 class="sectionTitle">Formazione e attività</h2>
+        <div class="grid3">
+          <div class="card"><h3>Mantrailing</h3><p>Ricerca persona specifica tramite traccia odorosa individuale.</p></div>
+          <div class="card"><h3>HRDD</h3><p>Ricerca specialistica di resti umani con progressione tecnica controllata.</p></div>
+          <div class="card"><h3>Formazione</h3><p id="training"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cani">
+      <div class="wrap">
+        <h2 class="sectionTitle">I cani</h2>
+        <div id="dogs" class="dogs"></div>
+      </div>
+    </section>
+
+    <section id="media">
+      <div class="wrap">
+        <h2 class="sectionTitle">Foto e video</h2>
+        <div id="gallery" class="gallery"></div>
+        <div id="videos" class="grid2" style="margin-top:18px"></div>
+      </div>
+    </section>
+
+    <section id="contatti" class="contact">
+      <div class="wrap grid2">
+        <div>
+          <h2 class="sectionTitle">Contatti</h2>
+          <p id="location"></p>
+          <p><b>Telefono:</b> <span id="phone"></span></p>
+          <p><b>Email:</b> <span id="email"></span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year"></span> K9 Mantrailing HRDD Tattico Napoletano</div>
+  </footer>
+
+  <script>
+    async function loadSite(){
+      const res = await fetch('/content/site.json', { cache: 'no-store' });
+      const d = await res.json();
+
+      const logo = d.brand?.logo || '/logo.png';
+
+      document.title = d.seo?.title || d.brand?.name || 'K9 Mantrailing HRDD';
+      document.querySelector('meta[name="description"]').setAttribute(
+        'content',
+        d.seo?.description || d.brand?.description || ''
+      );
+
+      document.getElementById('navName').textContent = d.brand?.name || '';
+      document.getElementById('brandName').textContent = d.brand?.name || '';
+      document.getElementById('brandDesc').textContent = d.brand?.description || '';
+      document.getElementById('navLogo').src = logo;
+      document.getElementById('heroLogo').src = logo;
+
+      document.getElementById('roles').textContent = d.owner?.roles || '';
+      document.getElementById('bio').textContent = d.owner?.bio || '';
+
+      document.getElementById('mantrailing').textContent = d.sections?.mantrailing || '';
+      document.getElementById('hrdd').textContent = d.sections?.hrdd || '';
+      document.getElementById('training').textContent = d.sections?.training || '';
+
+      document.getElementById('location').textContent = d.contacts?.location || '';
+      document.getElementById('phone').textContent = d.contacts?.phone || '';
+      document.getElementById('email').textContent = d.contacts?.email || '';
+
+      if (d.contacts?.whatsapp) {
+        document.getElementById('whatsappBtn').href = 'https://wa.me/' + d.contacts.whatsapp;
+      }
+
+      document.getElementById('dogs').innerHTML = (d.dogs || []).map(x => `
+        <div class="dog">
+          ${x.image ? `<img src="${x.image}" alt="${x.name || 'Cane'}">` : ''}
+          <div class="dogBody">
+            <b>${x.name || ''}</b>
+            ${x.breed ? `<p class="muted">${x.breed}</p>` : ''}
+            ${x.age ? `<p class="muted">${x.age}</p>` : ''}
+            <p>${x.status || ''}</p>
+            ${x.certifications ? `<p class="muted">${x.certifications}</p>` : ''}
+            <p class="muted">${x.description || ''}</p>
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('gallery').innerHTML = (d.gallery || []).map(x => `
+        <figure>
+          <img src="${x.image}" alt="${x.title || 'Foto'}">
+          <figcaption><b>${x.title || ''}</b><br>${x.caption || ''}</figcaption>
+        </figure>
+      `).join('');
+
+      document.getElementById('videos').innerHTML = (d.videos || []).filter(v => v.url).map(v => `
+        <div class="card">
+          <h3>${v.title || 'Video'}</h3>
+          <p class="muted">${v.caption || ''}</p>
+          <a class="btn" href="${v.url}" target="_blank" rel="noopener">Apri video</a>
+        </div>
+      `).join('');
+    }
+
+    loadSite();
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', user => {
+        if (!user && window.location.hash.includes('invite_token')) {
+          window.netlifyIdentity.open('signup');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

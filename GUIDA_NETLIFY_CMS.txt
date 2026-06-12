@@ -1,0 +1,98 @@
+GUIDA RAPIDA - SITO PWA CON CMS SU NETLIFY
+
+CONTENUTO DEL PACCHETTO
+- index.html: sito pubblico.
+- admin/: pannello CMS Decap.
+- admin/config.yml: configurazione CMS.
+- content/site.json: testi, cani, contatti, galleria, video, SEO.
+- assets/img/logo.png: marchio iniziale.
+- assets/uploads/: cartella dove il CMS caricherà foto, video e nuovo logo.
+- manifest.webmanifest + sw.js: funzioni PWA/installazione.
+- netlify.toml: configurazione Netlify.
+
+IMPORTANTE
+Il CMS funziona correttamente solo se il sito è collegato a un repository GitHub/GitLab tramite Netlify.
+Il semplice caricamento manuale drag & drop pubblica il sito, ma NON abilita il salvataggio CMS.
+
+PROCEDURA CONSIGLIATA
+1. Crea un account GitHub.
+2. Crea un nuovo repository, ad esempio: k9-mantrailing-hrdd.
+3. Carica dentro il repository TUTTI i file contenuti in questo ZIP.
+4. Vai su Netlify.
+5. Add new site > Import an existing project.
+6. Collega GitHub e seleziona il repository.
+7. Build command: lascia vuoto.
+8. Publish directory: .
+9. Deploy site.
+
+ABILITARE IL CMS
+1. In Netlify apri il sito appena pubblicato.
+2. Vai su Site configuration > Identity.
+3. Clicca Enable Identity.
+4. Vai su Services.
+5. Abilita Git Gateway.
+6. Vai su Registration preferences.
+7. Imposta Invite only, consigliato.
+8. Vai su Identity > Invite users.
+9. Invita la tua email.
+10. Apri l'email ricevuta e crea la password.
+
+ENTRARE NEL CMS
+Apri:
+https://TUO-SITO.netlify.app/admin/
+
+Da qui puoi modificare:
+- logo / marchio;
+- nome sito;
+- testi;
+- ruoli;
+- contatti;
+- cani;
+- foto galleria;
+- video;
+- SEO.
+
+COME AGGIUNGERE FOTO
+1. Apri /admin/.
+2. Entra in Gestione sito > Contenuti principali.
+3. Vai a Galleria foto.
+4. Aggiungi elemento.
+5. Carica immagine.
+6. Salva.
+7. Clicca Publish.
+
+COME CAMBIARE MARCHIO
+1. Apri /admin/.
+2. Gestione sito > Contenuti principali.
+3. Marchio e intestazione > Logo / Marchio.
+4. Carica nuovo logo.
+5. Salva e pubblica.
+
+COME AGGIUNGERE VIDEO
+Soluzione consigliata: carica il video su YouTube/Vimeo e inserisci il link nel campo Video.
+Per video pesanti è meglio non caricarli direttamente nel sito, perché rallentano la navigazione.
+
+PWA
+Il sito include manifest e service worker. Da smartphone, dopo la pubblicazione, puoi aprire il sito e usare:
+- Android/Chrome: Aggiungi a schermata Home.
+- iPhone/Safari: Condividi > Aggiungi a Home.
+
+GOOGLE
+Dopo pubblicazione:
+1. Vai su Google Search Console.
+2. Aggiungi il dominio o URL Netlify.
+3. Verifica la proprietà.
+4. Richiedi indicizzazione della homepage.
+
+SOCIAL
+Condividi il link su:
+- Facebook;
+- Instagram bio;
+- WhatsApp Business;
+- LinkedIn;
+- YouTube;
+- TikTok.
+
+NOTA TECNICA
+Il file sitemap.xml contiene una base minima. Dopo aver scelto il dominio finale, sostituisci / con l'URL completo, ad esempio:
+https://www.tuodominio.it/
