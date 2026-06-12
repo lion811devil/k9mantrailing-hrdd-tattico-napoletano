@@ -1,90 +1,130 @@
 {
-  "brand": {
-    "name": "K9 Mantrailing HRDD Tattico Napoletano",
-    "logo": "/logo.png",
-    "tagline": "Mantrailing operativo, HRDD e formazione cinofila specializzata",
-    "description": "-MANTRAILING:Ricerca persone scomparse/disperse\n-HRDD \"HUMAN REMAINS DETECTION DOG\" ricerca resti umani\nFormazione operativa con approccio tecnico, responsabile e professionale."
-  },
-  "owner": {
-    "name": "Napoletano Giovanni",
-    "roles": "Docente, formatore, responsabile dell’unità cinofila e operativo",
-    "bio": "Mi occupo di formazione, operatività cinofila, Mantrailing e ricerca in HRDD. Il lavoro è centrato sulla preparazione tecnica del binomio, sulla lettura del cane e sulla responsabilità operativa in contesti reali e addestrativi."
-  },
-  "contacts": {
-    "phone": "3281650082",
-    "email": "napoletano.giovanni.81@gmail.com",
-    "whatsapp": "393281650082",
-    "location": "San Giuliano Milanese (MI) - Desenzano del Garda (BS), ricerca internazionale"
-  },
-  "sections": {
-    "mantrailing": "Il Mantrailing è una disciplina operativa basata sulla capacità del cane di seguire la traccia odorosa specifica di una persona. L’obiettivo è costruire binomi affidabili, capaci di lavorare in contesti urbani, rurali e complessi.",
-    "hrdd": "HRDD \"Human Remains Detection Dog\": ricerca di resti umani. È un ambito specialistico che richiede metodo, progressione tecnica, controllo, precisione e forte responsabilità operativa.",
-    "training": "La formazione è rivolta a conduttori, unità cinofile, gruppi operativi e realtà che vogliono sviluppare competenze nel lavoro di ricerca, nella gestione del cane e nella lettura del comportamento operativo."
-  },
-  "dogs": [
-    {
-      "name": "Kira",
-      "image": "",
-      "breed": "",
-      "age": "",
-      "status": "Operativa in Protezione Civile del Basso Garda",
-      "certifications": "",
-      "description": "Unità operativa con esperienza nel lavoro di ricerca e addestramento."
-    },
-    {
-      "name": "Bruss",
-      "image": "",
-      "breed": "",
-      "age": "",
-      "status": "Operativo in Protezione Civile del Basso Garda",
-      "certifications": "",
-      "description": "Cane operativo impiegato in attività di protezione civile e lavoro cinofilo."
-    },
-    {
-      "name": "Alaska",
-      "image": "",
-      "breed": "",
-      "age": "",
-      "status": "In costruzione, futura operativa",
-      "certifications": "",
-      "description": "Percorso di crescita tecnico e operativo in fase di sviluppo."
-    },
-    {
-      "name": "Talpina",
-      "image": "",
-      "breed": "",
-      "age": "",
-      "status": "Unità del gruppo",
-      "certifications": "",
-      "description": "Parte del progetto cinofilo K9 Mantrailing HRDD Tattico Napoletano."
-    },
-    {
-      "name": "Blanka",
-      "image": "",
-      "breed": "",
-      "age": "",
-      "status": "Unità del gruppo",
-      "certifications": "",
-      "description": "Parte del progetto cinofilo K9 Mantrailing HRDD Tattico Napoletano."
-    }
-  ],
-  "gallery": [
-    {
-      "title": "Addestramento operativo",
-      "image": "/logo.png",
-      "caption": "Carica dal CMS foto reali di attività, esercitazioni e formazione."
-    }
-  ],
-  "videos": [
-    {
-      "title": "Video presentazione",
-      "url": "",
-      "caption": "Inserisci qui un link YouTube, Vimeo o un video caricato nella cartella media."
-    }
-  ],
-  "seo": {
-    "title": "K9 Mantrailing HRDD Tattico Napoletano",
-    "description": "Mantrailing, HRDD, formazione cinofila e unità operative con Napoletano Giovanni.",
-    "keywords": "mantrailing, HRDD, ricerca persone, unità cinofila, protezione civile, cani da ricerca, Napoletano Giovanni"
-  }
+"homepage": {
+"title": "K9 Mantrailing HRDD Tattico Napoletano",
+"subtitle": "Mantrailing operativo, HRDD, ricerca persone, formazione cinofila e preparazione tecnica del binomio.",
+"hero_image": "/logo.png"
+},
+"brand": {
+"name": "K9 Mantrailing HRDD Tattico Napoletano",
+"logo": "/logo.png",
+"tagline": "Mantrailing operativo, HRDD e formazione cinofila specializzata",
+"description": "Ricerca persone scomparse o disperse, ricerca in HRDD e formazione operativa con approccio tecnico, responsabile e professionale."
+},
+"owner": {
+"name": "Napoletano Giovanni",
+"roles": "Docente, formatore, responsabile dell’unità cinofila e operativo",
+"bio": "Mi occupo di formazione, operatività cinofila, Mantrailing e ricerca in HRDD. Il lavoro è centrato sulla preparazione tecnica del binomio, sulla lettura del cane e sulla responsabilità operativa in contesti reali e addestrativi.",
+"photo": ""
+},
+"services": [
+{
+"title": "Mantrailing operativo",
+"image": "",
+"description": "Disciplina basata sulla capacità del cane di seguire la traccia odorosa specifica di una persona. L’obiettivo è costruire binomi affidabili in contesti urbani, rurali e complessi."
+},
+{
+"title": "HRDD - Human Remains Detection Dog",
+"image": "",
+"description": "Ricerca specialistica di resti umani. È un ambito tecnico che richiede metodo, progressione, controllo, precisione e forte responsabilità operativa."
+},
+{
+"title": "Formazione conduttori e unità cinofile",
+"image": "",
+"description": "Percorsi rivolti a conduttori, unità cinofile, gruppi operativi e realtà che vogliono sviluppare competenze nel lavoro di ricerca e nella gestione del cane."
+},
+{
+"title": "Ricerca persone disperse",
+"image": "",
+"description": "Preparazione tecnica del binomio per attività di ricerca persone, con attenzione alla lettura del cane, alla gestione dello scenario e alla sicurezza operativa."
+},
+{
+"title": "Protezione Civile cinofila",
+"image": "",
+"description": "Supporto formativo e operativo per attività cinofile collegate a contesti di Protezione Civile, esercitazioni, simulazioni e preparazione del binomio."
+},
+{
+"title": "Educazione cinofila e problem solving",
+"image": "",
+"description": "Percorsi educativi orientati alla relazione, alla gestione del cane, alla comunicazione e alla risoluzione di difficoltà comportamentali."
+}
+],
+"sections": {
+"mantrailing": "Il Mantrailing è una disciplina operativa basata sulla capacità del cane di seguire la traccia odorosa specifica di una persona. L’obiettivo è costruire binomi affidabili, capaci di lavorare in contesti urbani, rurali e complessi.",
+"hrdd": "HRDD significa Human Remains Detection Dog: ricerca di resti umani. È un ambito specialistico che richiede metodo, progressione tecnica, controllo, precisione e forte responsabilità operativa.",
+"training": "La formazione è rivolta a conduttori, unità cinofile, gruppi operativi e realtà che vogliono sviluppare competenze nel lavoro di ricerca, nella gestione del cane e nella lettura del comportamento operativo."
+},
+"dogs": [
+{
+"name": "Kira",
+"image": "",
+"breed": "",
+"age": "",
+"status": "Operativa in Protezione Civile del Basso Garda",
+"certifications": "",
+"description": "Unità operativa con esperienza nel lavoro di ricerca e addestramento."
+},
+{
+"name": "Bruss",
+"image": "",
+"breed": "",
+"age": "",
+"status": "Operativo in Protezione Civile del Basso Garda",
+"certifications": "",
+"description": "Cane operativo impiegato in attività di Protezione Civile e lavoro cinofilo."
+},
+{
+"name": "Alaska",
+"image": "",
+"breed": "",
+"age": "",
+"status": "In costruzione, futura operativa",
+"certifications": "",
+"description": "Percorso di crescita tecnico e operativo in fase di sviluppo."
+},
+{
+"name": "Talpina",
+"image": "",
+"breed": "",
+"age": "",
+"status": "Unità del gruppo",
+"certifications": "",
+"description": "Parte del progetto cinofilo K9 Mantrailing HRDD Tattico Napoletano."
+},
+{
+"name": "Blanka",
+"image": "",
+"breed": "",
+"age": "",
+"status": "Unità del gruppo",
+"certifications": "",
+"description": "Parte del progetto cinofilo K9 Mantrailing HRDD Tattico Napoletano."
+}
+],
+"gallery": [
+{
+"title": "Addestramento operativo",
+"image": "/logo.png",
+"caption": "Carica dal CMS foto reali di attività, esercitazioni e formazione."
+}
+],
+"videos": [
+{
+"title": "Video presentazione",
+"url": "",
+"caption": "Inserisci qui un link YouTube, Vimeo, Facebook o Instagram."
+}
+],
+"testimonials": [],
+"partners": [],
+"contacts": {
+"phone": "3281650082",
+"email": "napoletano.giovanni.81@gmail.com",
+"whatsapp": "393281650082",
+"location": "San Giuliano Milanese, Desenzano del Garda, ricerca internazionale"
+},
+"seo": {
+"title": "K9 Mantrailing HRDD Tattico Napoletano",
+"description": "Mantrailing, HRDD, ricerca persone, ricerca resti umani, formazione cinofila e unità operative con Napoletano Giovanni.",
+"keywords": "mantrailing, HRDD, ricerca persone disperse, ricerca resti umani, unità cinofila, protezione civile cinofila, cani da ricerca, formazione cinofila, Napoletano Giovanni, San Giuliano Milanese, Desenzano del Garda"
+}
 }
