@@ -1,0 +1,91 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: false
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://k9-mantrailing-hrdd-tattico-napoletano.netlify.app"
+display_url: "https://k9-mantrailing-hrdd-tattico-napoletano.netlify.app"
+logo_url: "/logo.png"
+
+collections:
+  - name: "settings"
+    label: "Gestione sito"
+    files:
+      - label: "Contenuti principali"
+        name: "site"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Marchio e intestazione"
+            name: "brand"
+            widget: "object"
+            fields:
+              - {label: "Nome sito", name: "name", widget: "string"}
+              - {label: "Logo / Marchio", name: "logo", widget: "image"}
+              - {label: "Slogan", name: "tagline", widget: "string"}
+              - {label: "Descrizione hero", name: "description", widget: "text"}
+
+          - label: "Giovanni Napoletano"
+            name: "owner"
+            widget: "object"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Ruoli", name: "roles", widget: "string"}
+              - {label: "Biografia / presentazione", name: "bio", widget: "text"}
+
+          - label: "Contatti"
+            name: "contacts"
+            widget: "object"
+            fields:
+              - {label: "Telefono", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "WhatsApp con prefisso internazionale", name: "whatsapp", widget: "string"}
+              - {label: "Dove siamo / zone operative", name: "location", widget: "string"}
+
+          - label: "Sezioni testuali"
+            name: "sections"
+            widget: "object"
+            fields:
+              - {label: "Mantrailing", name: "mantrailing", widget: "text"}
+              - {label: "HRDD", name: "hrdd", widget: "text"}
+              - {label: "Formazione", name: "training", widget: "text"}
+
+          - label: "Cani"
+            name: "dogs"
+            widget: "list"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Foto cane", name: "image", widget: "image", required: false}
+              - {label: "Razza", name: "breed", widget: "string", required: false}
+              - {label: "Età", name: "age", widget: "string", required: false}
+              - {label: "Stato operativo", name: "status", widget: "string"}
+              - {label: "Certificazioni", name: "certifications", widget: "text", required: false}
+              - {label: "Descrizione", name: "description", widget: "text"}
+
+          - label: "Galleria foto"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "Immagine", name: "image", widget: "image"}
+              - {label: "Didascalia", name: "caption", widget: "text", required: false}
+
+          - label: "Video"
+            name: "videos"
+            widget: "list"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "URL video", name: "url", widget: "string", required: false}
+              - {label: "Didascalia", name: "caption", widget: "text", required: false}
+
+          - label: "SEO Google"
+            name: "seo"
+            widget: "object"
+            fields:
+              - {label: "Titolo SEO", name: "title", widget: "string"}
+              - {label: "Descrizione SEO", name: "description", widget: "text"}
+              - {label: "Parole chiave", name: "keywords", widget: "string"}
