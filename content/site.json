@@ -13,7 +13,7 @@
   },
   "homepage": {
     "title": "K9 Mantrailing HRDD Tattico Napoletano",
-    "subtitle": "Mantrailing operativo, HRDD, ricerca persone, formazione cinofila e preparazione tecnica del binomio.",
+    "subtitle": "Mantrailing operativo e sportivo, HRDD, ricerca persone, formazione cinofila e preparazione tecnica del binomio.",
     "hero_image": "/logo.png"
   },
   "gallery": [
@@ -39,7 +39,7 @@
   "dogs": [
     {
       "name": "Kira",
-      "image": "",
+      "image": "/assets/uploads/1000209620.png",
       "breed": "",
       "age": "",
       "status": "Operativa in Protezione Civile del Basso Garda",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Bruss",
-      "image": "",
+      "image": "/assets/uploads/1000209621.png",
       "breed": "",
       "age": "",
       "status": "Operativo in Protezione Civile del Basso Garda",
@@ -57,7 +57,7 @@
     },
     {
       "name": "Alaska",
-      "image": "",
+      "image": "/assets/uploads/1000233816.jpg",
       "breed": "",
       "age": "",
       "status": "In costruzione, futura operativa",
@@ -66,7 +66,7 @@
     },
     {
       "name": "Talpina",
-      "image": "",
+      "image": "/assets/uploads/1000001500.jpg",
       "breed": "",
       "age": "",
       "status": "Unità del gruppo",
@@ -75,7 +75,7 @@
     },
     {
       "name": "Blanka",
-      "image": "",
+      "image": "/assets/uploads/1000080520.jpg",
       "breed": "",
       "age": "",
       "status": "Unità del gruppo",
