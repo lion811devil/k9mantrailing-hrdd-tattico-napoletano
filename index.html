@@ -9,611 +9,93 @@
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="icon" href="/logo.png" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
   <style>
-    :root{
-      --bg:#070707;
-      --panel:#111;
-      --text:#f7f1e7;
-      --muted:#c9bca8;
-      --gold:#f7b733;
-      --orange:#ff7a00;
-      --green:#25d366;
-      --line:rgba(255,255,255,.14);
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:radial-gradient(circle at top,#2b1700,#070707 42%);
-      color:var(--text);
-      line-height:1.55;
-    }
-
-    a{color:inherit}
-    img{max-width:100%;display:block}
-    .wrap{width:min(1160px,92vw);margin:auto}
-
-    .nav{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background:rgba(7,7,7,.88);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--line);
-    }
-
-    .navin{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:10px 0;
-      gap:18px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight:900;
-      text-transform:uppercase;
-      letter-spacing:.04em;
-    }
-
-    .brand img{
-      width:56px;
-      height:56px;
-      object-fit:contain;
-      border-radius:8px;
-    }
-
-    .links{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      font-size:14px;
-    }
-
-    .links a{
-      text-decoration:none;
-      color:var(--muted);
-      font-weight:700;
-    }
-
-    .hero{
-      padding:76px 0 54px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(90deg,rgba(7,7,7,.92),rgba(7,7,7,.55)),var(--hero-bg, none);
-      background-size:cover;
-      background-position:center;
-      opacity:.35;
-      z-index:-1;
-    }
-
-    .heroGrid{
-      display:grid;
-      grid-template-columns:1.12fr .88fr;
-      gap:34px;
-      align-items:center;
-    }
-
-    .badge{
-      display:inline-block;
-      border:1px solid rgba(247,183,51,.5);
-      padding:8px 12px;
-      border-radius:999px;
-      color:var(--gold);
-      font-weight:800;
-      background:rgba(247,183,51,.08);
-    }
-
-    h1{
-      font-size:clamp(38px,6.2vw,82px);
-      line-height:.95;
-      margin:18px 0 16px;
-      text-transform:uppercase;
-      text-shadow:0 0 26px rgba(255,122,0,.45);
-    }
-
-    .lead{
-      font-size:clamp(18px,2vw,24px);
-      color:var(--muted);
-      max-width:760px;
-      white-space:pre-line;
-    }
-
-    .cta{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:28px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:13px 18px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:900;
-      border:1px solid var(--line);
-      background:#191919;
-    }
-
-    .btn.primary{
-      background:linear-gradient(135deg,var(--orange),var(--gold));
-      color:#120800;
-      border:0;
-    }
-
-    .heroLogo{
-      background:linear-gradient(145deg,rgba(255,122,0,.18),rgba(255,255,255,.03));
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:26px;
-      box-shadow:0 30px 80px rgba(0,0,0,.35);
-    }
-
-    section{padding:48px 0}
-    .sectionTitle{font-size:clamp(30px,4vw,48px);margin:0 0 20px}
-    .sectionIntro{color:var(--muted);font-size:18px;max-width:850px}
-
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-
-    .card{
-      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:22px;
-      overflow:hidden;
-    }
-
-    .card h3{
-      margin:0 0 8px;
-      color:var(--gold);
-      font-size:24px;
-    }
-
-    .card img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      border-radius:16px;
-      margin-bottom:14px;
-      background:#222;
-    }
-
-    .muted{color:var(--muted)}
-    .divider{border-top:1px solid var(--line)}
-
-    .dogs{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-    }
-
-    .dog{
-      background:#111;
-      border:1px solid var(--line);
-      border-radius:20px;
-      overflow:hidden;
-    }
-
-    .dog img{
-      width:100%;
-      height:240px;
-      object-fit:cover;
-      background:#222;
-    }
-
-    .dogBody{padding:18px}
-    .dog b{color:var(--gold);font-size:22px}
-    .dogStatus{font-weight:800;color:var(--text)}
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
-    }
-
-    .gallery figure{
-      margin:0;
-      background:#111;
-      border:1px solid var(--line);
-      border-radius:18px;
-      overflow:hidden;
-    }
-
-    .gallery img{
-      height:230px;
-      width:100%;
-      object-fit:cover;
-      background:#222;
-    }
-
-    .gallery figcaption{
-      padding:14px;
-      color:var(--muted);
-    }
-
-    .videoGrid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:18px;
-      margin-top:18px;
-    }
-
-    .contact{
-      background:linear-gradient(135deg,rgba(255,122,0,.20),rgba(26,143,69,.12));
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-
-    .contact p{font-size:18px}
-
-    .floatingWhatsapp{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      z-index:80;
-      width:58px;
-      height:58px;
-      border-radius:999px;
-      background:var(--green);
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      font-size:28px;
-      font-weight:900;
-      box-shadow:0 18px 45px rgba(0,0,0,.35);
-    }
-
-    .footer{
-      padding:28px 0;
-      color:var(--muted);
-      font-size:14px;
-      background:#050505;
-    }
-
-    .empty{
-      color:var(--muted);
-      border:1px dashed var(--line);
-      padding:18px;
-      border-radius:16px;
-    }
-
-    @media(max-width:850px){
-      .heroGrid,.grid3,.grid2,.videoGrid{grid-template-columns:1fr}
-      .dogs,.gallery{grid-template-columns:1fr 1fr}
-      .links{display:none}
-    }
-
-    @media(max-width:520px){
-      .dogs,.gallery{grid-template-columns:1fr}
-      h1{font-size:42px}
-      .hero{padding-top:42px}
-      .brand span{font-size:15px}
-      .brand img{width:54px;height:54px}
-    }
+    :root{--text:#fff7ea;--muted:#d4c5ad;--gold:#f7b733;--orange:#ff7a00;--green:#21c866;--line:rgba(255,255,255,.14);--shadow:0 28px 90px rgba(0,0,0,.45)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 20% 0%,rgba(255,122,0,.30),transparent 32%),radial-gradient(circle at 90% 20%,rgba(247,183,51,.14),transparent 28%),linear-gradient(180deg,#090909,#020202 62%);color:var(--text);line-height:1.58}
+    a{color:inherit} img{max-width:100%;display:block}.wrap{width:min(1180px,92vw);margin:auto}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(4,4,4,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none}.brand img{width:58px;height:58px;object-fit:contain;border-radius:10px}
+    .brand span{font-weight:900;text-transform:uppercase;letter-spacing:.045em;font-size:clamp(15px,2.5vw,22px);line-height:1.25}
+    .links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.links a{text-decoration:none;color:var(--muted);font-weight:700;font-size:14px}.links a:hover{color:var(--gold)}
+    .hero{position:relative;min-height:calc(100vh - 78px);display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.58),rgba(0,0,0,.88)),var(--hero-bg, url('/logo.png')) center/cover no-repeat;opacity:.72;filter:saturate(1.15) contrast(1.1)}
+    .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 35%,rgba(255,122,0,.28),transparent 35%)}
+    .heroInner{position:relative;z-index:2;padding:68px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:999px;border:1px solid rgba(247,183,51,.55);background:rgba(247,183,51,.09);color:var(--gold);font-weight:900}
+    h1{margin:20px 0 18px;font-size:clamp(44px,7vw,92px);line-height:.94;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 0 32px rgba(255,122,0,.36)}
+    .lead{font-size:clamp(20px,2.25vw,28px);max-width:780px;color:var(--muted);margin:0}.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 20px;border-radius:16px;text-decoration:none;font-weight:900;border:1px solid var(--line);background:#151515;color:var(--text)}
+    .btn.primary{background:linear-gradient(135deg,var(--orange),var(--gold));color:#120800;border:0}
+    .heroCard{background:linear-gradient(145deg,rgba(255,122,0,.20),rgba(255,255,255,.04));border:1px solid var(--line);border-radius:34px;padding:28px;box-shadow:var(--shadow)}
+    .heroCard img{width:100%;border-radius:24px;object-fit:cover;background:#fff}
+    section{padding:72px 0;border-bottom:1px solid rgba(255,255,255,.08)}.sectionHead{margin-bottom:26px}
+    .kicker{color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+    h2{font-size:clamp(36px,5vw,64px);line-height:1.02;margin:8px 0 10px}.sectionLead{color:var(--muted);font-size:20px;max-width:860px;margin:0}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.22)}
+    .card h3{margin:0 0 10px;color:var(--gold);font-size:26px}.muted{color:var(--muted)}
+    .profile{display:grid;grid-template-columns:.72fr 1.28fr;gap:20px;align-items:stretch}.profilePhoto{min-height:320px;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#111}.profilePhoto img{width:100%;height:100%;object-fit:cover}
+    .services,.dogs,.gallery,.testimonials,.partners{display:grid;gap:20px}.services{grid-template-columns:repeat(3,1fr)}
+    .service img,.dog img{width:100%;height:220px;object-fit:cover;border-radius:22px;margin-bottom:18px;background:#222}.dogs{grid-template-columns:repeat(3,1fr)}.dog .status{font-weight:900;color:var(--text)}
+    .gallery{grid-template-columns:repeat(3,1fr)}figure{margin:0;overflow:hidden}.gallery figure{background:#111;border:1px solid var(--line);border-radius:28px}.gallery img{width:100%;height:260px;object-fit:cover;background:#222}figcaption{padding:18px;color:var(--muted)}figcaption b{color:var(--text)}
+    .videos{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.empty{border:1px dashed rgba(255,255,255,.2);border-radius:22px;padding:24px;color:var(--muted)}
+    .testimonials{grid-template-columns:repeat(3,1fr)}blockquote{margin:0}blockquote p{margin:0 0 16px;color:var(--muted)}.partners{grid-template-columns:repeat(4,1fr)}.partner{text-align:center}.partner img{height:110px;width:100%;object-fit:contain;margin-bottom:10px}
+    .contact{background:radial-gradient(circle at 85% 30%,rgba(26,143,69,.22),transparent 30%),linear-gradient(135deg,rgba(255,122,0,.16),rgba(247,183,51,.06))}
+    .contactBox{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}.contactLine{font-size:22px;margin:12px 0;color:var(--muted)}.contactLine b{color:var(--text)}
+    .floatWA{position:fixed;right:22px;bottom:22px;z-index:80;width:72px;height:72px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:var(--green);color:#fff;text-decoration:none;font-size:34px;font-weight:900;box-shadow:0 18px 48px rgba(0,0,0,.45)}
+    .footer{padding:34px 0;color:var(--muted);font-size:15px;background:#030303}
+    @media(max-width:900px){.links{display:none}.heroInner,.profile,.contactBox{grid-template-columns:1fr}.services,.dogs,.gallery,.testimonials{grid-template-columns:1fr 1fr}.partners{grid-template-columns:1fr 1fr}.hero{min-height:auto}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1180px)}.nav{min-height:74px}.brand img{width:54px;height:54px}.heroInner{padding:54px 0 38px}h1{font-size:clamp(42px,14vw,62px)}.lead{font-size:20px}.services,.dogs,.gallery,.videos,.testimonials,.partners{grid-template-columns:1fr}section{padding:54px 0}.heroCard{padding:18px;border-radius:26px}.floatWA{width:64px;height:64px;right:16px;bottom:16px}}
   </style>
 </head>
-
 <body>
-  <nav class="nav">
-    <div class="wrap navin">
-      <div class="brand">
-        <img id="navLogo" src="/logo.png" alt="Logo K9 Mantrailing HRDD">
-        <span id="navName">K9 Mantrailing HRDD</span>
-      </div>
-      <div class="links">
-        <a href="#chi">Chi siamo</a>
-        <a href="#servizi">Servizi</a>
-        <a href="#cani">Cani</a>
-        <a href="#media">Foto e video</a>
-        <a href="#contatti">Contatti</a>
-      </div>
-    </div>
-  </nav>
-
-  <main id="app">
-    <header class="hero" id="hero">
-      <div class="wrap heroGrid">
-        <div>
-          <span id="tagline" class="badge">Unità cinofila • Mantrailing • HRDD</span>
-          <h1 id="heroTitle">K9 Mantrailing HRDD Tattico Napoletano</h1>
-          <p class="lead" id="heroSubtitle"></p>
-          <div class="cta">
-            <a class="btn primary" id="whatsappBtn" href="#" target="_blank" rel="noopener">Contatta su WhatsApp</a>
-            <a class="btn" href="#cani">Scopri i cani</a>
-          </div>
-        </div>
-        <div class="heroLogo">
-          <img id="heroLogo" src="/logo.png" alt="Marchio ufficiale K9">
-        </div>
-      </div>
-    </header>
-
-    <section id="chi" class="divider">
-      <div class="wrap grid2">
-        <div class="card">
-          <img id="ownerPhoto" src="" alt="" style="display:none;">
-          <h2 class="sectionTitle" id="ownerName">Napoletano Giovanni</h2>
-          <p id="roles" class="muted"></p>
-          <p id="bio"></p>
-        </div>
-
-        <div class="card">
-          <h2 class="sectionTitle">Identità operativa</h2>
-          <p class="muted">
-            Attività cinofile orientate alla preparazione tecnica del binomio, alla lettura del cane,
-            alla formazione del conduttore e alla responsabilità operativa nei contesti reali.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="servizi">
-      <div class="wrap">
-        <h2 class="sectionTitle">Servizi operativi e formativi</h2>
-        <p class="sectionIntro">Le attività principali del progetto K9 Mantrailing HRDD Tattico Napoletano.</p>
-        <div id="services" class="grid3" style="margin-top:18px"></div>
-      </div>
-    </section>
-
-    <section id="attivita" class="divider">
-      <div class="wrap">
-        <h2 class="sectionTitle">Mantrailing, HRDD e formazione</h2>
-        <div class="grid3">
-          <div class="card"><h3>Mantrailing</h3><p id="mantrailing" class="muted"></p></div>
-          <div class="card"><h3>HRDD</h3><p id="hrdd" class="muted"></p></div>
-          <div class="card"><h3>Formazione</h3><p id="training" class="muted"></p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cani">
-      <div class="wrap">
-        <h2 class="sectionTitle">I cani</h2>
-        <p class="sectionIntro">Schede aggiornabili dal CMS: nome, foto, razza, età, stato operativo, certificazioni e descrizione.</p>
-        <div id="dogs" class="dogs" style="margin-top:18px"></div>
-      </div>
-    </section>
-
-    <section id="media" class="divider">
-      <div class="wrap">
-        <h2 class="sectionTitle">Galleria foto</h2>
-        <div id="gallery" class="gallery"></div>
-
-        <h2 class="sectionTitle" style="margin-top:36px">Video</h2>
-        <div id="videos" class="videoGrid"></div>
-      </div>
-    </section>
-
-    <section id="testimonianze">
-      <div class="wrap">
-        <h2 class="sectionTitle">Testimonianze</h2>
-        <div id="testimonials" class="grid3"></div>
-      </div>
-    </section>
-
-    <section id="partner" class="divider">
-      <div class="wrap">
-        <h2 class="sectionTitle">Partner</h2>
-        <div id="partners" class="grid3"></div>
-      </div>
-    </section>
-
-    <section id="contatti" class="contact">
-      <div class="wrap grid2">
-        <div>
-          <h2 class="sectionTitle">Contatti</h2>
-          <p id="location"></p>
-          <p><b>Telefono:</b> <span id="phone"></span></p>
-          <p><b>Email:</b> <span id="email"></span></p>
-        </div>
-
-        <div class="card">
-          <h3>Zone operative</h3>
-          <p class="muted" id="locationBox"></p>
-          <a class="btn primary" id="contactWhatsappBtn" href="#" target="_blank" rel="noopener">Scrivi su WhatsApp</a>
-        </div>
-      </div>
-    </section>
+  <div class="topbar"><div class="wrap nav"><a class="brand" href="#top"><img id="navLogo" src="/logo.png" alt="Logo K9"><span id="navName">K9 Mantrailing HRDD Tattico Napoletano</span></a><div class="links"><a href="#chi">Giovanni</a><a href="#servizi">Servizi</a><a href="#cani">Cani</a><a href="#galleria">Galleria</a><a href="#contatti">Contatti</a></div></div></div>
+  <main id="top">
+    <header class="hero" id="hero"><div class="wrap heroInner"><div><div class="badge" id="tagline">Mantrailing operativo, HRDD e formazione cinofila specializzata</div><h1 id="heroTitle">K9 Mantrailing HRDD Tattico Napoletano</h1><p class="lead" id="heroSubtitle">Ricerca persone, HRDD e formazione operativa.</p><div class="cta"><a class="btn primary" id="waBtn" href="#">Contatta su WhatsApp</a><a class="btn" href="#cani">Scopri i cani</a></div></div><div class="heroCard"><img id="heroImage" src="/logo.png" alt="Immagine principale"></div></div></header>
+    <section id="chi"><div class="wrap"><div class="sectionHead"><div class="kicker">Responsabile operativo</div><h2 id="ownerName">Napoletano Giovanni</h2></div><div class="profile"><div class="profilePhoto" id="ownerPhotoBox"></div><div class="card"><h3>Profilo professionale</h3><p class="muted" id="ownerRoles"></p><p id="ownerBio"></p></div></div></div></section>
+    <section id="servizi"><div class="wrap"><div class="sectionHead"><div class="kicker">Aree operative</div><h2>Servizi e formazione</h2><p class="sectionLead">Sezioni aggiornabili dal CMS con testi, immagini e descrizioni operative.</p></div><div class="services" id="services"></div></div></section>
+    <section id="cani"><div class="wrap"><div class="sectionHead"><div class="kicker">Unità cinofile</div><h2>I cani</h2><p class="sectionLead">Schede aggiornabili dal CMS: foto, razza, età, stato operativo, certificazioni e descrizione.</p></div><div class="dogs" id="dogs"></div></div></section>
+    <section id="galleria"><div class="wrap"><div class="sectionHead"><div class="kicker">Media</div><h2>Galleria foto</h2></div><div class="gallery" id="gallery"></div></div></section>
+    <section id="video"><div class="wrap"><div class="sectionHead"><div class="kicker">Video</div><h2>Video</h2></div><div class="videos" id="videos"></div></div></section>
+    <section id="testimonianze"><div class="wrap"><div class="sectionHead"><div class="kicker">Feedback</div><h2>Testimonianze</h2></div><div class="testimonials" id="testimonials"></div></div></section>
+    <section id="partner"><div class="wrap"><div class="sectionHead"><div class="kicker">Rete operativa</div><h2>Partner</h2></div><div class="partners" id="partners"></div></div></section>
+    <section id="contatti" class="contact"><div class="wrap contactBox"><div><div class="kicker">Contatto diretto</div><h2>Contatti</h2><p class="contactLine"><b>Zone operative:</b> <span id="location"></span></p><p class="contactLine"><b>Telefono:</b> <span id="phone"></span></p><p class="contactLine"><b>Email:</b> <span id="email"></span></p></div><div class="card"><h3>Richiedi informazioni</h3><p class="muted">Per attività formative, collaborazione operativa, mantrailing, HRDD e progetti cinofili specializzati.</p><a class="btn primary" id="waBtn2" href="#">Scrivi su WhatsApp</a></div></div></section>
   </main>
-
-  <a id="floatingWhatsapp" class="floatingWhatsapp" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">☎</a>
-
-  <footer class="footer">
-    <div class="wrap">
-      © <span id="year"></span> <span id="footerName">K9 Mantrailing HRDD Tattico Napoletano</span>
-    </div>
-  </footer>
-
+  <a class="floatWA" id="waFloat" href="#" aria-label="WhatsApp">☎</a>
+  <footer class="footer"><div class="wrap">© <span id="year"></span> <span id="footerName">K9 Mantrailing HRDD Tattico Napoletano</span></div></footer>
   <script>
-    function safe(value, fallback = '') {
-      return value === undefined || value === null ? fallback : value;
+    const $ = id => document.getElementById(id);
+    const esc = value => String(value ?? '').replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+    function imgTag(src, alt){return src ? `<img src="${esc(src)}" alt="${esc(alt)}">` : '';}
+    function setWhatsApp(number){const href = number ? `https://wa.me/${number}` : '#contatti'; ['waBtn','waBtn2','waFloat'].forEach(id => { if($(id)) $(id).href = href; });}
+    async function loadSite(){
+      const res = await fetch('/content/site.json', { cache: 'no-store' });
+      if(!res.ok) throw new Error('Errore caricamento content/site.json');
+      const d = await res.json();
+      const brandName = d.brand?.name || d.homepage?.title || 'K9 Mantrailing HRDD Tattico Napoletano';
+      const logo = d.brand?.logo || '/logo.png';
+      const heroImage = d.homepage?.hero_image || logo;
+      document.title = d.seo?.title || brandName;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if(metaDesc) metaDesc.setAttribute('content', d.seo?.description || d.brand?.description || d.homepage?.subtitle || '');
+      $('navLogo').src = logo; $('navName').textContent = brandName; $('footerName').textContent = brandName;
+      $('tagline').textContent = d.brand?.tagline || ''; $('heroTitle').textContent = d.homepage?.title || brandName; $('heroSubtitle').textContent = d.homepage?.subtitle || d.brand?.description || '';
+      $('heroImage').src = heroImage; $('hero').style.setProperty('--hero-bg', `url("${heroImage}")`);
+      $('ownerName').textContent = d.owner?.name || 'Napoletano Giovanni'; $('ownerRoles').textContent = d.owner?.roles || ''; $('ownerBio').textContent = d.owner?.bio || '';
+      $('ownerPhotoBox').innerHTML = d.owner?.photo ? imgTag(d.owner.photo, d.owner.name || 'Foto') : imgTag(logo, 'Logo');
+      $('services').innerHTML = (d.services || []).map(s => `<article class="card service">${imgTag(s.image, s.title || 'Servizio')}<h3>${esc(s.title)}</h3><p class="muted">${esc(s.description)}</p></article>`).join('') || `<div class="empty">Nessun servizio inserito.</div>`;
+      $('dogs').innerHTML = (d.dogs || []).map(x => `<article class="card dog">${imgTag(x.image, x.name || 'Cane')}<h3>${esc(x.name)}</h3>${x.breed ? `<p class="muted">${esc(x.breed)}</p>` : ''}${x.age ? `<p class="muted">${esc(x.age)}</p>` : ''}<p class="status">${esc(x.status)}</p>${x.certifications ? `<p class="muted">${esc(x.certifications)}</p>` : ''}<p class="muted">${esc(x.description)}</p></article>`).join('') || `<div class="empty">Nessun cane inserito.</div>`;
+      $('gallery').innerHTML = (d.gallery || []).map(g => `<figure>${imgTag(g.image, g.title || 'Foto')}<figcaption><b>${esc(g.title)}</b><br>${esc(g.caption || '')}</figcaption></figure>`).join('') || `<div class="empty">Nessuna foto inserita.</div>`;
+      $('videos').innerHTML = (d.videos || []).filter(v => v.url).map(v => `<article class="card"><h3>${esc(v.title || 'Video')}</h3><p class="muted">${esc(v.caption || '')}</p><a class="btn primary" href="${esc(v.url)}" target="_blank" rel="noopener">Apri video</a></article>`).join('') || `<div class="empty">Nessun video inserito.</div>`;
+      $('testimonials').innerHTML = (d.testimonials || []).map(t => `<blockquote class="card"><p>“${esc(t.review)}”</p><b>${esc(t.name)}</b></blockquote>`).join('') || `<div class="empty">Nessuna testimonianza inserita.</div>`;
+      $('partners').innerHTML = (d.partners || []).map(p => `<article class="card partner">${imgTag(p.logo, p.name || 'Partner')}<b>${esc(p.name)}</b></article>`).join('') || `<div class="empty">Nessun partner inserito.</div>`;
+      $('location').textContent = d.contacts?.location || ''; $('phone').textContent = d.contacts?.phone || ''; $('email').textContent = d.contacts?.email || ''; setWhatsApp(d.contacts?.whatsapp);
     }
-
-    function setText(id, value, fallback = '') {
-      const el = document.getElementById(id);
-      if (el) el.textContent = safe(value, fallback);
-    }
-
-    function setHref(id, value) {
-      const el = document.getElementById(id);
-      if (el) el.href = value || '#';
-    }
-
-    function escapeHtml(str) {
-      return String(str || '')
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#039;');
-    }
-
-    function renderEmpty(text) {
-      return `<div class="empty">${escapeHtml(text)}</div>`;
-    }
-
-    async function loadSite() {
-      try {
-        const res = await fetch('/content/site.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error('Impossibile leggere content/site.json');
-
-        const d = await res.json();
-
-        const logo = d.brand?.logo || '/logo.png';
-        const siteName = d.brand?.name || 'K9 Mantrailing HRDD Tattico Napoletano';
-        const whatsappNumber = String(d.contacts?.whatsapp || '').replace(/\D/g, '');
-        const whatsappUrl = whatsappNumber ? 'https://wa.me/' + whatsappNumber : '#';
-
-        document.title = d.seo?.title || siteName;
-
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', d.seo?.description || d.brand?.description || '');
-        }
-
-        setText('navName', siteName);
-        setText('footerName', siteName);
-        setText('tagline', d.brand?.tagline || 'Unità cinofila • Mantrailing • HRDD');
-
-        setText('heroTitle', d.homepage?.title || siteName);
-        setText('heroSubtitle', d.homepage?.subtitle || d.brand?.description || '');
-
-        document.getElementById('navLogo').src = logo;
-        document.getElementById('heroLogo').src = logo;
-
-        if (d.homepage?.hero_image) {
-          document.getElementById('hero').style.setProperty('--hero-bg', `url("${d.homepage.hero_image}")`);
-        }
-
-        setText('ownerName', d.owner?.name || 'Napoletano Giovanni');
-        setText('roles', d.owner?.roles || '');
-        setText('bio', d.owner?.bio || '');
-
-        const ownerPhoto = document.getElementById('ownerPhoto');
-        if (d.owner?.photo) {
-          ownerPhoto.src = d.owner.photo;
-          ownerPhoto.alt = d.owner?.name || 'Napoletano Giovanni';
-          ownerPhoto.style.display = 'block';
-        }
-
-        setText('mantrailing', d.sections?.mantrailing || '');
-        setText('hrdd', d.sections?.hrdd || '');
-        setText('training', d.sections?.training || '');
-
-        setText('location', d.contacts?.location || '');
-        setText('locationBox', d.contacts?.location || '');
-        setText('phone', d.contacts?.phone || '');
-        setText('email', d.contacts?.email || '');
-
-        setHref('whatsappBtn', whatsappUrl);
-        setHref('contactWhatsappBtn', whatsappUrl);
-        setHref('floatingWhatsapp', whatsappUrl);
-
-        const services = d.services || [];
-        document.getElementById('services').innerHTML = services.length ? services.map(s => `
-          <div class="card">
-            ${s.image ? `<img src="${escapeHtml(s.image)}" alt="${escapeHtml(s.title || 'Servizio')}">` : ''}
-            <h3>${escapeHtml(s.title || '')}</h3>
-            <p class="muted">${escapeHtml(s.description || '')}</p>
-          </div>
-        `).join('') : renderEmpty('Nessun servizio inserito.');
-
-        const dogs = d.dogs || [];
-        document.getElementById('dogs').innerHTML = dogs.length ? dogs.map(x => `
-          <article class="dog">
-            ${x.image ? `<img src="${escapeHtml(x.image)}" alt="${escapeHtml(x.name || 'Cane')}">` : ''}
-            <div class="dogBody">
-              <b>${escapeHtml(x.name || '')}</b>
-              ${x.breed ? `<p class="muted">${escapeHtml(x.breed)}</p>` : ''}
-              ${x.age ? `<p class="muted">Età: ${escapeHtml(x.age)}</p>` : ''}
-              ${x.status ? `<p class="dogStatus">${escapeHtml(x.status)}</p>` : ''}
-              ${x.certifications ? `<p><b>Certificazioni:</b><br><span class="muted">${escapeHtml(x.certifications)}</span></p>` : ''}
-              ${x.description ? `<p class="muted">${escapeHtml(x.description)}</p>` : ''}
-            </div>
-          </article>
-        `).join('') : renderEmpty('Nessuna scheda cane inserita.');
-
-        const gallery = d.gallery || [];
-        document.getElementById('gallery').innerHTML = gallery.length ? gallery.map(x => `
-          <figure>
-            ${x.image ? `<img src="${escapeHtml(x.image)}" alt="${escapeHtml(x.title || 'Foto')}">` : ''}
-            <figcaption>
-              <b>${escapeHtml(x.title || '')}</b>
-              ${x.caption ? `<br>${escapeHtml(x.caption)}` : ''}
-            </figcaption>
-          </figure>
-        `).join('') : renderEmpty('Nessuna foto inserita.');
-
-        const videos = (d.videos || []).filter(v => v.url);
-        document.getElementById('videos').innerHTML = videos.length ? videos.map(v => `
-          <div class="card">
-            <h3>${escapeHtml(v.title || 'Video')}</h3>
-            ${v.caption ? `<p class="muted">${escapeHtml(v.caption)}</p>` : ''}
-            <a class="btn" href="${escapeHtml(v.url)}" target="_blank" rel="noopener">Apri video</a>
-          </div>
-        `).join('') : renderEmpty('Nessun video inserito.');
-
-        const testimonials = d.testimonials || [];
-        document.getElementById('testimonials').innerHTML = testimonials.length ? testimonials.map(t => `
-          <div class="card">
-            <h3>${escapeHtml(t.name || '')}</h3>
-            <p class="muted">${escapeHtml(t.review || '')}</p>
-          </div>
-        `).join('') : renderEmpty('Nessuna testimonianza inserita.');
-
-        const partners = d.partners || [];
-        document.getElementById('partners').innerHTML = partners.length ? partners.map(p => `
-          <div class="card">
-            ${p.logo ? `<img src="${escapeHtml(p.logo)}" alt="${escapeHtml(p.name || 'Partner')}">` : ''}
-            <h3>${escapeHtml(p.name || '')}</h3>
-          </div>
-        `).join('') : renderEmpty('Nessun partner inserito.');
-
-      } catch (error) {
-        console.error(error);
-        document.getElementById('app').insertAdjacentHTML(
-          'afterbegin',
-          `<div class="wrap" style="padding:20px">
-            <div class="empty">Errore nel caricamento dei contenuti CMS. Controlla il file content/site.json.</div>
-          </div>`
-        );
-      }
-    }
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-    loadSite();
-
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').catch(() => {});
-      });
-    }
-
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user && window.location.hash.includes('invite_token')) {
-          window.netlifyIdentity.open('signup');
-        }
-      });
-    }
+    $('year').textContent = new Date().getFullYear();
+    loadSite().catch(err => {console.error(err);document.body.insertAdjacentHTML('afterbegin','<div style="padding:14px;background:#7a0000;color:white;text-align:center">Errore caricamento dati CMS. Controlla content/site.json.</div>');});
+    if ('serviceWorker' in navigator) {window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(()=>{}));}
+    if (window.netlifyIdentity) {window.netlifyIdentity.on('init', user => {if (!user && window.location.hash.includes('invite_token')) window.netlifyIdentity.open('signup');});}
   </script>
 </body>
-      </html>
+</html>
