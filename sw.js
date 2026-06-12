@@ -1,4 +1,4 @@
-const CACHE_NAME = 'k9-pwa-v2';
+const CACHE_NAME = 'k9-pwa-v3';
 
 const ASSETS = [
   '/',
@@ -9,9 +9,9 @@ const ASSETS = [
 ];
 
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(ASSETS))
+    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
   );
 });
 
@@ -23,19 +23,17 @@ self.addEventListener('activate', event => {
           .filter(key => key !== CACHE_NAME)
           .map(key => caches.delete(key))
       )
-    )
+    ).then(() => self.clients.claim())
   );
 });
 
 self.addEventListener('fetch', event => {
-
   const url = new URL(event.request.url);
 
-  // Escludi CMS e servizi Netlify dalla cache
-
   if (
-    url.pathname.startsWith('/admin/') ||
-    url.pathname.startsWith('/.netlify/')
+    url.pathname.startsWith('/admin') ||
+    url.pathname.startsWith('/.netlify') ||
+    url.pathname.startsWith('/assets/uploads')
   ) {
     return;
   }
@@ -43,24 +41,14 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     fetch(event.request)
       .then(response => {
-
-        if (
-          event.request.method === 'GET' &&
-          response.status === 200
-        ) {
+        if (event.request.method === 'GET' && response.status === 200) {
           const copy = response.clone();
-
-          caches.open(CACHE_NAME)
-            .then(cache => cache.put(event.request, copy));
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
         }
-
         return response;
       })
       .catch(() =>
-        caches.match(event.request)
-          .then(cached =>
-            cached || caches.match('/index.html')
-          )
+        caches.match(event.request).then(cached => cached || caches.match('/index.html'))
       )
   );
 });
