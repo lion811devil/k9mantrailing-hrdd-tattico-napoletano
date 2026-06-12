@@ -14,13 +14,12 @@
     :root{
       --bg:#070707;
       --panel:#111;
-      --panel2:#171717;
       --text:#f7f1e7;
       --muted:#c9bca8;
       --gold:#f7b733;
       --orange:#ff7a00;
-      --line:rgba(255,255,255,.14);
       --green:#25d366;
+      --line:rgba(255,255,255,.14);
     }
 
     *{box-sizing:border-box}
@@ -50,8 +49,8 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:18px;
       padding:10px 0;
+      gap:18px;
     }
 
     .brand{
@@ -64,8 +63,8 @@
     }
 
     .brand img{
-      width:58px;
-      height:58px;
+      width:56px;
+      height:56px;
       object-fit:contain;
       border-radius:8px;
     }
@@ -83,11 +82,26 @@
       font-weight:700;
     }
 
-    .hero{padding:70px 0 50px}
+    .hero{
+      padding:76px 0 54px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(7,7,7,.92),rgba(7,7,7,.55)),var(--hero-bg, none);
+      background-size:cover;
+      background-position:center;
+      opacity:.35;
+      z-index:-1;
+    }
 
     .heroGrid{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
+      grid-template-columns:1.12fr .88fr;
       gap:34px;
       align-items:center;
     }
@@ -150,7 +164,7 @@
       box-shadow:0 30px 80px rgba(0,0,0,.35);
     }
 
-    section{padding:46px 0}
+    section{padding:48px 0}
     .sectionTitle{font-size:clamp(30px,4vw,48px);margin:0 0 20px}
     .sectionIntro{color:var(--muted);font-size:18px;max-width:850px}
 
@@ -169,6 +183,15 @@
       margin:0 0 8px;
       color:var(--gold);
       font-size:24px;
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:16px;
+      margin-bottom:14px;
+      background:#222;
     }
 
     .muted{color:var(--muted)}
@@ -297,7 +320,7 @@
       </div>
       <div class="links">
         <a href="#chi">Chi siamo</a>
-        <a href="#attivita">Attività</a>
+        <a href="#servizi">Servizi</a>
         <a href="#cani">Cani</a>
         <a href="#media">Foto e video</a>
         <a href="#contatti">Contatti</a>
@@ -306,12 +329,12 @@
   </nav>
 
   <main id="app">
-    <header class="hero">
+    <header class="hero" id="hero">
       <div class="wrap heroGrid">
         <div>
           <span id="tagline" class="badge">Unità cinofila • Mantrailing • HRDD</span>
-          <h1 id="brandName">K9 Mantrailing HRDD Tattico Napoletano</h1>
-          <p class="lead" id="brandDesc"></p>
+          <h1 id="heroTitle">K9 Mantrailing HRDD Tattico Napoletano</h1>
+          <p class="lead" id="heroSubtitle"></p>
           <div class="cta">
             <a class="btn primary" id="whatsappBtn" href="#" target="_blank" rel="noopener">Contatta su WhatsApp</a>
             <a class="btn" href="#cani">Scopri i cani</a>
@@ -326,6 +349,7 @@
     <section id="chi" class="divider">
       <div class="wrap grid2">
         <div class="card">
+          <img id="ownerPhoto" src="" alt="" style="display:none;">
           <h2 class="sectionTitle" id="ownerName">Napoletano Giovanni</h2>
           <p id="roles" class="muted"></p>
           <p id="bio"></p>
@@ -341,49 +365,54 @@
       </div>
     </section>
 
-    <section id="attivita">
+    <section id="servizi">
+      <div class="wrap">
+        <h2 class="sectionTitle">Servizi operativi e formativi</h2>
+        <p class="sectionIntro">Le attività principali del progetto K9 Mantrailing HRDD Tattico Napoletano.</p>
+        <div id="services" class="grid3" style="margin-top:18px"></div>
+      </div>
+    </section>
+
+    <section id="attivita" class="divider">
       <div class="wrap">
         <h2 class="sectionTitle">Mantrailing, HRDD e formazione</h2>
-        <p class="sectionIntro">
-          Le sezioni seguenti vengono lette direttamente dal CMS e possono essere aggiornate in autonomia.
-        </p>
-
-        <div class="grid3" style="margin-top:18px">
-          <div class="card">
-            <h3>Mantrailing</h3>
-            <p id="mantrailing" class="muted"></p>
-          </div>
-
-          <div class="card">
-            <h3>HRDD</h3>
-            <p id="hrdd" class="muted"></p>
-          </div>
-
-          <div class="card">
-            <h3>Formazione</h3>
-            <p id="training" class="muted"></p>
-          </div>
+        <div class="grid3">
+          <div class="card"><h3>Mantrailing</h3><p id="mantrailing" class="muted"></p></div>
+          <div class="card"><h3>HRDD</h3><p id="hrdd" class="muted"></p></div>
+          <div class="card"><h3>Formazione</h3><p id="training" class="muted"></p></div>
         </div>
       </div>
     </section>
 
-    <section id="cani" class="divider">
+    <section id="cani">
       <div class="wrap">
         <h2 class="sectionTitle">I cani</h2>
-        <p class="sectionIntro">
-          Schede operative aggiornabili dal CMS: nome, foto, razza, età, stato operativo, certificazioni e descrizione.
-        </p>
+        <p class="sectionIntro">Schede aggiornabili dal CMS: nome, foto, razza, età, stato operativo, certificazioni e descrizione.</p>
         <div id="dogs" class="dogs" style="margin-top:18px"></div>
       </div>
     </section>
 
-    <section id="media">
+    <section id="media" class="divider">
       <div class="wrap">
         <h2 class="sectionTitle">Galleria foto</h2>
         <div id="gallery" class="gallery"></div>
 
         <h2 class="sectionTitle" style="margin-top:36px">Video</h2>
         <div id="videos" class="videoGrid"></div>
+      </div>
+    </section>
+
+    <section id="testimonianze">
+      <div class="wrap">
+        <h2 class="sectionTitle">Testimonianze</h2>
+        <div id="testimonials" class="grid3"></div>
+      </div>
+    </section>
+
+    <section id="partner" class="divider">
+      <div class="wrap">
+        <h2 class="sectionTitle">Partner</h2>
+        <div id="partners" class="grid3"></div>
       </div>
     </section>
 
@@ -428,11 +457,6 @@
       if (el) el.href = value || '#';
     }
 
-    function imageSrc(path) {
-      if (!path) return '';
-      return path;
-    }
-
     function escapeHtml(str) {
       return String(str || '')
         .replaceAll('&', '&amp;')
@@ -442,6 +466,10 @@
         .replaceAll("'", '&#039;');
     }
 
+    function renderEmpty(text) {
+      return `<div class="empty">${escapeHtml(text)}</div>`;
+    }
+
     async function loadSite() {
       try {
         const res = await fetch('/content/site.json', { cache: 'no-store' });
@@ -449,7 +477,7 @@
 
         const d = await res.json();
 
-        const logo = imageSrc(d.brand?.logo) || '/logo.png';
+        const logo = d.brand?.logo || '/logo.png';
         const siteName = d.brand?.name || 'K9 Mantrailing HRDD Tattico Napoletano';
         const whatsappNumber = String(d.contacts?.whatsapp || '').replace(/\D/g, '');
         const whatsappUrl = whatsappNumber ? 'https://wa.me/' + whatsappNumber : '#';
@@ -458,24 +486,33 @@
 
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-          metaDescription.setAttribute(
-            'content',
-            d.seo?.description || d.brand?.description || ''
-          );
+          metaDescription.setAttribute('content', d.seo?.description || d.brand?.description || '');
         }
 
         setText('navName', siteName);
-        setText('brandName', siteName);
         setText('footerName', siteName);
         setText('tagline', d.brand?.tagline || 'Unità cinofila • Mantrailing • HRDD');
-        setText('brandDesc', d.brand?.description || '');
+
+        setText('heroTitle', d.homepage?.title || siteName);
+        setText('heroSubtitle', d.homepage?.subtitle || d.brand?.description || '');
 
         document.getElementById('navLogo').src = logo;
         document.getElementById('heroLogo').src = logo;
 
+        if (d.homepage?.hero_image) {
+          document.getElementById('hero').style.setProperty('--hero-bg', `url("${d.homepage.hero_image}")`);
+        }
+
         setText('ownerName', d.owner?.name || 'Napoletano Giovanni');
         setText('roles', d.owner?.roles || '');
         setText('bio', d.owner?.bio || '');
+
+        const ownerPhoto = document.getElementById('ownerPhoto');
+        if (d.owner?.photo) {
+          ownerPhoto.src = d.owner.photo;
+          ownerPhoto.alt = d.owner?.name || 'Napoletano Giovanni';
+          ownerPhoto.style.display = 'block';
+        }
 
         setText('mantrailing', d.sections?.mantrailing || '');
         setText('hrdd', d.sections?.hrdd || '');
@@ -490,6 +527,15 @@
         setHref('contactWhatsappBtn', whatsappUrl);
         setHref('floatingWhatsapp', whatsappUrl);
 
+        const services = d.services || [];
+        document.getElementById('services').innerHTML = services.length ? services.map(s => `
+          <div class="card">
+            ${s.image ? `<img src="${escapeHtml(s.image)}" alt="${escapeHtml(s.title || 'Servizio')}">` : ''}
+            <h3>${escapeHtml(s.title || '')}</h3>
+            <p class="muted">${escapeHtml(s.description || '')}</p>
+          </div>
+        `).join('') : renderEmpty('Nessun servizio inserito.');
+
         const dogs = d.dogs || [];
         document.getElementById('dogs').innerHTML = dogs.length ? dogs.map(x => `
           <article class="dog">
@@ -503,7 +549,7 @@
               ${x.description ? `<p class="muted">${escapeHtml(x.description)}</p>` : ''}
             </div>
           </article>
-        `).join('') : `<div class="empty">Nessuna scheda cane inserita.</div>`;
+        `).join('') : renderEmpty('Nessuna scheda cane inserita.');
 
         const gallery = d.gallery || [];
         document.getElementById('gallery').innerHTML = gallery.length ? gallery.map(x => `
@@ -514,7 +560,7 @@
               ${x.caption ? `<br>${escapeHtml(x.caption)}` : ''}
             </figcaption>
           </figure>
-        `).join('') : `<div class="empty">Nessuna foto inserita.</div>`;
+        `).join('') : renderEmpty('Nessuna foto inserita.');
 
         const videos = (d.videos || []).filter(v => v.url);
         document.getElementById('videos').innerHTML = videos.length ? videos.map(v => `
@@ -523,7 +569,23 @@
             ${v.caption ? `<p class="muted">${escapeHtml(v.caption)}</p>` : ''}
             <a class="btn" href="${escapeHtml(v.url)}" target="_blank" rel="noopener">Apri video</a>
           </div>
-        `).join('') : `<div class="empty">Nessun video inserito.</div>`;
+        `).join('') : renderEmpty('Nessun video inserito.');
+
+        const testimonials = d.testimonials || [];
+        document.getElementById('testimonials').innerHTML = testimonials.length ? testimonials.map(t => `
+          <div class="card">
+            <h3>${escapeHtml(t.name || '')}</h3>
+            <p class="muted">${escapeHtml(t.review || '')}</p>
+          </div>
+        `).join('') : renderEmpty('Nessuna testimonianza inserita.');
+
+        const partners = d.partners || [];
+        document.getElementById('partners').innerHTML = partners.length ? partners.map(p => `
+          <div class="card">
+            ${p.logo ? `<img src="${escapeHtml(p.logo)}" alt="${escapeHtml(p.name || 'Partner')}">` : ''}
+            <h3>${escapeHtml(p.name || '')}</h3>
+          </div>
+        `).join('') : renderEmpty('Nessun partner inserito.');
 
       } catch (error) {
         console.error(error);
@@ -554,4 +616,4 @@
     }
   </script>
 </body>
-</html>
+      </html>
