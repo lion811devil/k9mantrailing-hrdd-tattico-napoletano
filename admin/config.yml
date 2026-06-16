@@ -2,100 +2,140 @@ backend:
   name: git-gateway
   branch: main
 
-local_backend: false
-
+local_backend: true
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: "https://k9mantrailing-hrdd-tattico-napoletano.netlify.app"
-display_url: "https://k9mantrailing-hrdd-tattico-napoletano.netlify.app"
-logo_url: "/logo.png"
+site_url: "/"
+display_url: "/"
+logo_url: "/assets/img/logo-fusione.png"
 
 collections:
-  - name: "settings"
-    label: "Gestione sito"
+  - name: "site"
+    label: "Impostazioni sito"
     files:
-      - label: "Contenuti principali"
-        name: "site"
-        file: "content/site.json"
+      - file: "content/site.json"
+        label: "Contenuti generali"
+        name: "site_content"
         format: "json"
         fields:
+          - {label: "Nome del sito", name: "siteName", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "image", required: false}
+          - {label: "Logo secondario", name: "logoSecondary", widget: "image", required: false}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "Titolo Hero", name: "heroTitle", widget: "string"}
+          - {label: "Sottotitolo Hero", name: "heroSubtitle", widget: "text"}
+          - {label: "Immagine Hero", name: "heroImage", widget: "image", required: false}
 
-          - label: "Homepage"
-            name: "homepage"
-            widget: "object"
-            fields:
-              - {label: "Titolo principale", name: "title", widget: "string"}
-              - {label: "Sottotitolo", name: "subtitle", widget: "text"}
-              - {label: "Immagine Hero", name: "hero_image", widget: "image", required: false}
-
-          - label: "Marchio"
-            name: "brand"
-            widget: "object"
-            fields:
-              - {label: "Nome", name: "name", widget: "string"}
-              - {label: "Logo", name: "logo", widget: "image"}
-              - {label: "Slogan", name: "tagline", widget: "string"}
-              - {label: "Descrizione", name: "description", widget: "text"}
-
-          - label: "Giovanni Napoletano"
+          - label: "Biografia"
             name: "owner"
             widget: "object"
             fields:
               - {label: "Nome", name: "name", widget: "string"}
               - {label: "Ruoli", name: "roles", widget: "string"}
               - {label: "Biografia", name: "bio", widget: "text"}
-              - {label: "Foto", name: "photo", widget: "image", required: false}
+              - {label: "Foto profilo", name: "photo", widget: "image", required: false}
 
-          - label: "Servizi / Discipline"
-            name: "services"
+          - label: "Contatti"
+            name: "contacts"
+            widget: "object"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Telefono", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "WhatsApp con prefisso internazionale", name: "whatsapp", widget: "string", required: false}
+
+          - label: "Località operative"
+            name: "locations"
+            widget: "list"
+            required: false
+            field: {label: "Località", name: "location", widget: "string"}
+
+          - label: "Social"
+            name: "socials"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Nome social", name: "label", widget: "string"}
+              - {label: "Link", name: "url", widget: "string", required: false}
+
+          - label: "Discipline"
+            name: "disciplines"
             widget: "list"
             summary: "{{fields.title}}"
+            required: false
             fields:
-              - {label: "Attivo", name: "active", widget: "boolean", default: true, required: false}
-              - {label: "Ordine", name: "order", widget: "number", required: false, value_type: "int"}
-              - {label: "Nome servizio / disciplina", name: "title", widget: "string"}
+              - {label: "Attiva", name: "active", widget: "boolean", default: true}
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "Descrizione breve", name: "short", widget: "text"}
+              - {label: "Descrizione estesa", name: "long", widget: "text"}
               - {label: "Immagine", name: "image", widget: "image", required: false}
-              - {label: "Descrizione breve", name: "description", widget: "text"}
-              - {label: "Descrizione completa", name: "long_description", widget: "text", required: false}
-              - {label: "Specializzazione", name: "specialization", widget: "string", required: false}
+              - label: "Adattamento immagine"
+                name: "imageFit"
+                widget: "select"
+                required: false
+                default: "contain"
+                options:
+                  - {label: "Mostra tutta la foto", value: "contain"}
+                  - {label: "Riempi il riquadro", value: "cover"}
+              - label: "Posizione immagine"
+                name: "imagePosition"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - {label: "Centro", value: "center"}
+                  - {label: "Alto", value: "top"}
+                  - {label: "Basso", value: "bottom"}
+                  - {label: "Sinistra", value: "left"}
+                  - {label: "Destra", value: "right"}
+              - {label: "Icona", name: "icon", widget: "string", required: false}
+              - {label: "Testo pulsante", name: "buttonText", widget: "string", required: false}
+              - {label: "Link pulsante", name: "buttonLink", widget: "string", required: false}
 
-          - label: "Cani"
+          - label: "Cani operativi"
             name: "dogs"
             widget: "list"
             summary: "{{fields.name}}"
+            required: false
             fields:
-              - {label: "Attivo", name: "active", widget: "boolean", default: true, required: false}
-              - {label: "Ordine", name: "order", widget: "number", required: false, value_type: "int"}
               - {label: "Nome", name: "name", widget: "string"}
-              - {label: "Foto", name: "image", widget: "image", required: false}
+              - {label: "Foto", name: "photo", widget: "image", required: false}
+              - label: "Adattamento foto"
+                name: "imageFit"
+                widget: "select"
+                required: false
+                default: "contain"
+                options:
+                  - {label: "Mostra tutta la foto", value: "contain"}
+                  - {label: "Riempi il riquadro", value: "cover"}
+              - label: "Posizione foto"
+                name: "imagePosition"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - {label: "Centro", value: "center"}
+                  - {label: "Alto", value: "top"}
+                  - {label: "Basso", value: "bottom"}
+                  - {label: "Sinistra", value: "left"}
+                  - {label: "Destra", value: "right"}
               - {label: "Razza", name: "breed", widget: "string", required: false}
-              - {label: "Età", name: "age", widget: "string", required: false}
+              - {label: "Sesso", name: "sex", widget: "string", required: false}
+              - {label: "Data di nascita", name: "birth", widget: "string", required: false}
               - {label: "Stato operativo", name: "status", widget: "string"}
-              - {label: "Specializzazione", name: "specialization", widget: "string", required: false}
+              - {label: "Disciplina", name: "discipline", widget: "string"}
+              - {label: "Livello operativo", name: "operationalLevel", widget: "string", required: false}
               - {label: "Certificazioni", name: "certifications", widget: "text", required: false}
               - {label: "Descrizione", name: "description", widget: "text"}
-
-          - label: "Galleria"
-            name: "gallery"
-            widget: "list"
-            summary: "{{fields.title}}"
-            fields:
-              - {label: "Attiva", name: "active", widget: "boolean", default: true, required: false}
-              - {label: "Titolo", name: "title", widget: "string"}
-              - {label: "Immagine", name: "image", widget: "image"}
-              - {label: "Descrizione", name: "caption", widget: "text", required: false}
-
-          - label: "Video"
-            name: "videos"
-            widget: "list"
-            required: false
-            summary: "{{fields.title}}"
-            fields:
-              - {label: "Attivo", name: "active", widget: "boolean", default: true, required: false}
-              - {label: "Titolo", name: "title", widget: "string"}
-              - {label: "URL video", name: "url", widget: "string", required: false}
-              - {label: "Descrizione", name: "caption", widget: "text", required: false}
+              - label: "Galleria immagini"
+                name: "gallery"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Immagine", name: "image", widget: "image"}
+                  - {label: "Titolo", name: "title", widget: "string", required: false}
+              - {label: "Note operative", name: "notes", widget: "text", required: false}
 
           - label: "Corsi"
             name: "courses"
@@ -103,16 +143,15 @@ collections:
             required: false
             summary: "{{fields.title}}"
             fields:
-              - {label: "Attivo", name: "active", widget: "boolean", default: true, required: false}
-              - {label: "Ordine", name: "order", widget: "number", required: false, value_type: "int"}
+              - {label: "Attivo", name: "active", widget: "boolean", default: true}
               - {label: "Titolo corso", name: "title", widget: "string"}
-              - {label: "Locandina / Immagine", name: "image", widget: "image", required: false}
+              - {label: "Locandina", name: "image", widget: "image", required: false}
               - {label: "Data", name: "date", widget: "string", required: false}
               - {label: "Luogo", name: "location", widget: "string", required: false}
               - {label: "Durata", name: "duration", widget: "string", required: false}
               - {label: "Descrizione", name: "description", widget: "text"}
               - {label: "Programma", name: "program", widget: "text", required: false}
-              - {label: "Link iscrizione", name: "signup_url", widget: "string", required: false}
+              - {label: "Link iscrizione", name: "link", widget: "string", required: false}
 
           - label: "Eventi"
             name: "events"
@@ -120,21 +159,80 @@ collections:
             required: false
             summary: "{{fields.title}}"
             fields:
-              - {label: "Attivo", name: "active", widget: "boolean", default: true, required: false}
-              - {label: "Data", name: "date", widget: "string", required: false}
+              - {label: "Attivo", name: "active", widget: "boolean", default: true}
               - {label: "Titolo evento", name: "title", widget: "string"}
-              - {label: "Luogo", name: "location", widget: "string", required: false}
               - {label: "Immagine", name: "image", widget: "image", required: false}
+              - {label: "Data", name: "date", widget: "string", required: false}
+              - {label: "Luogo", name: "location", widget: "string", required: false}
               - {label: "Descrizione", name: "description", widget: "text"}
 
-          - label: "Documenti scaricabili"
-            name: "downloads"
+          - label: "Galleria"
+            name: "gallery"
             widget: "list"
             required: false
             summary: "{{fields.title}}"
             fields:
-              - {label: "Attivo", name: "active", widget: "boolean", default: true, required: false}
-              - {label: "Titolo documento", name: "title", widget: "string"}
+              - {label: "Tipo", name: "type", widget: "select", options: ["image", "video"], default: "image"}
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "File o URL", name: "url", widget: "string", required: false}
+              - label: "Adattamento immagine"
+                name: "imageFit"
+                widget: "select"
+                required: false
+                default: "contain"
+                options:
+                  - {label: "Mostra tutta la foto", value: "contain"}
+                  - {label: "Riempi il riquadro", value: "cover"}
+              - label: "Posizione immagine"
+                name: "imagePosition"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - {label: "Centro", value: "center"}
+                  - {label: "Alto", value: "top"}
+                  - {label: "Basso", value: "bottom"}
+                  - {label: "Sinistra", value: "left"}
+                  - {label: "Destra", value: "right"}
+
+          - label: "Video"
+            name: "videos"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "URL", name: "url", widget: "string", required: false}
+              - {label: "Descrizione", name: "description", widget: "text", required: false}
+
+          - label: "Testimonianze"
+            name: "reviews"
+            widget: "list"
+            required: false
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Foto", name: "photo", widget: "image", required: false}
+              - {label: "Recensione", name: "review", widget: "text"}
+
+          - label: "Partner"
+            name: "partners"
+            widget: "list"
+            required: false
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "image", required: false}
+              - {label: "Sito web", name: "website", widget: "string", required: false}
+              - {label: "Descrizione", name: "description", widget: "text", required: false}
+
+          - label: "Documenti"
+            name: "documents"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
               - {label: "File", name: "file", widget: "file"}
               - {label: "Descrizione", name: "description", widget: "text", required: false}
 
@@ -144,57 +242,8 @@ collections:
             required: false
             summary: "{{fields.question}}"
             fields:
-              - {label: "Attiva", name: "active", widget: "boolean", default: true, required: false}
               - {label: "Domanda", name: "question", widget: "string"}
               - {label: "Risposta", name: "answer", widget: "text"}
 
-          - label: "Testimonianze"
-            name: "testimonials"
-            widget: "list"
-            required: false
-            summary: "{{fields.name}}"
-            fields:
-              - {label: "Attiva", name: "active", widget: "boolean", default: true, required: false}
-              - {label: "Nome", name: "name", widget: "string"}
-              - {label: "Recensione", name: "review", widget: "text"}
-
-          - label: "Partner"
-            name: "partners"
-            widget: "list"
-            required: false
-            summary: "{{fields.name}}"
-            fields:
-              - {label: "Attivo", name: "active", widget: "boolean", default: true, required: false}
-              - {label: "Nome", name: "name", widget: "string"}
-              - {label: "Logo", name: "logo", widget: "image", required: false}
-              - {label: "Link", name: "url", widget: "string", required: false}
-
-          - label: "Social"
-            name: "social"
-            widget: "object"
-            required: false
-            fields:
-              - {label: "Facebook", name: "facebook", widget: "string", required: false}
-              - {label: "Instagram", name: "instagram", widget: "string", required: false}
-              - {label: "TikTok", name: "tiktok", widget: "string", required: false}
-              - {label: "YouTube", name: "youtube", widget: "string", required: false}
-              - {label: "Telegram", name: "telegram", widget: "string", required: false}
-              - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
-
-          - label: "Contatti"
-            name: "contacts"
-            widget: "object"
-            fields:
-              - {label: "Telefono", name: "phone", widget: "string"}
-              - {label: "Email", name: "email", widget: "string"}
-              - {label: "WhatsApp con prefisso internazionale", name: "whatsapp", widget: "string"}
-              - {label: "Zone operative", name: "location", widget: "text"}
-
-          - label: "SEO"
-            name: "seo"
-            widget: "object"
-            fields:
-              - {label: "Titolo SEO", name: "title", widget: "string"}
-              - {label: "Descrizione SEO", name: "description", widget: "text"}
-              - {label: "Keywords", name: "keywords", widget: "text"}
-              
+          - {label: "Footer", name: "footer", widget: "text"}
+          
