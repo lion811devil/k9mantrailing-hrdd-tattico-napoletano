@@ -1,124 +1,244 @@
 {
-  "brand": {
-    "name": "K9 Mantrailing HRDD Tattico Napoletano",
-    "logo": "/logo.png",
-    "tagline": "Mantrailing operativo, HRDD e formazione cinofila specializzata",
-    "description": "Ricerca persone scomparse o disperse, ricerca in HRDD e formazione operativa con approccio tecnico, responsabile e professionale."
-  },
-  "partners": [],
-  "sections": {
-    "mantrailing": "Il Mantrailing è una disciplina operativa basata sulla capacità del cane di seguire la traccia odorosa specifica di una persona. L’obiettivo è costruire binomi affidabili, capaci di lavorare in contesti urbani, rurali e complessi.",
-    "hrdd": "HRDD significa Human Remains Detection Dog: ricerca di resti umani. È un ambito specialistico che richiede metodo, progressione tecnica, controllo, precisione e forte responsabilità operativa.",
-    "training": "La formazione è rivolta a conduttori, unità cinofile, gruppi operativi e realtà che vogliono sviluppare competenze nel lavoro di ricerca, nella gestione del cane e nella lettura del comportamento operativo."
-  },
   "homepage": {
     "title": "K9 Mantrailing HRDD Tattico Napoletano",
-    "subtitle": "Mantrailing operativo e sportivo, HRDD, ricerca persone, formazione cinofila e preparazione tecnica del binomio.",
-    "hero_image": "/logo.png"
+    "subtitle": "Unità cinofila specialistica dedicata a ricerca persone scomparse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
+    "hero_image": "/assets/img/logo-fusione.png"
   },
-  "gallery": [
-    {
-      "title": "Addestramento operativo",
-      "image": "/assets/uploads/1000230323.jpg",
-      "caption": "Segnalazione dopo ritrovamento disperso"
-    }
-  ],
-  "contacts": {
-    "phone": "3281650082",
-    "email": "napoletano.giovanni.81@gmail.com",
-    "whatsapp": "393281650082",
-    "location": "San Giuliano Milanese, Desenzano del Garda, ricerca internazionale"
+  "brand": {
+    "name": "K9 Mantrailing HRDD Tattico Napoletano",
+    "logo": "/assets/img/logo-fusione.png",
+    "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
+    "description": "Unità cinofila specialistica dedicata a ricerca persone scomparse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali."
   },
   "owner": {
     "name": "Napoletano Giovanni",
     "roles": "Docente, formatore, responsabile dell’unità cinofila e operativo",
-    "bio": "Mi occupo di formazione, operatività cinofila, Mantrailing e ricerca in HRDD. Il lavoro è centrato sulla preparazione tecnica del binomio, sulla lettura del cane e sulla responsabilità operativa in contesti reali e addestrativi.",
-    "photo": "/assets/uploads/1000233954.jpg"
-  },
-  "testimonials": [],
-  "dogs": [
-    {
-      "name": "Kira",
-      "image": "/assets/uploads/1000209620.png",
-      "breed": "",
-      "age": "",
-      "status": "Operativa in Protezione Civile del Basso Garda",
-      "certifications": "",
-      "description": "Unità operativa con esperienza nel lavoro di ricerca e addestramento."
-    },
-    {
-      "name": "Bruss",
-      "image": "/assets/uploads/1000209621.png",
-      "breed": "",
-      "age": "",
-      "status": "Operativo in Protezione Civile del Basso Garda",
-      "certifications": "",
-      "description": "Cane operativo impiegato in attività di Protezione Civile e lavoro cinofilo."
-    },
-    {
-      "name": "Alaska",
-      "image": "/assets/uploads/1000233816.jpg",
-      "breed": "",
-      "age": "",
-      "status": "In costruzione, futura operativa",
-      "certifications": "",
-      "description": "Percorso di crescita tecnico e operativo in fase di sviluppo."
-    },
-    {
-      "name": "Talpina",
-      "image": "/assets/uploads/1000001121.jpg",
-      "breed": "",
-      "age": "",
-      "status": "Unità del gruppo",
-      "certifications": "",
-      "description": "Parte del progetto cinofilo K9 Mantrailing HRDD Tattico Napoletano."
-    },
-    {
-      "name": "Blanka",
-      "image": "/assets/uploads/1000080520.jpg",
-      "breed": "",
-      "age": "",
-      "status": "Unità del gruppo",
-      "certifications": "",
-      "description": "Parte del progetto cinofilo K9 Mantrailing HRDD Tattico Napoletano."
-    }
-  ],
-  "videos": [],
-  "seo": {
-    "title": "K9 Mantrailing HRDD Tattico Napoletano",
-    "description": "Mantrailing, HRDD, ricerca persone, ricerca resti umani, formazione cinofila e unità operative con Napoletano Giovanni.",
-    "keywords": "mantrailing, HRDD, ricerca persone disperse, ricerca resti umani, unità cinofila, protezione civile cinofila, cani da ricerca, formazione cinofila, Napoletano Giovanni, San Giuliano Milanese, Desenzano del Garda"
+    "bio": "Il progetto K9 Mantrailing HRDD Tattico Napoletano nasce per presentare attività cinofile specialistiche, formazione operativa e lavoro sul campo con un approccio serio, tecnico e professionale.",
+    "photo": ""
   },
   "services": [
     {
-      "title": "Mantrailing operativo",
-      "image": "/assets/uploads/1000230281.jpg",
-      "description": "Disciplina basata sulla capacità del cane di seguire la traccia odorosa specifica di una persona. L’obiettivo è costruire binomi affidabili in contesti urbani, rurali e complessi."
-    },
-    {
-      "title": "HRDD - Human Remains Detection Dog",
-      "image": "/assets/uploads/1000112050.jpg",
-      "description": "Ricerca specialistica di resti umani. È un ambito tecnico che richiede metodo, progressione, controllo, precisione e forte responsabilità operativa."
-    },
-    {
-      "title": "Formazione conduttori e unità cinofile",
+      "active": true,
+      "order": 1,
+      "title": "Mantrailing - Ricerca Persone Scomparse",
       "image": "",
-      "description": "Percorsi rivolti a conduttori, unità cinofile, gruppi operativi e realtà che vogliono sviluppare competenze nel lavoro di ricerca e nella gestione del cane."
+      "description": "Ricerca della traccia individuale di una persona tramite il lavoro olfattivo del cane.",
+      "long_description": "Il Mantrailing utilizza la capacità olfattiva del cane per seguire la traccia specifica di una persona, partendo da un riferimento odoroso. È una disciplina centrale per la ricerca di persone disperse e scomparse, con lavoro su motivazione, conduzione, lettura del cane e gestione dello scenario operativo.",
+      "specialization": "🐾"
     },
     {
-      "title": "Ricerca persone disperse",
+      "active": true,
+      "order": 2,
+      "title": "HRDD - Ricerca Resti Umani",
       "image": "",
-      "description": "Preparazione tecnica del binomio per attività di ricerca persone, con attenzione alla lettura del cane, alla gestione dello scenario e alla sicurezza operativa."
+      "description": "Attività specialistica per la ricerca di resti umani e tracce biologiche umane.",
+      "long_description": "HRDD significa Human Remains Detection Dog. La disciplina richiede formazione specifica, metodo, controllo ambientale e grande precisione nella gestione del binomio cane-conduttore. È trattata come attività specialistica con attenzione a sicurezza, etica e contesto operativo.",
+      "specialization": "☠️"
     },
     {
+      "active": true,
+      "order": 3,
+      "title": "Rieducazione in acqua di comportamenti problematici",
+      "image": "",
+      "description": "Percorsi controllati in ambiente acquatico per migliorare gestione, fiducia e autocontrollo.",
+      "long_description": "L’acqua può essere usata come ambiente strutturato per lavorare su fiducia, gestione emotiva, coordinazione, collaborazione e recupero di comportamenti problematici, sempre con gradualità e attenzione al benessere del cane.",
+      "specialization": "🌊"
+    },
+    {
+      "active": true,
+      "order": 4,
+      "title": "Educazione cinofila",
+      "image": "",
+      "description": "Percorsi educativi per migliorare relazione, comunicazione e gestione quotidiana.",
+      "long_description": "L’educazione cinofila lavora sulla relazione uomo-cane, sulla comunicazione, sulle regole di convivenza e sulla gestione pratica del cane nella vita quotidiana.",
+      "specialization": "🎓"
+    },
+    {
+      "active": true,
+      "order": 5,
+      "title": "Formazione operatori cinofili",
+      "image": "",
+      "description": "Formazione tecnica per operatori, conduttori e figure cinofile operative.",
+      "long_description": "Percorsi dedicati a chi opera o vuole formarsi nel settore cinofilo, con moduli teorici e pratici su conduzione, sicurezza, lettura del cane e impostazione del lavoro.",
+      "specialization": "🛡️"
+    },
+    {
+      "active": true,
+      "order": 6,
+      "title": "Obedience",
+      "image": "",
+      "description": "Precisione, ascolto, autocontrollo e collaborazione del binomio.",
+      "long_description": "L’Obedience sviluppa attenzione, precisione, autocontrollo e collaborazione. È utile sia come disciplina sportiva sia come base tecnica per un cane più equilibrato e gestibile.",
+      "specialization": "🎯"
+    },
+    {
+      "active": true,
+      "order": 7,
+      "title": "Puppy class",
+      "image": "",
+      "description": "Percorsi per cuccioli orientati a socializzazione, sicurezza e corrette abitudini.",
+      "long_description": "Le puppy class aiutano il cucciolo a sviluppare competenze sociali, sicurezza ambientale, autocontrollo e corrette basi educative fin dalle prime fasi della crescita.",
+      "specialization": "🐶"
+    },
+    {
+      "active": true,
+      "order": 8,
+      "title": "Dogsitter",
+      "image": "",
+      "description": "Formazione e supporto per gestione professionale del cane.",
+      "long_description": "La formazione dogsitter prepara alla gestione responsabile del cane, con attenzione a sicurezza, comunicazione, bisogni etologici, prevenzione degli incidenti e corretto rapporto con il proprietario.",
+      "specialization": "🤝"
+    },
+    {
+      "active": true,
+      "order": 9,
       "title": "Protezione Civile cinofila",
       "image": "",
-      "description": "Supporto formativo e operativo per attività cinofile collegate a contesti di Protezione Civile, esercitazioni, simulazioni e preparazione del binomio."
+      "description": "Preparazione del binomio per contesti di supporto, emergenza e ricerca.",
+      "long_description": "La Protezione Civile cinofila richiede disciplina, metodo, collaborazione e formazione continua. Il lavoro è orientato alla preparazione del binomio in scenari di ricerca e supporto operativo.",
+      "specialization": "🚨"
     },
     {
-      "title": "Educazione cinofila e problem solving",
+      "active": true,
+      "order": 10,
+      "title": "Problem solving comportamentale",
       "image": "",
-      "description": "Percorsi educativi orientati alla relazione, alla gestione del cane, alla comunicazione e alla risoluzione di difficoltà comportamentali."
+      "description": "Analisi e gestione di comportamenti problematici con percorsi personalizzati.",
+      "long_description": "Il problem solving comportamentale parte dall’osservazione del cane, del contesto e della relazione con il proprietario, costruendo percorsi progressivi e realistici per migliorare la gestione.",
+      "specialization": "🧠"
     }
-  ]
+  ],
+  "dogs": [
+    {
+      "active": true,
+      "order": 1,
+      "name": "Kira",
+      "image": "",
+      "breed": "",
+      "age": "",
+      "status": "Operativa in Protezione Civile del Basso Garda",
+      "specialization": "Protezione Civile cinofila / Ricerca",
+      "certifications": "Inserire note operative specifiche.",
+      "description": "Scheda modificabile dal CMS con foto, descrizione e note operative."
+    },
+    {
+      "active": true,
+      "order": 2,
+      "name": "Bruss",
+      "image": "",
+      "breed": "",
+      "age": "",
+      "status": "Operativo in Protezione Civile del Basso Garda",
+      "specialization": "Protezione Civile cinofila / Ricerca",
+      "certifications": "Inserire note operative specifiche.",
+      "description": "Scheda modificabile dal CMS con foto, descrizione e note operative."
+    },
+    {
+      "active": true,
+      "order": 3,
+      "name": "Alaska",
+      "image": "",
+      "breed": "",
+      "age": "",
+      "status": "In costruzione, futura operativa",
+      "specialization": "Formazione operativa",
+      "certifications": "Aggiornare progressi dal CMS.",
+      "description": "Percorso di crescita e preparazione operativa."
+    },
+    {
+      "active": true,
+      "order": 4,
+      "name": "Talpina",
+      "image": "",
+      "breed": "",
+      "age": "",
+      "status": "Scheda da completare",
+      "specialization": "Attività cinofila",
+      "certifications": "",
+      "description": "Profilo modificabile dal CMS."
+    },
+    {
+      "active": true,
+      "order": 5,
+      "name": "Blanka",
+      "image": "",
+      "breed": "",
+      "age": "",
+      "status": "Scheda da completare",
+      "specialization": "Attività cinofila",
+      "certifications": "",
+      "description": "Profilo modificabile dal CMS."
+    }
+  ],
+  "gallery": [
+    {
+      "active": true,
+      "title": "Logo ufficiale",
+      "image": "/assets/img/logo-orizzontale.png",
+      "caption": ""
+    },
+    {
+      "active": true,
+      "title": "Emblema tattico",
+      "image": "/assets/img/logo-fusione.png",
+      "caption": ""
+    }
+  ],
+  "videos": [
+    {
+      "active": true,
+      "title": "Video presentazione",
+      "url": "",
+      "caption": ""
+    }
+  ],
+  "courses": [
+    {
+      "active": true,
+      "order": 1,
+      "title": "Corso Dogsitter",
+      "image": "",
+      "date": "",
+      "location": "",
+      "duration": "11 ore teoriche • 5 ore pratiche",
+      "description": "Percorso formativo dedicato alla gestione professionale e responsabile del cane.",
+      "program": "Sicurezza, gestione, comunicazione, bisogni del cane, prevenzione degli incidenti e rapporto con il proprietario.",
+      "signup_url": ""
+    }
+  ],
+  "events": [],
+  "downloads": [],
+  "faq": [
+    {
+      "active": true,
+      "question": "Come posso richiedere informazioni sui corsi?",
+      "answer": "Puoi contattare direttamente Napoletano Giovanni tramite WhatsApp, telefono o email indicati nella sezione contatti."
+    },
+    {
+      "active": true,
+      "question": "Le attività sono rivolte solo a unità operative?",
+      "answer": "No. Il progetto comprende sia attività operative specialistiche sia percorsi formativi, educativi e introduttivi."
+    }
+  ],
+  "testimonials": [],
+  "partners": [],
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "telegram": "",
+    "linkedin": ""
+  },
+  "contacts": {
+    "phone": "3281650082",
+    "email": "napoletano.giovanni.81@gmail.com",
+    "whatsapp": "393281650082",
+    "location": "San Giuliano Milanese, Desenzano del Garda, Ricerca internazionale"
+  },
+  "seo": {
+    "title": "K9 Mantrailing HRDD Tattico Napoletano",
+    "description": "Unità cinofila specialistica dedicata a ricerca persone scomparse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
+    "keywords": "mantrailing, HRDD, ricerca persone scomparse, ricerca resti umani, unità cinofila, protezione civile cinofila, formazione cinofila, dogsitter, educazione cinofila, Napoletano Giovanni, San Giuliano Milanese, Desenzano del Garda"
+  }
 }
