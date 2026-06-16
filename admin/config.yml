@@ -12,114 +12,245 @@ display_url: "https://k9mantrailing-hrdd-tattico-napoletano.netlify.app"
 logo_url: "/logo.png"
 
 collections:
+  - name: "settings"
+    label: "Gestione sito"
+    files:
+      - label: "Contenuti principali"
+        name: "site"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - {label: "Nome sito", name: "siteName", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "image", required: false}
+          - {label: "Logo secondario", name: "logoSecondary", widget: "image", required: false}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "Titolo Hero", name: "heroTitle", widget: "string"}
+          - {label: "Sottotitolo Hero", name: "heroSubtitle", widget: "text"}
+          - {label: "Immagine Hero", name: "heroImage", widget: "image", required: false}
 
-- name: "settings"
-  label: "Gestione sito"
-  files:
-    - label: "Contenuti principali"
-      name: "site"
-      file: "content/site.json"
-      format: "json"
-      fields:
-        - {label: "Homepage", name: "homepage", widget: "object"}
-        - {label: "Marchio", name: "brand", widget: "object"}
-        - {label: "Proprietario", name: "owner", widget: "object"}
-        - {label: "Contatti", name: "contacts", widget: "object"}
-        - {label: "SEO", name: "seo", widget: "object"}
+          - label: "Giovanni Napoletano"
+            name: "owner"
+            widget: "object"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Ruoli", name: "roles", widget: "string"}
+              - {label: "Biografia", name: "bio", widget: "text"}
+              - {label: "Foto profilo", name: "photo", widget: "image", required: false}
 
-- name: "discipline"
-  label: "Discipline"
-  folder: "content/disciplines"
-  create: true
-  slug: "{{slug}}"
-  extension: "json"
-  format: "json"
-  fields:
-    - {label: "Titolo", name: "title", widget: "string"}
-    - {label: "Immagine", name: "image", widget: "image", required: false}
-    - {label: "Descrizione", name: "description", widget: "text"}
+          - label: "Contatti"
+            name: "contacts"
+            widget: "object"
+            fields:
+              - {label: "Referente", name: "name", widget: "string"}
+              - {label: "Telefono", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "WhatsApp con prefisso internazionale", name: "whatsapp", widget: "string", required: false}
 
-- name: "dogs"
-  label: "Cani"
-  folder: "content/dogs"
-  create: true
-  slug: "{{slug}}"
-  extension: "json"
-  format: "json"
-  fields:
-    - {label: "Nome", name: "name", widget: "string"}
-    - {label: "Foto", name: "image", widget: "image"}
-    - {label: "Razza", name: "breed", widget: "string", required: false}
-    - {label: "Età", name: "age", widget: "string", required: false}
-    - {label: "Stato operativo", name: "status", widget: "string"}
-    - {label: "Descrizione", name: "description", widget: "text"}
+          - label: "Località operative"
+            name: "locations"
+            widget: "list"
+            required: false
+            field:
+              label: "Località"
+              name: "location"
+              widget: "string"
 
-- name: "courses"
-  label: "Corsi"
-  folder: "content/courses"
-  create: true
-  slug: "{{slug}}"
-  extension: "json"
-  format: "json"
-  fields:
-    - {label: "Titolo", name: "title", widget: "string"}
-    - {label: "Immagine", name: "image", widget: "image", required: false}
-    - {label: "Descrizione", name: "description", widget: "text"}
+          - label: "Social"
+            name: "socials"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            fields:
+              - {label: "Nome social", name: "label", widget: "string"}
+              - {label: "URL", name: "url", widget: "string", required: false}
 
-- name: "events"
-  label: "Eventi"
-  folder: "content/events"
-  create: true
-  slug: "{{slug}}"
-  extension: "json"
-  format: "json"
-  fields:
-    - {label: "Titolo", name: "title", widget: "string"}
-    - {label: "Data", name: "date", widget: "datetime"}
-    - {label: "Descrizione", name: "description", widget: "text"}
+          - label: "Discipline"
+            name: "disciplines"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Attiva", name: "active", widget: "boolean", default: true}
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "Icona", name: "icon", widget: "string", required: false}
+              - {label: "Immagine", name: "image", widget: "image", required: false}
+              - label: "Adattamento immagine"
+                name: "imageFit"
+                widget: "select"
+                default: "contain"
+                options:
+                  - {label: "Mostra tutta la foto", value: "contain"}
+                  - {label: "Riempi il riquadro", value: "cover"}
+              - label: "Posizione immagine"
+                name: "imagePosition"
+                widget: "select"
+                default: "center"
+                options:
+                  - {label: "Centro", value: "center"}
+                  - {label: "Alto", value: "top"}
+                  - {label: "Basso", value: "bottom"}
+                  - {label: "Sinistra", value: "left"}
+                  - {label: "Destra", value: "right"}
+              - {label: "Descrizione breve", name: "short", widget: "text"}
+              - {label: "Descrizione estesa", name: "long", widget: "text"}
+              - {label: "Testo pulsante", name: "buttonText", widget: "string", required: false}
+              - {label: "Link pulsante", name: "buttonLink", widget: "string", required: false}
 
-- name: "gallery"
-  label: "Galleria"
-  folder: "content/gallery"
-  create: true
-  slug: "{{slug}}"
-  extension: "json"
-  format: "json"
-  fields:
-    - {label: "Titolo", name: "title", widget: "string"}
-    - {label: "Immagine", name: "image", widget: "image"}
-    - {label: "Descrizione", name: "caption", widget: "text", required: false}
+          - label: "Cani"
+            name: "dogs"
+            widget: "list"
+            required: false
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Foto", name: "photo", widget: "image", required: false}
+              - label: "Adattamento foto"
+                name: "imageFit"
+                widget: "select"
+                default: "contain"
+                options:
+                  - {label: "Mostra tutta la foto", value: "contain"}
+                  - {label: "Riempi il riquadro", value: "cover"}
+              - label: "Posizione foto"
+                name: "imagePosition"
+                widget: "select"
+                default: "center"
+                options:
+                  - {label: "Centro", value: "center"}
+                  - {label: "Alto", value: "top"}
+                  - {label: "Basso", value: "bottom"}
+                  - {label: "Sinistra", value: "left"}
+                  - {label: "Destra", value: "right"}
+              - {label: "Razza", name: "breed", widget: "string", required: false}
+              - {label: "Sesso", name: "sex", widget: "string", required: false}
+              - {label: "Data nascita", name: "birth", widget: "string", required: false}
+              - {label: "Stato operativo", name: "status", widget: "string"}
+              - {label: "Disciplina", name: "discipline", widget: "string", required: false}
+              - {label: "Livello operativo", name: "operationalLevel", widget: "string", required: false}
+              - {label: "Certificazioni", name: "certifications", widget: "text", required: false}
+              - {label: "Descrizione", name: "description", widget: "text"}
+              - label: "Galleria del cane"
+                name: "gallery"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Titolo", name: "title", widget: "string", required: false}
+                  - {label: "Immagine", name: "image", widget: "image"}
+              - {label: "Note operative", name: "notes", widget: "text", required: false}
 
-- name: "videos"
-  label: "Video"
-  folder: "content/videos"
-  create: true
-  slug: "{{slug}}"
-  extension: "json"
-  format: "json"
-  fields:
-    - {label: "Titolo", name: "title", widget: "string"}
-    - {label: "URL", name: "url", widget: "string"}
+          - label: "Corsi"
+            name: "courses"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Attivo", name: "active", widget: "boolean", default: true}
+              - {label: "Titolo corso", name: "title", widget: "string"}
+              - {label: "Locandina / Immagine", name: "image", widget: "image", required: false}
+              - {label: "Data", name: "date", widget: "string", required: false}
+              - {label: "Luogo", name: "location", widget: "string", required: false}
+              - {label: "Durata", name: "duration", widget: "string", required: false}
+              - {label: "Descrizione", name: "description", widget: "text"}
+              - {label: "Programma", name: "program", widget: "text", required: false}
+              - {label: "Link iscrizione", name: "link", widget: "string", required: false}
 
-- name: "faq"
-  label: "FAQ"
-  folder: "content/faq"
-  create: true
-  slug: "{{slug}}"
-  extension: "json"
-  format: "json"
-  fields:
-    - {label: "Domanda", name: "question", widget: "string"}
-    - {label: "Risposta", name: "answer", widget: "text"}
+          - label: "Eventi"
+            name: "events"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Attivo", name: "active", widget: "boolean", default: true}
+              - {label: "Titolo evento", name: "title", widget: "string"}
+              - {label: "Immagine", name: "image", widget: "image", required: false}
+              - {label: "Data", name: "date", widget: "string", required: false}
+              - {label: "Luogo", name: "location", widget: "string", required: false}
+              - {label: "Descrizione", name: "description", widget: "text"}
 
-- name: "partners"
-  label: "Partner"
-  folder: "content/partners"
-  create: true
-  slug: "{{slug}}"
-  extension: "json"
-  format: "json"
-  fields:
-    - {label: "Nome", name: "name", widget: "string"}
-    - {label: "Logo", name: "logo", widget: "image"}
-    
+          - label: "Galleria"
+            name: "gallery"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - label: "Tipo"
+                name: "type"
+                widget: "select"
+                default: "image"
+                options:
+                  - {label: "Immagine", value: "image"}
+                  - {label: "Video", value: "video"}
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "File immagine o URL video", name: "url", widget: "string"}
+              - label: "Adattamento immagine"
+                name: "imageFit"
+                widget: "select"
+                default: "contain"
+                required: false
+                options:
+                  - {label: "Mostra tutta la foto", value: "contain"}
+                  - {label: "Riempi il riquadro", value: "cover"}
+              - label: "Posizione immagine"
+                name: "imagePosition"
+                widget: "select"
+                default: "center"
+                required: false
+                options:
+                  - {label: "Centro", value: "center"}
+                  - {label: "Alto", value: "top"}
+                  - {label: "Basso", value: "bottom"}
+                  - {label: "Sinistra", value: "left"}
+                  - {label: "Destra", value: "right"}
+
+          - label: "Video"
+            name: "videos"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "URL", name: "url", widget: "string", required: false}
+              - {label: "Descrizione", name: "description", widget: "text", required: false}
+
+          - label: "Testimonianze"
+            name: "reviews"
+            widget: "list"
+            required: false
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Foto", name: "photo", widget: "image", required: false}
+              - {label: "Recensione", name: "review", widget: "text"}
+
+          - label: "Partner"
+            name: "partners"
+            widget: "list"
+            required: false
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "image", required: false}
+              - {label: "Sito web", name: "website", widget: "string", required: false}
+              - {label: "Descrizione", name: "description", widget: "text", required: false}
+
+          - label: "Documenti"
+            name: "documents"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "File", name: "file", widget: "file"}
+              - {label: "Descrizione", name: "description", widget: "text", required: false}
+
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            required: false
+            summary: "{{fields.question}}"
+            fields:
+              - {label: "Domanda", name: "question", widget: "string"}
+              - {label: "Risposta", name: "answer", widget: "text"}
+
+          - {label: "Footer", name: "footer", widget: "text", required: false}
+          
