@@ -1,34 +1,62 @@
 {
-  "siteName": "K9 Mantrailing HRDD Tattico Napoletano",
-  "logo": "/assets/uploads/1000234965.jpg",
-  "logoSecondary": "/assets/uploads/1000234965.jpg",
-
-  "heroTitle": "K9 Mantrailing HRDD Tattico Napoletano",
-  "heroSubtitle": "Unità cinofila specialistica dedicata a ricerca persone scomparse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
-  "heroImage": "/assets/uploads/1000234965.jpg",
-
-  "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
-
-  "owner": {
-    "name": "Napoletano Giovanni",
-    "roles": "Docente, formatore, responsabile dell’unità cinofila e operativo",
-    "bio": "Il progetto K9 Mantrailing HRDD Tattico Napoletano nasce per presentare attività cinofile specialistiche, formazione operativa e lavoro sul campo con un approccio serio, tecnico e professionale.",
-    "photo": "/assets/uploads/1000234965.jpg"
-  },
-
-  "contacts": {
-    "name": "Napoletano Giovanni",
-    "phone": "3281650082",
-    "email": "napoletano.giovanni.81@gmail.com",
-    "whatsapp": "393281650082"
-  },
-
-  "locations": [
-    "San Giuliano Milanese",
-    "Desenzano del Garda",
-    "Ricerca internazionale"
+  "heroImage": "/assets/uploads/1000217803.png",
+  "disciplines": [
+    {
+      "imagePosition": "center",
+      "active": true,
+      "buttonLink": "",
+      "imageFit": "contain",
+      "title": "Mantrailing - Ricerca Persone Scomparse",
+      "icon": "🐾",
+      "image": "",
+      "short": "Ricerca della traccia individuale di una persona tramite il lavoro olfattivo del cane.",
+      "long": "Il Mantrailing utilizza la capacità olfattiva del cane per seguire la traccia specifica di una persona, partendo da un riferimento odoroso.",
+      "buttonText": ""
+    },
+    {
+      "imagePosition": "center",
+      "active": true,
+      "buttonLink": "",
+      "imageFit": "contain",
+      "title": "HRDD - Ricerca Resti Umani",
+      "icon": "☠️",
+      "image": "",
+      "short": "Attività specialistica per la ricerca di resti umani e tracce biologiche umane.",
+      "long": "Disciplina specialistica Human Remains Detection Dog.",
+      "buttonText": ""
+    },
+    {
+      "imagePosition": "center",
+      "active": true,
+      "buttonLink": "",
+      "imageFit": "contain",
+      "title": "Educazione cinofila",
+      "icon": "🎓",
+      "image": "",
+      "short": "Percorsi educativi per migliorare relazione e gestione.",
+      "long": "Percorsi educativi personalizzati.",
+      "buttonText": ""
+    }
   ],
-
+  "socials": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "YouTube",
+      "url": ""
+    }
+  ],
+  "logoSecondary": "/assets/uploads/1000217802.png",
+  "logo": "/assets/uploads/1000217802.png",
+  "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
+  "heroSubtitle": "Unità cinofila specialistica dedicata a ricerca persone scomparse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
+  "siteName": "K9 Mantrailing HRDD Tattico Napoletano",
   "gallery": [
     {
       "type": "image",
@@ -45,102 +73,40 @@
       "imagePosition": "center"
     }
   ],
-
-  "socials": [
+  "contacts": {
+    "name": "Napoletano Giovanni",
+    "phone": "3281650082",
+    "email": "napoletano.giovanni.81@gmail.com",
+    "whatsapp": "393281650082"
+  },
+  "owner": {
+    "name": "Napoletano Giovanni",
+    "roles": "Docente, formatore, responsabile dell’unità cinofila e operativo",
+    "bio": "Il progetto K9 Mantrailing HRDD Tattico Napoletano nasce per presentare attività cinofile specialistiche, formazione operativa e lavoro sul campo con un approccio serio, tecnico e professionale.",
+    "photo": "/assets/uploads/1000234965.jpg"
+  },
+  "faq": [
     {
-      "label": "Facebook",
-      "url": ""
+      "question": "Come posso richiedere informazioni sui corsi?",
+      "answer": "Puoi contattare direttamente Napoletano Giovanni tramite telefono, email o WhatsApp."
     },
     {
-      "label": "Instagram",
-      "url": ""
-    },
-    {
-      "label": "YouTube",
-      "url": ""
+      "question": "Le discipline possono essere aggiornate?",
+      "answer": "Sì, dal CMS."
     }
   ],
-
-  "disciplines": [
-    {
-      "active": true,
-      "title": "Mantrailing - Ricerca Persone Scomparse",
-      "icon": "🐾",
-      "image": "",
-      "short": "Ricerca della traccia individuale di una persona tramite il lavoro olfattivo del cane.",
-      "long": "Il Mantrailing utilizza la capacità olfattiva del cane per seguire la traccia specifica di una persona, partendo da un riferimento odoroso.",
-      "buttonText": "",
-      "buttonLink": "",
-      "imageFit": "contain",
-      "imagePosition": "center"
-    },
-    {
-      "active": true,
-      "title": "HRDD - Ricerca Resti Umani",
-      "icon": "☠️",
-      "image": "",
-      "short": "Attività specialistica per la ricerca di resti umani e tracce biologiche umane.",
-      "long": "Disciplina specialistica Human Remains Detection Dog.",
-      "buttonText": "",
-      "buttonLink": "",
-      "imageFit": "contain",
-      "imagePosition": "center"
-    },
-    {
-      "active": true,
-      "title": "Educazione cinofila",
-      "icon": "🎓",
-      "image": "",
-      "short": "Percorsi educativi per migliorare relazione e gestione.",
-      "long": "Percorsi educativi personalizzati.",
-      "buttonText": "",
-      "buttonLink": "",
-      "imageFit": "contain",
-      "imagePosition": "center"
-    }
-  ],
-
   "dogs": [
     {
       "name": "Kira",
       "status": "Operativa in Protezione Civile del Basso Garda",
       "discipline": "Protezione Civile cinofila / Ricerca",
-      "description": "Scheda modificabile dal CMS con foto, descrizione e note operative.",
-      "photo": "",
-      "notes": "Inserire note operative specifiche."
-    },
-    {
-      "name": "Bruss",
-      "status": "Operativo in Protezione Civile del Basso Garda",
-      "discipline": "Protezione Civile cinofila / Ricerca",
-      "description": "Scheda modificabile dal CMS con foto, descrizione e note operative.",
-      "photo": "",
-      "notes": "Inserire note operative specifiche."
-    },
-    {
-      "name": "Alaska",
-      "status": "In costruzione, futura operativa",
-      "discipline": "Formazione operativa",
-      "description": "Percorso di crescita e preparazione operativa.",
-      "photo": "",
-      "notes": "Aggiornare progressi dal CMS."
-    },
-    {
-      "name": "Talpina",
-      "status": "Scheda da completare",
-      "discipline": "Attività cinofila",
-      "description": "Profilo modificabile dal CMS.",
-      "photo": ""
-    },
-    {
-      "name": "Blanka",
-      "status": "Scheda da completare",
-      "discipline": "Attività cinofila",
-      "description": "Profilo modificabile dal CMS.",
-      "photo": ""
+      "description": "Operativa in protezione civile in Mantrailing e HRDD ",
+      "photo": "/assets/uploads/1000234967.png",
+      "notes": "Inserire note operative specifiche.",
+      "imageFit": "contain",
+      "imagePosition": "center"
     }
   ],
-
   "courses": [
     {
       "title": "Corso Dogsitter",
@@ -150,7 +116,6 @@
       "active": true
     }
   ],
-
   "events": [
     {
       "title": "Stage Mantrailing",
@@ -163,17 +128,11 @@
       "active": true
     }
   ],
-
-  "faq": [
-    {
-      "question": "Come posso richiedere informazioni sui corsi?",
-      "answer": "Puoi contattare direttamente Napoletano Giovanni tramite telefono, email o WhatsApp."
-    },
-    {
-      "question": "Le discipline possono essere aggiornate?",
-      "answer": "Sì, dal CMS."
-    }
-  ],
-
-  "footer": "© K9 Mantrailing HRDD Tattico Napoletano - Tutti i diritti riservati."
+  "footer": "© K9 Mantrailing HRDD Tattico Napoletano - Tutti i diritti riservati.",
+  "heroTitle": "K9 Mantrailing HRDD Tattico Napoletano",
+  "locations": [
+    "San Giuliano Milanese",
+    "Desenzano del Garda",
+    "Ricerca internazionale"
+  ]
 }
