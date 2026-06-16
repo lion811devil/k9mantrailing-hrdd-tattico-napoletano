@@ -252,10 +252,7 @@ h2{
   color:var(--muted);
 }
 
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-
 .discipline,.dogs,.gallery,.reviews,.partners,.courses,.events,.documents,.faqGrid{
   display:grid;
   gap:20px;
@@ -283,15 +280,8 @@ h2{
   font-size:26px;
   margin-bottom:12px;
 }
-.status{
-  font-weight:900;
-  color:var(--text);
-}
-.meta{
-  color:var(--gold);
-  font-weight:900;
-  margin:0 0 8px;
-}
+.status{font-weight:900;color:var(--text)}
+.meta{color:var(--gold);font-weight:900;margin:0 0 8px}
 .gallery figure{
   margin:0;
   background:#111;
@@ -299,24 +289,9 @@ h2{
   border-radius:28px;
   overflow:hidden;
 }
-.gallery img{
-  width:100%;
-  height:auto;
-  object-fit:contain;
-  background:#111;
-}
-figcaption{
-  padding:18px;
-  color:var(--muted);
-}
+figcaption{padding:18px;color:var(--muted)}
 figcaption b{color:var(--text)}
-.empty{
-  border:1px dashed rgba(255,255,255,.24);
-  border-radius:22px;
-  padding:24px;
-  color:var(--muted);
-  background:rgba(255,255,255,.025);
-}
+
 .contact{
   background:
     radial-gradient(circle at 85% 30%,rgba(26,143,69,.22),transparent 30%),
@@ -334,13 +309,8 @@ figcaption b{color:var(--text)}
   color:var(--muted);
 }
 .contactLine b{color:var(--text)}
-.socials{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:16px;
-}
-.socials a{
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.socials a,.socials span{
   text-decoration:none;
   padding:10px 13px;
   border-radius:999px;
@@ -367,18 +337,13 @@ figcaption b{color:var(--text)}
   font-weight:900;
   box-shadow:0 18px 48px rgba(0,0,0,.45);
 }
-.footer{
-  padding:34px 0;
-  color:var(--muted);
-  font-size:15px;
-  background:#030303;
-}
+.footer{padding:34px 0;color:var(--muted);font-size:15px;background:#030303}
 
 @media(max-width:900px){
   .links{display:none}
   .heroInner,.profile,.contactBox,.grid2{grid-template-columns:1fr}
   .discipline,.dogs,.gallery,.reviews,.courses,.events,.faqGrid{grid-template-columns:1fr 1fr}
-  .partners,.documents,.grid4{grid-template-columns:1fr 1fr}
+  .partners,.documents{grid-template-columns:1fr 1fr}
   .hero{min-height:auto}
 }
 @media(max-width:560px){
@@ -388,7 +353,7 @@ figcaption b{color:var(--text)}
   .heroInner{padding:54px 0 38px}
   h1{font-size:clamp(42px,14vw,62px)}
   .lead{font-size:20px}
-  .discipline,.dogs,.gallery,.reviews,.courses,.events,.faqGrid,.partners,.documents,.grid3,.grid4{grid-template-columns:1fr}
+  .discipline,.dogs,.gallery,.reviews,.courses,.events,.faqGrid,.partners,.documents{grid-template-columns:1fr}
   section{padding:54px 0}
   .heroCard{padding:18px;border-radius:26px}
   .floatWA{width:64px;height:64px;right:16px;bottom:16px}
@@ -449,108 +414,16 @@ figcaption b{color:var(--text)}
   </div>
 </section>
 
-<section id="discipline">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Aree operative e formative</div>
-      <h2>Discipline</h2>
-      <p class="sectionLead">Attività specialistiche, formazione cinofila e preparazione tecnica del binomio.</p>
-    </div>
-    <div class="discipline" id="disciplines"></div>
-  </div>
-</section>
-
-<section id="cani">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Unità cinofile</div>
-      <h2>I cani</h2>
-      <p class="sectionLead">Le nostre unità cinofile impegnate in attività di ricerca, formazione, addestramento e preparazione operativa.</p>
-    </div>
-    <div class="dogs" id="dogs"></div>
-  </div>
-</section>
-
-<section id="corsi">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Formazione</div>
-      <h2>Corsi</h2>
-      <p class="sectionLead">Corsi, stage e percorsi formativi aggiornabili dal pannello di gestione.</p>
-    </div>
-    <div class="courses" id="courses"></div>
-  </div>
-</section>
-
-<section id="eventi">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Calendario operativo</div>
-      <h2>Eventi</h2>
-    </div>
-    <div class="events" id="events"></div>
-  </div>
-</section>
-
-<section id="galleria">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Media</div>
-      <h2>Galleria</h2>
-    </div>
-    <div class="gallery" id="gallery"></div>
-  </div>
-</section>
-
-<section id="video">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Video</div>
-      <h2>Video</h2>
-    </div>
-    <div class="grid2" id="videos"></div>
-  </div>
-</section>
-
-<section id="recensioni">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Feedback</div>
-      <h2>Testimonianze</h2>
-    </div>
-    <div class="reviews" id="reviews"></div>
-  </div>
-</section>
-
-<section id="partner">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Rete operativa</div>
-      <h2>Partner</h2>
-    </div>
-    <div class="partners" id="partners"></div>
-  </div>
-</section>
-
-<section id="documenti">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Area download</div>
-      <h2>Documenti</h2>
-    </div>
-    <div class="documents" id="documents"></div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div class="kicker">Domande frequenti</div>
-      <h2>FAQ</h2>
-    </div>
-    <div class="faqGrid" id="faqList"></div>
-  </div>
-</section>
+<section id="discipline"><div class="wrap"><div class="sectionHead"><div class="kicker">Aree operative e formative</div><h2>Discipline</h2><p class="sectionLead">Attività specialistiche, formazione cinofila e preparazione tecnica del binomio.</p></div><div class="discipline" id="disciplines"></div></div></section>
+<section id="cani"><div class="wrap"><div class="sectionHead"><div class="kicker">Unità cinofile</div><h2>I cani</h2><p class="sectionLead">Unità cinofile, schede operative e profili aggiornabili.</p></div><div class="dogs" id="dogs"></div></div></section>
+<section id="corsi"><div class="wrap"><div class="sectionHead"><div class="kicker">Formazione</div><h2>Corsi</h2></div><div class="courses" id="courses"></div></div></section>
+<section id="eventi"><div class="wrap"><div class="sectionHead"><div class="kicker">Calendario operativo</div><h2>Eventi</h2></div><div class="events" id="events"></div></div></section>
+<section id="galleria"><div class="wrap"><div class="sectionHead"><div class="kicker">Media</div><h2>Galleria</h2></div><div class="gallery" id="gallery"></div></div></section>
+<section id="video"><div class="wrap"><div class="sectionHead"><div class="kicker">Video</div><h2>Video</h2></div><div class="grid2" id="videos"></div></div></section>
+<section id="recensioni"><div class="wrap"><div class="sectionHead"><div class="kicker">Feedback</div><h2>Testimonianze</h2></div><div class="reviews" id="reviews"></div></div></section>
+<section id="partner"><div class="wrap"><div class="sectionHead"><div class="kicker">Rete operativa</div><h2>Partner</h2></div><div class="partners" id="partners"></div></div></section>
+<section id="documenti"><div class="wrap"><div class="sectionHead"><div class="kicker">Area download</div><h2>Documenti</h2></div><div class="documents" id="documents"></div></div></section>
+<section id="faq"><div class="wrap"><div class="sectionHead"><div class="kicker">Domande frequenti</div><h2>FAQ</h2></div><div class="faqGrid" id="faqList"></div></div></section>
 
 <section id="contatti" class="contact">
   <div class="wrap contactBox">
@@ -572,73 +445,76 @@ figcaption b{color:var(--text)}
 </main>
 
 <a class="floatWA" id="waFloat" href="#" aria-label="WhatsApp">☎</a>
-
-<footer class="footer">
-  <div class="wrap"><span id="footerText">© K9 Mantrailing HRDD Tattico Napoletano - Tutti i diritti riservati.</span></div>
-</footer>
+<footer class="footer"><div class="wrap"><span id="footerText">© K9 Mantrailing HRDD Tattico Napoletano - Tutti i diritti riservati.</span></div></footer>
 
 <script>
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
-
 function show(id){const el=$(id); if(el) el.style.display='block'}
 function hide(id){const el=$(id); if(el) el.style.display='none'}
 function fit(v){return v==='cover'?'cover':'contain'}
 function pos(v){return v||'center'}
-
-function imgTag(src,alt,fitMode='contain',position='center'){
+function mediaPath(src){
   if(!src) return '';
-  return `<img src="${esc(src)}" alt="${esc(alt)}" style="object-fit:${fit(fitMode)};object-position:${esc(pos(position))};">`;
+  src=String(src).trim();
+  if(src.startsWith('http://')||src.startsWith('https://')||src.startsWith('data:')) return src;
+  if(src.startsWith('/')) return src;
+  return '/' + src.replace(/^\.\//,'');
 }
-
+function imgTag(src,alt,fitMode='contain',position='center'){
+  const path=mediaPath(src);
+  if(!path) return '';
+  return `<img src="${esc(path)}" alt="${esc(alt)}" loading="lazy" style="object-fit:${fit(fitMode)};object-position:${esc(pos(position))};">`;
+}
+function setText(id,value){const el=$(id); if(el) el.textContent=value||''}
 function setWhatsApp(number){
   const clean=String(number||'').replace(/\D/g,'');
   const href=clean?`https://wa.me/${clean}`:'#contatti';
   ['waBtn','waBtn2','waFloat'].forEach(id=>{if($(id))$(id).href=href});
 }
-
 function renderLinkButton(text,href){
-  return href?`<a class="btn" href="${esc(href)}" target="_blank" rel="noopener">${esc(text||'Apri')}</a>`:'';
+  return href?`<a class="btn" href="${esc(mediaPath(href))}" target="_blank" rel="noopener">${esc(text||'Apri')}</a>`:'';
 }
-
 async function loadSite(){
-  const res=await fetch('/content/site.json',{cache:'no-store'});
+  const res=await fetch('/content/site.json?v=' + Date.now(),{cache:'no-store'});
   if(!res.ok) throw new Error('Errore caricamento content/site.json');
   const d=await res.json();
 
   const siteName=d.siteName||'K9 Mantrailing HRDD Tattico Napoletano';
-  const logo=d.logo||'/logo.png';
-  const heroImage=d.heroImage||logo;
+  const logo=mediaPath(d.logo||'/logo.png');
+  const heroImage=mediaPath(d.heroImage||logo);
 
   document.title=d.heroTitle||siteName;
   const metaDesc=document.querySelector('meta[name="description"]');
   if(metaDesc) metaDesc.setAttribute('content',d.heroSubtitle||'');
 
-  $('navLogo').src=logo;
-  $('navName').textContent=siteName;
-  $('tagline').textContent=d.tagline||'';
-  $('heroTitle').textContent=d.heroTitle||siteName;
-  $('heroSubtitle').textContent=d.heroSubtitle||'';
-  $('heroImage').src=heroImage;
-  $('hero').style.setProperty('--hero-bg',`url("${heroImage}")`);
-  $('footerText').textContent=d.footer||`© ${siteName}`;
+  if($('navLogo')) $('navLogo').src=logo;
+  setText('navName',siteName);
+  setText('tagline',d.tagline||'');
+  setText('heroTitle',d.heroTitle||siteName);
+  setText('heroSubtitle',d.heroSubtitle||'');
+  if($('heroImage')) $('heroImage').src=heroImage;
+  if($('hero')) $('hero').style.setProperty('--hero-bg',`url("${heroImage}")`);
+  setText('footerText',d.footer||`© ${siteName}`);
 
-  $('ownerName').textContent=d.owner?.name||'Napoletano Giovanni';
-  $('ownerRoles').textContent=d.owner?.roles||'';
-  $('ownerBio').textContent=d.owner?.bio||'';
+  setText('ownerName',d.owner?.name||'Napoletano Giovanni');
+  setText('ownerRoles',d.owner?.roles||'');
+  setText('ownerBio',d.owner?.bio||'');
 
-  const ownerPhoto=d.owner?.photo;
+  const ownerPhoto=mediaPath(d.owner?.photo||'');
   const box=$('ownerPhotoBox');
-  if(ownerPhoto){
-    box.className='profilePhoto hasPhoto';
-    box.innerHTML=imgTag(ownerPhoto,d.owner?.name||'Napoletano Giovanni','contain','center');
-  }else{
-    box.className='profilePhoto noPhoto';
-    box.innerHTML='<div><p class="kicker">Foto profilo</p><p>Foto profilo in aggiornamento.</p></div>';
+  if(box){
+    if(ownerPhoto){
+      box.className='profilePhoto hasPhoto';
+      box.innerHTML=imgTag(ownerPhoto,d.owner?.name||'Napoletano Giovanni','contain','center');
+    }else{
+      box.className='profilePhoto noPhoto';
+      box.innerHTML='';
+    }
   }
 
   const locations=d.locations||[];
-  $('locationList').innerHTML=locations.map(x=>`<span>${esc(x)}</span>`).join('');
+  if($('locationList')) $('locationList').innerHTML=locations.map(x=>`<span>${esc(x)}</span>`).join('');
 
   const disciplines=(d.disciplines||[]).filter(x=>x.active!==false);
   if(disciplines.length){
@@ -650,8 +526,7 @@ async function loadSite(){
         <p class="muted">${esc(x.short||'')}</p>
         ${x.long?`<p>${esc(x.long)}</p>`:''}
         ${renderLinkButton(x.buttonText,x.buttonLink)}
-      </article>
-    `).join('');
+      </article>`).join('');
   }else hide('discipline');
 
   const dogs=d.dogs||[];
@@ -670,8 +545,7 @@ async function loadSite(){
         ${x.certifications?`<p class="muted">${esc(x.certifications)}</p>`:''}
         ${x.description?`<p>${esc(x.description)}</p>`:''}
         ${x.notes?`<p class="muted">${esc(x.notes)}</p>`:''}
-      </article>
-    `).join('');
+      </article>`).join('');
   }else hide('cani');
 
   const courses=(d.courses||[]).filter(x=>x.active!==false);
@@ -687,8 +561,7 @@ async function loadSite(){
         ${x.description?`<p>${esc(x.description)}</p>`:''}
         ${x.program?`<p class="muted">${esc(x.program)}</p>`:''}
         ${renderLinkButton('Iscriviti / informazioni',x.link)}
-      </article>
-    `).join('');
+      </article>`).join('');
   }else hide('corsi');
 
   const events=(d.events||[]).filter(x=>x.active!==false);
@@ -701,8 +574,7 @@ async function loadSite(){
         ${x.date?`<p class="meta">${esc(x.date)}</p>`:''}
         ${x.location?`<p class="muted">${esc(x.location)}</p>`:''}
         ${x.description?`<p>${esc(x.description)}</p>`:''}
-      </article>
-    `).join('');
+      </article>`).join('');
   }else hide('eventi');
 
   const gallery=(d.gallery||[]).filter(x=>x.url);
@@ -711,11 +583,10 @@ async function loadSite(){
     $('gallery').innerHTML=gallery.map(x=>`
       <figure>
         ${x.type==='video'
-          ? `<div class="card"><h3>${esc(x.title)}</h3><a class="btn primary" href="${esc(x.url)}" target="_blank" rel="noopener">Apri video</a></div>`
+          ? `<div class="card"><h3>${esc(x.title)}</h3><a class="btn primary" href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener">Apri video</a></div>`
           : imgTag(x.url,x.title,x.imageFit,x.imagePosition)}
         <figcaption><b>${esc(x.title)}</b></figcaption>
-      </figure>
-    `).join('');
+      </figure>`).join('');
   }else hide('galleria');
 
   const videos=(d.videos||[]).filter(x=>x.url);
@@ -725,9 +596,24 @@ async function loadSite(){
       <article class="card">
         <h3>${esc(x.title||'Video')}</h3>
         ${x.description?`<p class="muted">${esc(x.description)}</p>`:''}
-        <a class="btn primary" href="${esc(x.url)}" target="_blank" rel="noopener">Apri video</a>
-      </article>
-    `).join('');
+        <a class="btn primary" href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener">Apri video</a>
+      </article>`).join('');
   }else hide('video');
 
-  const reviews=
+  const reviews=(d.reviews||[]).filter(x=>x.name||x.review);
+  if(reviews.length){
+    show('recensioni');
+    $('reviews').innerHTML=reviews.map(x=>`
+      <article class="card review">
+        ${imgTag(x.photo,x.name,'contain','center')}
+        <h3>${esc(x.name)}</h3>
+        ${x.review?`<p class="muted">“${esc(x.review)}”</p>`:''}
+      </article>`).join('');
+  }else hide('recensioni');
+
+  const partners=(d.partners||[]).filter(x=>x.name||x.logo);
+  if(partners.length){
+    show('partner');
+    $('partners').innerHTML=partners.map(x=>`
+      <article class="card partner">
+        ${imgTag(
