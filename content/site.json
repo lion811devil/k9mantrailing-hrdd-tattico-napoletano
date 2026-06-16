@@ -53,6 +53,12 @@
     }
   ],
   "logoSecondary": "/assets/uploads/1000217802.png",
+  "partners": [
+    {
+      "name": "MANTRAILING RAGIÒ DI SOLE",
+      "logo": "/assets/uploads/1000178519.png"
+    }
+  ],
   "logo": "/assets/uploads/1000217802.png",
   "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
   "heroSubtitle": "Unità cinofila specialistica dedicata a ricerca persone scomparse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
@@ -89,10 +95,6 @@
     {
       "question": "Come posso richiedere informazioni sui corsi?",
       "answer": "Puoi contattare direttamente Napoletano Giovanni tramite telefono, email o WhatsApp."
-    },
-    {
-      "question": "Le discipline possono essere aggiornate?",
-      "answer": "Sì, dal CMS."
     }
   ],
   "dogs": [
