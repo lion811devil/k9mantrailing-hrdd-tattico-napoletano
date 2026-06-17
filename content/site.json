@@ -66,15 +66,8 @@
   "gallery": [
     {
       "type": "image",
-      "title": "Logo ufficiale",
-      "url": "/assets/uploads/1000234965.jpg",
-      "imageFit": "contain",
-      "imagePosition": "center"
-    },
-    {
-      "type": "image",
-      "title": "Immagine istituzionale",
-      "url": "/assets/uploads/1000234965.jpg",
+      "title": "Bruss nel ritrovamento e segnalazione del figurante al conduttore ",
+      "url": "/assets/uploads/1000230330.jpg",
       "imageFit": "contain",
       "imagePosition": "center"
     }
