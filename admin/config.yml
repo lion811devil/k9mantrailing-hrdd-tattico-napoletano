@@ -181,7 +181,8 @@ collections:
                   - {label: "Immagine", value: "image"}
                   - {label: "Video", value: "video"}
               - {label: "Titolo", name: "title", widget: "string"}
-              - {label: "File immagine o URL video", name: "url", widget: "string"}
+              - {label: "Immagine", name: "url", widget: "image", required: false}
+              - {label: "URL video", name: "videoUrl", widget: "string", required: false}
               - label: "Adattamento immagine"
                 name: "imageFit"
                 widget: "select"
