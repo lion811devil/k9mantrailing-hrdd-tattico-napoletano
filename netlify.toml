@@ -1,6 +1,5 @@
 [build]
   publish = "."
-  command = "node scripts/build-events.js"
 
 [[headers]]
   for = "/*"
