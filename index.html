@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>K9 Mantrailing HRDD Tattico Napoletano</title>
+<meta name="description" content="Mantrailing, HRDD, ricerca persone, formazione cinofila e unità operative con Napoletano Giovanni."/>
+<meta name="theme-color" content="#ff7a00"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+<link rel="icon" href="/logo.png"/>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<style>
+:root{
+  --text:#fff8ed;
+  --muted:#d7c7ad;
+  --gold:#f6b739;
+  --orange:#ff7a00;
+  --green:#22c55e;
+  --line:rgba(255,255,255,.14);
+  --shadow:0 30px 90px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at 18% 0%,rgba(255,122,0,.30),transparent 32%),
+    radial-gradient(circle at 90% 12%,rgba(246,183,57,.12),transparent 28%),
+    linear-gradient(180deg,#090909 0%,#020202 62%,#050505 100%);
+  color:var(--text);
+  line-height:1.6;
+}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1180px,92vw);margin:auto}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(4,4,4,.90);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+  min-width:0;
+}
+.brand img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  border-radius:10px;
+  flex:0 0 auto;
+  background:#fff;
+}
+.brand span{
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.045em;
+  font-size:clamp(15px,2.5vw,22px);
+  line-height:1.25;
+}
+.links{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.links a{
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:800;
+  font-size:14px;
+}
+.links a:hover{color:var(--gold)}
+
+.hero{
+  position:relative;
+  min-height:calc(100vh - 78px);
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  isolation:isolate;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.64),rgba(0,0,0,.88)),
+    var(--hero-bg,url('/logo.png')) center/cover no-repeat;
+  opacity:.76;
+  z-index:-2;
+  filter:saturate(1.05) contrast(1.08);
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 18% 36%,rgba(255,122,0,.30),transparent 36%),
+    linear-gradient(180deg,transparent 70%,rgba(0,0,0,.86));
+  z-index:-1;
+}
+.heroInner{
+  padding:68px 0;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:34px;
+  align-items:center;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 15px;
+  border-radius:999px;
+  border:1px solid rgba(246,183,57,.55);
+  background:rgba(246,183,57,.09);
+  color:var(--gold);
+  font-weight:900;
+}
+h1{
+  margin:20px 0 18px;
+  font-size:clamp(43px,7vw,92px);
+  line-height:.94;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  text-shadow:0 0 32px rgba(255,122,0,.38);
+}
+.lead{
+  font-size:clamp(20px,2.25vw,28px);
+  max-width:780px;
+  color:var(--muted);
+  margin:0;
+}
+.cta{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:15px 20px;
+  border-radius:16px;
+  text-decoration:none;
+  font-weight:900;
+  border:1px solid var(--line);
+  background:#151515;
+  color:var(--text);
+}
+.btn.primary{
+  background:linear-gradient(135deg,var(--orange),var(--gold));
+  color:#120800;
+  border:0;
+}
+.heroCard{
+  background:linear-gradient(145deg,rgba(255,122,0,.20),rgba(255,255,255,.04));
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+.heroCard img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:24px;
+  background:#fff;
+}
+
+section{
+  padding:72px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.sectionHead{margin-bottom:26px}
+.kicker{
+  color:var(--gold);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:13px;
+}
+h2{
+  font-size:clamp(36px,5vw,64px);
+  line-height:1.02;
+  margin:8px 0 10px;
+}
+.sectionLead{
+  color:var(--muted);
+  font-size:20px;
+  max-width:860px;
+  margin:0;
+}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:26px;
+  box-shadow:0 20px 60px rgba(0,0,0,.22);
+}
+.card h3{
+  margin:0 0 10px;
+  color:var(--gold);
+  font-size:26px;
+}
+.muted{color:var(--muted)}
+
+.profile{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  gap:20px;
+  align-items:stretch;
+}
+.profilePhoto{
+  min-height:360px;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:radial-gradient(circle at center,rgba(255,122,0,.18),transparent 55%),#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.profilePhoto.hasPhoto img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  background:#111;
+}
+.profilePhoto.noPhoto{
+  padding:26px;
+  text-align:center;
+  color:var(--muted);
+}
+
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.discipline,.dogs,.gallery,.reviews,.partners,.courses,.events,.documents,.faqGrid{
+  display:grid;
+  gap:20px;
+}
+.discipline,.dogs,.gallery,.reviews,.courses,.events,.faqGrid{grid-template-columns:repeat(3,1fr)}
+.partners,.documents{grid-template-columns:repeat(4,1fr)}
+
+.discipline img,.dog img,.course img,.event img,.gallery img,.review img,.partner img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:22px;
+  margin-bottom:18px;
+  background:#111;
+}
+.discipline .icon{
+  display:inline-flex;
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,122,0,.16);
+  border:1px solid rgba(255,122,0,.35);
+  font-size:26px;
+  margin-bottom:12px;
+}
+.status{font-weight:900;color:var(--text)}
+.meta{color:var(--gold);font-weight:900;margin:0 0 8px}
+
+.eventPoster{
+  width:100%;
+  border-radius:22px;
+  margin-bottom:18px;
+  background:#111;
+  border:1px solid rgba(255,255,255,.10);
+}
+.eventTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+.eventBadge{
+  display:inline-flex;
+  padding:7px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  color:#140900;
+  background:linear-gradient(135deg,var(--orange),var(--gold));
+}
+.eventStatus{
+  display:inline-flex;
+  padding:7px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:900;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--line);
+  color:var(--text);
+}
+.eventActions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.eventDetails{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:24px;
+  align-items:start;
+}
+.eventInfoList{
+  display:grid;
+  gap:10px;
+  margin:18px 0;
+}
+.eventInfoList div{
+  padding:12px 14px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.045);
+  color:var(--muted);
+}
+.eventInfoList b{color:var(--text)}
+.eventTextBlock{
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+}
+.eventTextBlock h3{margin-bottom:8px}
+.shareBox{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.mapFrame{
+  width:100%;
+  min-height:300px;
+  border:0;
+  border-radius:22px;
+  margin-top:16px;
+  background:#111;
+}
+.eventNotice{
+  padding:16px;
+  border-radius:20px;
+  border:1px solid rgba(246,183,57,.35);
+  background:rgba(246,183,57,.08);
+  margin:18px 0;
+}
+.eventNotice b{color:var(--gold)}
+@media(max-width:900px){
+  .eventDetails{grid-template-columns:1fr}
+}
+
+.gallery figure{
+  margin:0;
+  background:#111;
+  border:1px solid var(--line);
+  border-radius:28px;
+  overflow:hidden;
+}
+figcaption{padding:18px;color:var(--muted)}
+figcaption b{color:var(--text)}
+
+.contact{
+  background:
+    radial-gradient(circle at 85% 30%,rgba(26,143,69,.22),transparent 30%),
+    linear-gradient(135deg,rgba(255,122,0,.16),rgba(246,183,57,.06));
+}
+.contactBox{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  align-items:center;
+}
+.contactLine{
+  font-size:22px;
+  margin:12px 0;
+  color:var(--muted);
+}
+.contactLine b{color:var(--text)}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.socials a,.socials span{
+  text-decoration:none;
+  padding:10px 13px;
+  border-radius:999px;
+  background:rgba(255,255,255,.07);
+  border:1px solid var(--line);
+  color:var(--muted);
+  font-weight:900;
+}
+.floatWA{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:80;
+  width:72px;
+  height:72px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--green);
+  color:#fff;
+  text-decoration:none;
+  font-size:34px;
+  font-weight:900;
+  box-shadow:0 18px 48px rgba(0,0,0,.45);
+}
+.footer{
+  padding:38px 0;
+  color:var(--muted);
+  font-size:15px;
+  background:#030303;
+}
+.footerGrid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:22px;
+  align-items:start;
+}
+.footer h3{
+  margin:0 0 10px;
+  color:var(--gold);
+  font-size:22px;
+}
+.footer p{
+  margin:7px 0;
+}
+.footer a{
+  color:var(--muted);
+  text-decoration:none;
+}
+.footer a:hover{color:var(--gold)}
+.officialSocials{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.officialSocials a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:48px;
+  height:48px;
+  padding:0 14px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.07);
+  color:var(--text);
+  font-weight:900;
+  text-decoration:none;
+}
+.officialSocials a:hover{
+  border-color:rgba(246,183,57,.55);
+  color:var(--gold);
+}
+
+/* Rifinitura estetica: pulsanti social e condivisione più compatti */
+.shareBox.compact{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+.shareBox.compact .btn{
+  padding:12px 16px;
+  border-radius:18px;
+  min-height:52px;
+  font-size:16px;
+}
+.followBox{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+.socialIconButton{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-width:58px;
+  height:58px;
+  padding:0 16px;
+  border-radius:20px;
+  text-decoration:none;
+  font-weight:900;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));
+  color:var(--text);
+  box-shadow:0 10px 26px rgba(0,0,0,.18);
+}
+.socialIconButton:hover{
+  border-color:rgba(246,183,57,.58);
+  color:var(--gold);
+}
+.socialIcon{
+  font-size:24px;
+  line-height:1;
+}
+.socialLabel{
+  font-size:15px;
+}
+@media(max-width:560px){
+  .shareBox.compact .btn{
+    padding:10px 14px;
+    min-height:48px;
+    font-size:15px;
+  }
+  .socialIconButton{
+    min-width:54px;
+    height:54px;
+    padding:0 13px;
+    border-radius:18px;
+  }
+  .socialLabel{font-size:14px}
+}
+
+
+@media(max-width:900px){
+  .footerGrid{grid-template-columns:1fr}
+  .links{display:none}
+  .heroInner,.profile,.contactBox,.grid2{grid-template-columns:1fr}
+  .discipline,.dogs,.gallery,.reviews,.courses,.events,.faqGrid{grid-template-columns:1fr 1fr}
+  .partners,.documents{grid-template-columns:1fr 1fr}
+  .hero{min-height:auto}
+}
+@media(max-width:560px){
+  .wrap{width:min(100% - 28px,1180px)}
+  .nav{min-height:74px}
+  .brand img{width:54px;height:54px}
+  .heroInner{padding:54px 0 38px}
+  h1{font-size:clamp(42px,14vw,62px)}
+  .lead{font-size:20px}
+  .discipline,.dogs,.gallery,.reviews,.courses,.events,.faqGrid,.partners,.documents{grid-template-columns:1fr}
+  section{padding:54px 0}
+  .heroCard{padding:18px;border-radius:26px}
+  .floatWA{width:64px;height:64px;right:16px;bottom:16px}
+}
+</style>
+</head>
+
+<body>
+<div class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img id="navLogo" src="/logo.png" alt="Logo K9">
+      <span id="navName">K9 Mantrailing HRDD Tattico Napoletano</span>
+    </a>
+    <div class="links">
+      <a href="#chi">Giovanni</a>
+      <a href="#discipline">Discipline</a>
+      <a href="#cani">Cani</a>
+      <a href="#corsi">Corsi</a>
+      <a href="#eventi">Eventi</a>
+      <a href="#contatti">Contatti</a>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+<header class="hero" id="hero">
+  <div class="wrap heroInner">
+    <div>
+      <div class="badge" id="tagline">Mantrailing • HRDD • Formazione cinofila operativa</div>
+      <h1 id="heroTitle">K9 Mantrailing HRDD Tattico Napoletano</h1>
+      <p class="lead" id="heroSubtitle">Ricerca persone, HRDD e formazione operativa.</p>
+      <div class="cta">
+        <a class="btn primary" id="waBtn" href="#">Contatta su WhatsApp</a>
+        <a class="btn" href="#discipline">Scopri le discipline</a>
+      </div>
+    </div>
+    <div class="heroCard">
+      <img id="heroImage" src="/logo.png" alt="Immagine principale">
+    </div>
+  </div>
+</header>
+
+<section id="chi">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div class="kicker">Responsabile operativo</div>
+      <h2 id="ownerName">Napoletano Giovanni</h2>
+    </div>
+    <div class="profile">
+      <div class="profilePhoto noPhoto" id="ownerPhotoBox"></div>
+      <div class="card">
+        <h3>Profilo professionale</h3>
+        <p class="muted" id="ownerRoles"></p>
+        <p id="ownerBio"></p>
+        <div id="locationList" class="socials"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="discipline"><div class="wrap"><div class="sectionHead"><div class="kicker">Aree operative e formative</div><h2>Discipline</h2><p class="sectionLead">Attività specialistiche, formazione cinofila e preparazione tecnica del binomio.</p></div><div class="discipline" id="disciplines"></div></div></section>
+<section id="cani"><div class="wrap"><div class="sectionHead"><div class="kicker">Unità cinofile</div><h2>I cani</h2><p class="sectionLead">Unità cinofile, schede operative e profili aggiornabili.</p></div><div class="dogs" id="dogs"></div></div></section>
+<section id="corsi"><div class="wrap"><div class="sectionHead"><div class="kicker">Formazione</div><h2>Corsi</h2></div><div class="courses" id="courses"></div></div></section>
+<section id="eventi"><div class="wrap"><div class="sectionHead"><div class="kicker">Calendario formativo</div><h2 id="eventsTitle">Eventi, corsi e stage</h2><p class="sectionLead" id="eventsLead">Calendario aggiornato delle attività formative e operative.</p></div><div class="events" id="events"></div><div id="eventDetail"></div></div></section>
+<section id="galleria"><div class="wrap"><div class="sectionHead"><div class="kicker">Media</div><h2>Galleria</h2></div><div class="gallery" id="gallery"></div></div></section>
+<section id="video"><div class="wrap"><div class="sectionHead"><div class="kicker">Video</div><h2>Video</h2></div><div class="grid2" id="videos"></div></div></section>
+<section id="recensioni"><div class="wrap"><div class="sectionHead"><div class="kicker">Feedback</div><h2>Testimonianze</h2></div><div class="reviews" id="reviews"></div></div></section>
+<section id="partner"><div class="wrap"><div class="sectionHead"><div class="kicker">Rete operativa</div><h2>Partner</h2></div><div class="partners" id="partners"></div></div></section>
+<section id="documenti"><div class="wrap"><div class="sectionHead"><div class="kicker">Area download</div><h2>Documenti</h2></div><div class="documents" id="documents"></div></div></section>
+<section id="faq"><div class="wrap"><div class="sectionHead"><div class="kicker">Domande frequenti</div><h2>FAQ</h2></div><div class="faqGrid" id="faqList"></div></div></section>
+
+<section id="contatti" class="contact">
+  <div class="wrap contactBox">
+    <div>
+      <div class="kicker">Contatto diretto</div>
+      <h2>Contatti</h2>
+      <p class="contactLine"><b>Referente:</b> <span id="contactName"></span></p>
+      <p class="contactLine"><b>Telefono:</b> <span id="phone"></span></p>
+      <p class="contactLine"><b>Email:</b> <span id="email"></span></p>
+      <div id="socials" class="socials"></div>
+    </div>
+    <div class="card">
+      <h3>Richiedi informazioni</h3>
+      <p class="muted">Per attività formative, collaborazione operativa, mantrailing, HRDD e progetti cinofili specializzati.</p>
+      <a class="btn primary" id="waBtn2" href="#">Scrivi su WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<a class="floatWA" id="waFloat" href="#" aria-label="WhatsApp">☎</a>
+<footer class="footer">
+  <div class="wrap footerGrid">
+    <div>
+      <h3 id="footerBrand">K9 Mantrailing HRDD Tattico Napoletano</h3>
+      <p id="footerText">© K9 Mantrailing HRDD Tattico Napoletano - Tutti i diritti riservati.</p>
+      <div id="footerOfficialSocials" class="officialSocials"></div>
+    </div>
+    <div>
+      <h3>Contatti</h3>
+      <p><b>Referente:</b> <span id="footerContactName"></span></p>
+      <p><b>Telefono:</b> <a id="footerPhone" href="#"></a></p>
+      <p><b>Email:</b> <a id="footerEmail" href="#"></a></p>
+      <p><b>Sede:</b> <span id="footerAddress"></span></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const esc=value=>String(value??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+function show(id){const el=$(id); if(el) el.style.display='block'}
+function hide(id){const el=$(id); if(el) el.style.display='none'}
+function fit(v){return v==='cover'?'cover':'contain'}
+function pos(v){return v||'center'}
+function mediaPath(src){
+  if(!src) return '';
+  src=String(src).trim();
+  if(src.startsWith('http://')||src.startsWith('https://')||src.startsWith('data:')) return src;
+  if(src.startsWith('/')) return src;
+  return '/' + src.replace(/^\.\//,'');
+}
+function imgTag(src,alt,fitMode='contain',position='center'){
+  const path=mediaPath(src);
+  if(!path) return '';
+  return `<img src="${esc(path)}" alt="${esc(alt)}" loading="lazy" style="object-fit:${fit(fitMode)};object-position:${esc(pos(position))};">`;
+}
+function setText(id,value){const el=$(id); if(el) el.textContent=value||''}
+function setWhatsApp(number){
+  const clean=String(number||'').replace(/\D/g,'');
+  const href=clean?`https://wa.me/${clean}`:'#contatti';
+  ['waBtn','waBtn2','waFloat'].forEach(id=>{if($(id))$(id).href=href});
+}
+function renderLinkButton(text,href){
+  return href?`<a class="btn" href="${esc(mediaPath(href))}" target="_blank" rel="noopener">${esc(text||'Apri')}</a>`:'';
+}
+
+const EVENTS_REPO_OWNER='lion811devil';
+const EVENTS_REPO_NAME='k9mantrailing-hrdd-tattico-napoletano';
+const EVENTS_REPO_BRANCH='main';
+
+function slugify(value){
+  return String(value||'')
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9]+/g,'-')
+    .replace(/^-+|-+$/g,'') || 'evento';
+}
+function eventSlugFromFileName(name){
+  return String(name||'').replace(/\.json$/i,'');
+}
+function formatEventDate(value){
+  if(!value) return '';
+  const raw=String(value);
+  const datePart=raw.includes('T')?raw.split('T')[0]:raw;
+  const parts=datePart.split('-');
+  if(parts.length===3){
+    const d=new Date(Number(parts[0]),Number(parts[1])-1,Number(parts[2]));
+    if(!Number.isNaN(d.getTime())) return d.toLocaleDateString('it-IT',{weekday:'long',day:'2-digit',month:'long',year:'numeric'});
+  }
+  return raw;
+}
+function eventShareUrl(slug){
+  const base=window.location.origin + window.location.pathname.replace(/\/index\.html$/,'/');
+  return `${base}#evento=${encodeURIComponent(slug)}`;
+}
+function currentEventSlug(){
+  const hash=window.location.hash||'';
+  if(hash.startsWith('#evento=')) return decodeURIComponent(hash.replace('#evento=',''));
+  const params=new URLSearchParams(window.location.search);
+  return params.get('evento')||'';
+}
+async function loadEventFiles(){
+  const api=`https://api.github.com/repos/${EVENTS_REPO_OWNER}/${EVENTS_REPO_NAME}/contents/content/events?ref=${EVENTS_REPO_BRANCH}`;
+  const res=await fetch(api,{cache:'no-store'});
+  if(!res.ok) return [];
+  const files=await res.json();
+  if(!Array.isArray(files)) return [];
+  const jsonFiles=files.filter(f=>f.type==='file' && /\.json$/i.test(f.name));
+  const events=await Promise.all(jsonFiles.map(async file=>{
+    const r=await fetch(file.download_url + (file.download_url.includes('?')?'&':'?') + 'v=' + Date.now(),{cache:'no-store'});
+    if(!r.ok) return null;
+    const data=await r.json();
+    return {...data, slug:eventSlugFromFileName(file.name)};
+  }));
+  return events.filter(Boolean).filter(x=>x.published!==false && x.active!==false);
+}
+function normalizeEvent(x){
+  return {
+    slug:x.slug||slugify(x.title),
+    title:x.title||'Evento',
+    category:x.category||x.type||'Evento',
+    poster:x.poster||x.image||'',
+    date:x.date||'',
+    time:x.time||'',
+    location:x.location||'',
+    mapLink:x.mapsLink||x.mapLink||x.googleMaps||'',
+    description:x.description||'',
+    fullDescription:x.fullDescription||x.details||'',
+    program:x.program||'',
+    teachers:x.teachers||x.instructors||'',
+    materials:x.materials||'',
+    cost:x.cost||x.price||'',
+    maxParticipants:x.maxParticipants||'',
+    availableSpots:x.availableSpots||x.spotsAvailable||x.availableSeats||'',
+    status:x.status||'Iscrizioni aperte',
+    registrationEnabled:x.registrationEnabled!==false,
+    buttonText:x.buttonText||'Iscriviti',
+    gallery:Array.isArray(x.gallery)?x.gallery:[],
+    attachments:Array.isArray(x.attachments)?x.attachments:[]
+  };
+}
+function eventCard(x){
+  const e=normalizeEvent(x);
+  const url=eventShareUrl(e.slug);
+  return `
+    <article class="card event">
+      ${e.poster?`<img class="eventPoster" src="${esc(mediaPath(e.poster))}" alt="${esc(e.title)}" loading="lazy">`:''}
+      <div class="eventTop">
+        <span class="eventBadge">${esc(e.category)}</span>
+        <span class="eventStatus">${esc(e.status)}</span>
+      </div>
+      <h3>${esc(e.title)}</h3>
+      ${e.date?`<p class="meta">${esc(formatEventDate(e.date))}${e.time?` • ${esc(e.time)}`:''}</p>`:''}
+      ${e.location?`<p class="muted">${esc(e.location)}</p>`:''}
+      ${e.description?`<p>${esc(e.description)}</p>`:''}
+      <div class="eventActions">
+        <a class="btn primary" href="${esc(url)}">Apri scheda</a>
+        ${eventRegistrationHref(e)?`<a class="btn" href="${esc(eventRegistrationHref(e))}" target="_blank" rel="noopener">${esc(e.buttonText||'Iscriviti')}</a>`:''}
+      </div>
+    </article>`;
+}
+
+function sitePhoneClean(){
+  const c=window.__siteContacts||{};
+  return String(c.whatsapp||c.phone||'').replace(/\D/g,'');
+}
+function siteEmail(){
+  const c=window.__siteContacts||{};
+  return String(c.email||'').trim();
+}
+function eventRegistrationHref(e){
+  if(e.registrationEnabled===false) return '';
+  const phone=sitePhoneClean();
+  if(!phone) return '';
+  const msg=[
+    'Ciao Giovanni,',
+    '',
+    `vorrei iscrivermi all\'evento: ${e.title}`,
+    e.date ? `Data: ${formatEventDate(e.date)}` : '',
+    e.time ? `Orario: ${e.time}` : '',
+    e.location ? `Luogo: ${e.location}` : '',
+    '',
+    'Nome e Cognome:',
+    'Telefono:',
+    'Nome del cane:',
+    'Razza:',
+    'Età:',
+    'Livello del binomio:',
+    'Numero partecipanti:',
+    '',
+    'Grazie.'
+  ].filter(line=>line!==null && line!==undefined).join('\n');
+  return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+}
+function eventMapEmbedSrc(e){
+  const query=e.location || e.mapLink || '';
+  if(!query) return '';
+  return `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+}
+function eventCalendarUrl(e){
+  const title=e.title||'Evento';
+  const details=e.description||'';
+  const location=e.location||'';
+  const date=String(e.date||'').split('T')[0];
+  if(!date) return '';
+  const compact=date.replace(/-/g,'');
+  const time=String(e.time||'').match(/(\d{1,2})[.:](\d{2})/);
+  let start=`${compact}T090000`;
+  let end=`${compact}T180000`;
+  if(time){
+    const h=String(time[1]).padStart(2,'0');
+    const m=String(time[2]).padStart(2,'0');
+    start=`${compact}T${h}${m}00`;
+  }
+  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${start}/${end}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+}
+function eventContactButtons(e){
+  const phone=sitePhoneClean();
+  const email=siteEmail();
+  const msg=`Buongiorno Giovanni, vorrei informazioni su "${e.title}" del ${formatEventDate(e.date)}. Grazie.`;
+  return `
+    ${phone?`<a class="btn" href="tel:+${esc(phone)}">Chiama</a>`:''}
+    ${phone?`<a class="btn" href="https://wa.me/${esc(phone)}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">WhatsApp</a>`:''}
+    ${email?`<a class="btn" href="mailto:${esc(email)}?subject=${encodeURIComponent('Informazioni evento: '+e.title)}&body=${encodeURIComponent(msg)}">Email</a>`:''}
+  `;
+}
+
+function officialSocialLinks(){
+  const c=window.__siteContacts||{};
+  return [
+    {label:'Facebook', icon:'f', url:c.facebook},
+    {label:'Instagram', icon:'◎', url:c.instagram},
+    {label:'YouTube', icon:'▶', url:c.youtube},
+    {label:'TikTok', icon:'♪', url:c.tiktok}
+  ].filter(x=>String(x.url||'').trim());
+}
+function officialSocialButtons(extraClass='socialIconButton'){
+  const socials=officialSocialLinks();
+  if(!socials.length) return '';
+  return socials.map(x=>`<a class="${esc(extraClass)}" href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener" aria-label="${esc(x.label)}"><span class="socialIcon">${esc(x.icon)}</span><span class="socialLabel">${esc(x.label)}</span></a>`).join('');
+}
+function renderOfficialSocials(){
+  const socials=officialSocialLinks();
+  const footer=$('footerOfficialSocials');
+  if(footer){
+    footer.innerHTML=socials.map(x=>`<a href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener" aria-label="${esc(x.label)}">${esc(x.icon)}</a>`).join('');
+  }
+}
+function eventDetailHtml(x){
+  const e=normalizeEvent(x);
+  const url=eventShareUrl(e.slug);
+  const wa=`https://wa.me/?text=${encodeURIComponent(e.title + ' - ' + url)}`;
+  const fb=`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  const tg=`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(e.title)}`;
+  const mail=`mailto:?subject=${encodeURIComponent(e.title)}&body=${encodeURIComponent(url)}`;
+  const registrationHref=eventRegistrationHref(e);
+  const calendarHref=eventCalendarUrl(e);
+  const mapEmbed=eventMapEmbedSrc(e);
+  const info=[
+    e.date?`<div><b>Data:</b> ${esc(formatEventDate(e.date))}</div>`:'',
+    e.time?`<div><b>Orario:</b> ${esc(e.time)}</div>`:'',
+    e.location?`<div><b>Luogo:</b> ${esc(e.location)}</div>`:'',
+    e.maxParticipants?`<div><b>Partecipanti massimi:</b> ${esc(e.maxParticipants)}</div>`:'',
+    e.availableSpots?`<div><b>Posti disponibili:</b> ${esc(e.availableSpots)}</div>`:'',
+    e.cost?`<div><b>Costo:</b> ${esc(e.cost)}</div>`:'',
+    e.teachers?`<div><b>Docenti:</b> ${Array.isArray(e.teachers)?esc(e.teachers.join(', ')):esc(e.teachers)}</div>`:'',
+    e.status?`<div><b>Stato:</b> ${esc(e.status)}</div>`:''
+  ].join('');
+  const programHtml=Array.isArray(e.program)
+    ? e.program.map(p=>`<div><b>${esc(p.time||'')}</b> ${esc(p.activity||p)}</div>`).join('')
+    : esc(e.program||'');
+  const materialsHtml=Array.isArray(e.materials)
+    ? e.materials.map(m=>`<div>${esc(m.item||m)}</div>`).join('')
+    : esc(e.materials||'');
+  return `
+    <article class="card eventDetails">
+      <div>
+        ${e.poster?`<a href="${esc(mediaPath(e.poster))}" target="_blank" rel="noopener"><img class="eventPoster" src="${esc(mediaPath(e.poster))}" alt="${esc(e.title)}" loading="lazy"></a>`:''}
+        <div class="eventActions">
+          ${e.poster?`<a class="btn" href="${esc(mediaPath(e.poster))}" target="_blank" rel="noopener">Apri locandina</a>`:''}
+          ${registrationHref?`<a class="btn primary" href="${esc(registrationHref)}" target="_blank" rel="noopener">${esc(e.buttonText||'Iscriviti')}</a>`:''}
+          ${e.mapLink?`<a class="btn" href="${esc(mediaPath(e.mapLink))}" target="_blank" rel="noopener">Apri navigazione</a>`:''}
+          ${calendarHref?`<a class="btn" href="${esc(calendarHref)}" target="_blank" rel="noopener">Aggiungi al calendario</a>`:''}
+          <a class="btn" href="#eventi">Torna agli eventi</a>
+        </div>
+      </div>
+      <div>
+        <div class="eventTop">
+          <span class="eventBadge">${esc(e.category)}</span>
+          <span class="eventStatus">${esc(e.status)}</span>
+        </div>
+        <h2>${esc(e.title)}</h2>
+        ${e.description?`<p class="sectionLead">${esc(e.description)}</p>`:''}
+        <div class="eventInfoList">${info}</div>
+        ${mapEmbed?`<div class="eventTextBlock"><h3>Mappa</h3><iframe class="mapFrame" src="${esc(mapEmbed)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>`:''}
+        ${e.fullDescription?`<div class="eventTextBlock"><h3>Descrizione completa</h3><p class="muted">${esc(e.fullDescription)}</p></div>`:''}
+        ${programHtml?`<div class="eventTextBlock"><h3>Programma</h3><div class="eventInfoList">${programHtml}</div></div>`:''}
+        ${materialsHtml?`<div class="eventTextBlock"><h3>Materiale necessario</h3><div class="eventInfoList">${materialsHtml}</div></div>`:''}
+        ${e.attachments.length?`<div class="eventTextBlock"><h3>Allegati</h3><div class="eventActions">${e.attachments.map(a=>`<a class="btn" href="${esc(mediaPath(a.file||a.url))}" target="_blank" rel="noopener">${esc(a.title||'Scarica')}</a>`).join('')}</div></div>`:''}
+        ${e.gallery.length?`<div class="eventTextBlock"><h3>Galleria</h3><div class="gallery">${e.gallery.map(img=>imgTag(img.url||img.image||img,img.title||e.title,'contain','center')).join('')}</div></div>`:''}
+        <div class="eventTextBlock">
+          <h3>Contatto rapido</h3>
+          <div class="shareBox">${eventContactButtons(e)}</div>
+        </div>
+        ${officialSocialButtons().length?`<div class="eventTextBlock"><h3>Seguici</h3><div class="followBox">${officialSocialButtons()}</div></div>`:''}
+        <div class="eventTextBlock">
+          <h3>Condividi evento</h3>
+          <div class="shareBox compact">
+            <a class="btn" href="${esc(wa)}" target="_blank" rel="noopener">💬 WhatsApp</a>
+            <a class="btn" href="${esc(fb)}" target="_blank" rel="noopener">f Facebook</a>
+            <a class="btn" href="${esc(tg)}" target="_blank" rel="noopener">✈ Telegram</a>
+            <a class="btn" href="${esc(mail)}">✉ Email</a>
+          </div>
+        </div>
+      </div>
+    </article>`;
+}
+async function renderCmsEvents(){
+  const container=$('events');
+  const detail=$('eventDetail');
+  if(!container || !detail) return;
+  let events=await loadEventFiles();
+  events=events.map(normalizeEvent).sort((a,b)=>String(a.date||'').localeCompare(String(b.date||'')));
+  if(!events.length){
+    show('eventi');
+    if($('eventsTitle')) $('eventsTitle').textContent='Eventi, corsi e stage';
+    if($('eventsLead')) $('eventsLead').textContent='Al momento non ci sono eventi pubblicati.';
+    detail.innerHTML='';
+    container.innerHTML='<article class="card"><h3>Nessun evento in calendario</h3><p class="muted">Quando pubblicherai un nuovo evento dal CMS, comparirà automaticamente qui.</p></article>';
+    return;
+  }
+  show('eventi');
+  const selected=currentEventSlug();
+  if(selected){
+    const found=events.find(e=>e.slug===selected);
+    if(found){
+      if($('eventsTitle')) $('eventsTitle').textContent='Scheda evento';
+      if($('eventsLead')) $('eventsLead').textContent='Pagina dedicata condivisibile.';
+      container.innerHTML='';
+      detail.innerHTML=eventDetailHtml(found);
+      return;
+    }
+  }
+  if($('eventsTitle')) $('eventsTitle').textContent='Eventi, corsi e stage';
+  if($('eventsLead')) $('eventsLead').textContent='Calendario aggiornato delle attività formative e operative.';
+  detail.innerHTML='';
+  container.innerHTML=events.map(eventCard).join('');
+}
+window.addEventListener('hashchange',()=>renderCmsEvents());
+async function loadSite(){
+  const res=await fetch('/content/site.json?v=' + Date.now(),{cache:'no-store'});
+  if(!res.ok) throw new Error('Errore caricamento content/site.json');
+  const d=await res.json();
+
+  const siteName=d.siteName||'K9 Mantrailing HRDD Tattico Napoletano';
+  const logo=mediaPath(d.logo||'/logo.png');
+  const heroImage=mediaPath(d.heroImage||logo);
+
+  document.title=d.heroTitle||siteName;
+  const metaDesc=document.querySelector('meta[name="description"]');
+  if(metaDesc) metaDesc.setAttribute('content',d.heroSubtitle||'');
+
+  if($('navLogo')) $('navLogo').src=logo;
+  setText('navName',siteName);
+  setText('tagline',d.tagline||'');
+  setText('heroTitle',d.heroTitle||siteName);
+  setText('heroSubtitle',d.heroSubtitle||'');
+  if($('heroImage')) $('heroImage').src=heroImage;
+  if($('hero')) $('hero').style.setProperty('--hero-bg',`url("${heroImage}")`);
+  setText('footerBrand',siteName);
+  setText('footerText',d.footer||`© ${siteName}`);
+
+  setText('ownerName',d.owner?.name||'Napoletano Giovanni');
+  setText('ownerRoles',d.owner?.roles||'');
+  setText('ownerBio',d.owner?.bio||'');
+
+  const ownerPhoto=mediaPath(d.owner?.photo||'');
+  const box=$('ownerPhotoBox');
+  if(box){
+    if(ownerPhoto){
+      box.className='profilePhoto hasPhoto';
+      box.innerHTML=imgTag(ownerPhoto,d.owner?.name||'Napoletano Giovanni','contain','center');
+    }else{
+      box.className='profilePhoto noPhoto';
+      box.innerHTML='';
+    }
+  }
+
+  const locations=d.locations||[];
+  if($('locationList')) $('locationList').innerHTML=locations.map(x=>`<span>${esc(x)}</span>`).join('');
+
+  const disciplines=(d.disciplines||[]).filter(x=>x.active!==false);
+  if(disciplines.length){
+    show('discipline');
+    $('disciplines').innerHTML=disciplines.map(x=>`
+      <article class="card">
+        ${x.image?imgTag(x.image,x.title,x.imageFit,x.imagePosition):`<div class="icon">${esc(x.icon||'🐾')}</div>`}
+        <h3>${esc(x.title)}</h3>
+        <p class="muted">${esc(x.short||'')}</p>
+        ${x.long?`<p>${esc(x.long)}</p>`:''}
+        ${renderLinkButton(x.buttonText,x.buttonLink)}
+      </article>`).join('');
+  }else hide('discipline');
+
+  const dogs=d.dogs||[];
+  if(dogs.length){
+    show('cani');
+    $('dogs').innerHTML=dogs.map(x=>`
+      <article class="card dog">
+        ${imgTag(x.photo,x.name,x.imageFit,x.imagePosition)}
+        <h3>${esc(x.name)}</h3>
+        ${x.breed?`<p class="muted">${esc(x.breed)}</p>`:''}
+        ${x.sex?`<p class="muted">${esc(x.sex)}</p>`:''}
+        ${x.birth?`<p class="muted">${esc(x.birth)}</p>`:''}
+        ${x.status?`<p class="status">${esc(x.status)}</p>`:''}
+        ${x.discipline?`<p class="meta">${esc(x.discipline)}</p>`:''}
+        ${x.operationalLevel?`<p class="muted">${esc(x.operationalLevel)}</p>`:''}
+        ${x.certifications?`<p class="muted">${esc(x.certifications)}</p>`:''}
+        ${x.description?`<p>${esc(x.description)}</p>`:''}
+        ${x.notes?`<p class="muted">${esc(x.notes)}</p>`:''}
+      </article>`).join('');
+  }else hide('cani');
+
+  const courses=(d.courses||[]).filter(x=>x.active!==false);
+  if(courses.length){
+    show('corsi');
+    $('courses').innerHTML=courses.map(x=>`
+      <article class="card course">
+        ${imgTag(x.image,x.title,'contain','center')}
+        <h3>${esc(x.title)}</h3>
+        ${x.date?`<p class="meta">${esc(x.date)}</p>`:''}
+        ${x.location?`<p class="muted">${esc(x.location)}</p>`:''}
+        ${x.duration?`<p class="muted">${esc(x.duration)}</p>`:''}
+        ${x.description?`<p>${esc(x.description)}</p>`:''}
+        ${x.program?`<p class="muted">${esc(x.program)}</p>`:''}
+        ${renderLinkButton('Iscriviti / informazioni',x.link)}
+      </article>`).join('');
+  }else hide('corsi');
+
+  window.__siteContacts=d.contacts||{};
+  await renderCmsEvents();
+
+  const gallery=(d.gallery||[]).filter(x=>x.url);
+  if(gallery.length){
+    show('galleria');
+    $('gallery').innerHTML=gallery.map(x=>`
+      <figure>
+        ${x.type==='video'
+          ? `<div class="card"><h3>${esc(x.title)}</h3><a class="btn primary" href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener">Apri video</a></div>`
+          : imgTag(x.url,x.title,x.imageFit,x.imagePosition)}
+        <figcaption><b>${esc(x.title)}</b></figcaption>
+      </figure>`).join('');
+  }else hide('galleria');
+
+  const videos=(d.videos||[]).filter(x=>x.url);
+  if(videos.length){
+    show('video');
+    $('videos').innerHTML=videos.map(x=>`
+      <article class="card">
+        <h3>${esc(x.title||'Video')}</h3>
+        ${x.description?`<p class="muted">${esc(x.description)}</p>`:''}
+        <a class="btn primary" href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener">Apri video</a>
+      </article>`).join('');
+  }else hide('video');
+
+  const reviews=(d.reviews||[]).filter(x=>x.name||x.review);
+  if(reviews.length){
+    show('recensioni');
+    $('reviews').innerHTML=reviews.map(x=>`
+      <article class="card review">
+        ${imgTag(x.photo,x.name,'contain','center')}
+        <h3>${esc(x.name)}</h3>
+        ${x.review?`<p class="muted">“${esc(x.review)}”</p>`:''}
+      </article>`).join('');
+  }else hide('recensioni');
+
+  const partners=(d.partners||[]).filter(x=>x.name||x.logo);
+  if(partners.length){
+    show('partner');
+    $('partners').innerHTML=partners.map(x=>`
+      <article class="card partner">
+        ${imgTag(x.logo,x.name,'contain','center')}
+        <h3>${esc(x.name)}</h3>
+        ${x.description?`<p class="muted">${esc(x.description)}</p>`:''}
+        ${renderLinkButton('Sito web',x.website)}
+      </article>`).join('');
+  }else hide('partner');
+
+  const documents=(d.documents||[]).filter(x=>x.title||x.file);
+  if(documents.length){
+    show('documenti');
+    $('documents').innerHTML=documents.map(x=>`
+      <article class="card">
+        <h3>${esc(x.title)}</h3>
+        ${x.description?`<p class="muted">${esc(x.description)}</p>`:''}
+        ${x.file?`<a class="btn primary" href="${esc(mediaPath(x.file))}" target="_blank" rel="noopener">Scarica</a>`:''}
+      </article>`).join('');
+  }else hide('documenti');
+
+  const faq=(d.faq||[]).filter(x=>x.question||x.answer);
+  if(faq.length){
+    show('faq');
+    $('faqList').innerHTML=faq.map(x=>`
+      <article class="card">
+        <h3>${esc(x.question)}</h3>
+        <p class="muted">${esc(x.answer)}</p>
+      </article>`).join('');
+  }else hide('faq');
+
+  setText('contactName',d.contacts?.name||d.owner?.name||'');
+  setText('phone',d.contacts?.phone||'');
+  setText('email',d.contacts?.email||'');
+  setWhatsApp(d.contacts?.whatsapp||d.contacts?.phone);
+
+  setText('footerContactName',d.contacts?.name||d.owner?.name||'');
+  if($('footerPhone')){
+    $('footerPhone').textContent=d.contacts?.phone||'';
+    $('footerPhone').href=d.contacts?.phone?'tel:+'+String(d.contacts.phone).replace(/\D/g,''):'#';
+  }
+  if($('footerEmail')){
+    $('footerEmail').textContent=d.contacts?.email||'';
+    $('footerEmail').href=d.contacts?.email?'mailto:'+d.contacts.email:'#';
+  }
+  setText('footerAddress',d.contacts?.address||'');
+
+  const socials=(d.socials||[]).filter(x=>x.url);
+  const official=officialSocialLinks().map(x=>({label:x.label,url:x.url}));
+  const finalSocials=socials.length?socials:official;
+  if($('socials')) $('socials').innerHTML=finalSocials.map(x=>`<a href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener">${esc(x.label)}</a>`).join('');
+  renderOfficialSocials();
+}
+
+loadSite().catch(err=>{
+  console.error(err);
+  document.body.insertAdjacentHTML('afterbegin','<div style="padding:14px;background:#7a0000;color:white;text-align:center">Errore caricamento dati CMS. Controlla content/site.json e index.html.</div>');
+});
+
+if('serviceWorker'in navigator){
+  window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+}
+if(window.netlifyIdentity){
+  window.netlifyIdentity.on('init',user=>{
+    if(!user&&window.location.hash.includes('invite_token')) window.netlifyIdentity.open('signup');
+  });
+}
+</script>
+</body>
+</html>
