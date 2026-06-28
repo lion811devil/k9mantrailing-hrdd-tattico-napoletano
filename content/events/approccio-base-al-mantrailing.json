@@ -1,0 +1,16 @@
+{
+  "maxParticipants": 10,
+  "availableSeats": 10,
+  "registrationEnabled": true,
+  "price": "60",
+  "poster": "/assets/uploads/1000238534.png",
+  "time": "Dalle 8.30 alle 18.30",
+  "published": true,
+  "date": "2026-07-26",
+  "status": "Iscrizioni aperte",
+  "location": "Sesto Ulteriano ",
+  "title": "Approccio base al MANTRAILING",
+  "description": "Basi sul Mantrailing ",
+  "category": "Open Day",
+  "buttonText": "Iscriviti"
+}
