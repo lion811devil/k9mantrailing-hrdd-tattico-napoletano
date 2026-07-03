@@ -1,67 +1,128 @@
-// Custom color picker widget for Decap CMS
+// Color Picker Widget per Decap CMS
+// Percorso previsto: /admin/widgets/color-picker.js
+// Widget: colorpicker
+
 (function () {
-  if (!window.CMS) return;
+  function normalizeHex(value) {
+    var raw = String(value || '').trim();
+    if (!raw) return '';
+    if (raw[0] !== '#') raw = '#' + raw;
+    raw = raw.replace(/[^#0-9a-fA-F]/g, '');
+    if (/^#[0-9a-fA-F]{3}$/.test(raw)) {
+      return '#' + raw[1] + raw[1] + raw[2] + raw[2] + raw[3] + raw[3];
+    }
+    if (/^#[0-9a-fA-F]{6}$/.test(raw)) return raw.toLowerCase();
+    return String(value || '');
+  }
 
-  const ColorControl = createClass({
-    handleChange: function (e) {
-      this.props.onChange(e.target.value);
+  function isValidHex(value) {
+    return /^#[0-9a-fA-F]{6}$/.test(String(value || '').trim());
+  }
+
+  var ColorPickerControl = createClass({
+    handleTextChange: function (event) {
+      this.props.onChange(event.target.value);
     },
-
+    handleTextBlur: function (event) {
+      this.props.onChange(normalizeHex(event.target.value));
+    },
+    handleColorChange: function (event) {
+      this.props.onChange(event.target.value);
+    },
     render: function () {
-      const value = this.props.value || "#ff7a00";
+      var value = this.props.value || '';
+      var normalized = normalizeHex(value);
+      var colorValue = isValidHex(normalized) ? normalized : '#ff7a00';
+      var field = this.props.field || {};
+      var hint = field.get ? field.get('hint') : '';
 
-      return h("div", {
-        style: {
-          display: "flex",
-          alignItems: "center",
-          gap: "12px"
-        }
-      },
-        h("input", {
-          type: "color",
-          value: value,
-          onChange: this.handleChange,
+      return h('div', { style: { display: 'grid', gap: '10px' } },
+        h('div', {
           style: {
-            width: "58px",
-            height: "42px",
-            border: "0",
-            padding: "0",
-            background: "transparent",
-            cursor: "pointer"
+            display: 'flex',
+            gap: '10px',
+            alignItems: 'center',
+            flexWrap: 'wrap'
           }
-        }),
-        h("input", {
-          type: "text",
-          value: value,
-          onChange: this.handleChange,
-          placeholder: "#ff7a00",
-          style: {
-            width: "130px",
-            padding: "10px",
-            border: "1px solid #ddd",
-            borderRadius: "6px"
-          }
-        }),
-        h("span", {
-          style: {
-            width: "34px",
-            height: "34px",
-            borderRadius: "8px",
-            border: "1px solid #ccc",
-            background: value,
-            display: "inline-block"
-          }
-        })
+        },
+          h('input', {
+            type: 'color',
+            value: colorValue,
+            onChange: this.handleColorChange,
+            style: {
+              width: '66px',
+              height: '48px',
+              padding: '2px',
+              borderRadius: '10px',
+              border: '1px solid #d1d5db',
+              background: '#fff',
+              cursor: 'pointer'
+            }
+          }),
+          h('input', {
+            type: 'text',
+            value: value,
+            onChange: this.handleTextChange,
+            onBlur: this.handleTextBlur,
+            placeholder: '#ff7a00',
+            style: {
+              flex: '1 1 180px',
+              minWidth: '160px',
+              minHeight: '44px',
+              padding: '10px 12px',
+              borderRadius: '8px',
+              border: '1px solid #d1d5db',
+              fontSize: '16px',
+              fontFamily: 'monospace'
+            }
+          }),
+          h('div', {
+            title: value || 'Nessun colore impostato',
+            style: {
+              width: '48px',
+              height: '48px',
+              borderRadius: '10px',
+              border: '1px solid #d1d5db',
+              background: colorValue,
+              boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.08)'
+            }
+          })
+        ),
+        hint ? h('div', { style: { color: '#6b7280', fontSize: '13px' } }, hint) : null
       );
     }
   });
 
-  const ColorPreview = createClass({
+  var ColorPickerPreview = createClass({
     render: function () {
-      const value = this.props.value || "";
-      return h("span", {}, value);
+      var value = normalizeHex(this.props.value || '');
+      var colorValue = isValidHex(value) ? value : '#ff7a00';
+      return h('div', {
+        style: {
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '8px 10px',
+          border: '1px solid #ddd',
+          borderRadius: '8px',
+          fontFamily: 'Arial, sans-serif'
+        }
+      },
+        h('span', {
+          style: {
+            width: '22px',
+            height: '22px',
+            borderRadius: '6px',
+            background: colorValue,
+            border: '1px solid #ccc'
+          }
+        }),
+        h('span', {}, value || 'Nessun colore')
+      );
     }
   });
 
-  CMS.registerWidget("color", ColorControl, ColorPreview);
+  if (window.CMS) {
+    CMS.registerWidget('colorpicker', ColorPickerControl, ColorPickerPreview);
+  }
 })();
