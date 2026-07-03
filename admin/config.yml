@@ -1,0 +1,360 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "Contenuti sito"
+    files:
+      - file: "content/site.json"
+        label: "Homepage"
+        name: "homepage"
+        fields:
+          - { label: "Nome sito", name: "siteName", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image", required: false }
+          - { label: "Titolo principale", name: "heroTitle", widget: "string", required: false }
+          - { label: "Sottotitolo", name: "heroSubtitle", widget: "text", required: false }
+          - { label: "Frase breve", name: "tagline", widget: "string", required: false }
+          - { label: "Immagine principale", name: "heroImage", widget: "image", required: false }
+
+          - label: "Aspetto del sito"
+            name: "appearance"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Colore testo principale", name: "textColor", widget: "colorpicker", required: false, hint: "Esempio: #fff8ed" }
+              - { label: "Colore testo secondario", name: "mutedTextColor", widget: "colorpicker", required: false, hint: "Esempio: #d7c7ad" }
+              - { label: "Colore principale / arancio", name: "primaryColor", widget: "colorpicker", required: false, hint: "Esempio: #ff7a00" }
+              - { label: "Colore accento / oro", name: "accentColor", widget: "colorpicker", required: false, hint: "Esempio: #f6b739" }
+              - { label: "Colore pulsante WhatsApp", name: "whatsappColor", widget: "colorpicker", required: false, hint: "Esempio: #22c55e" }
+              - { label: "Colore sfondo base", name: "backgroundColor", widget: "colorpicker", required: false, hint: "Esempio: #090909" }
+
+          - label: "Testi sezioni homepage"
+            name: "sectionLabels"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Aree operative - Etichetta", name: "disciplinesKicker", widget: "string", required: false, default: "Aree operative e formative" }
+              - { label: "Aree operative - Titolo", name: "disciplinesTitle", widget: "string", required: false, default: "Discipline" }
+              - { label: "Aree operative - Testo", name: "disciplinesLead", widget: "text", required: false, default: "Attività specialistiche, formazione cinofila e preparazione tecnica del binomio." }
+              - { label: "Unità cinofile - Etichetta", name: "dogsKicker", widget: "string", required: false, default: "Unità cinofile" }
+              - { label: "Unità cinofile - Titolo", name: "dogsTitle", widget: "string", required: false, default: "I cani" }
+              - { label: "Unità cinofile - Testo", name: "dogsLead", widget: "text", required: false, default: "Unità cinofile, schede operative e profili aggiornabili." }
+              - { label: "Formazione - Etichetta", name: "coursesKicker", widget: "string", required: false, default: "Formazione" }
+              - { label: "Formazione - Titolo", name: "coursesTitle", widget: "string", required: false, default: "Corsi" }
+              - { label: "Formazione - Testo", name: "coursesLead", widget: "text", required: false }
+              - { label: "Galleria - Etichetta", name: "galleryKicker", widget: "string", required: false, default: "Media" }
+              - { label: "Galleria - Titolo", name: "galleryTitle", widget: "string", required: false, default: "Galleria" }
+              - { label: "Galleria - Testo", name: "galleryLead", widget: "text", required: false }
+              - { label: "Partner - Etichetta", name: "partnersKicker", widget: "string", required: false, default: "Rete operativa" }
+              - { label: "Partner - Titolo", name: "partnersTitle", widget: "string", required: false, default: "Partner" }
+              - { label: "Partner - Testo", name: "partnersLead", widget: "text", required: false }
+              - { label: "FAQ - Etichetta", name: "faqKicker", widget: "string", required: false, default: "Domande frequenti" }
+              - { label: "FAQ - Titolo", name: "faqTitle", widget: "string", required: false, default: "FAQ" }
+              - { label: "FAQ - Testo", name: "faqLead", widget: "text", required: false }
+              - { label: "Contatti - Etichetta", name: "contactsKicker", widget: "string", required: false, default: "Contatto diretto" }
+              - { label: "Contatti - Titolo", name: "contactsTitle", widget: "string", required: false, default: "Contatti" }
+              - { label: "Box contatto - Titolo", name: "contactCardTitle", widget: "string", required: false, default: "Richiedi informazioni" }
+              - { label: "Box contatto - Testo", name: "contactCardText", widget: "text", required: false, default: "Per attività formative, collaborazione operativa, mantrailing, HRDD e progetti cinofili specializzati." }
+              - { label: "Box contatto - Pulsante", name: "contactButtonText", widget: "string", required: false, default: "Scrivi su WhatsApp" }
+
+          - label: "Sezione social homepage"
+            name: "homeSocials"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Titolo", name: "title", widget: "string", required: false, default: "Seguici sui social" }
+              - { label: "Testo", name: "text", widget: "text", required: false, default: "Resta aggiornato su corsi, stage, addestramenti ed eventi." }
+
+          - label: "Centro distribuzione"
+            name: "distribution"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Hashtag predefiniti", name: "hashtags", widget: "string", required: false, default: "#Mantrailing #HRDD #Cinofilia #K9 #RicercaPersone" }
+              - { label: "Testo introduttivo", name: "intro", widget: "text", required: false, default: "Tutte le informazioni e l'iscrizione sono disponibili nella scheda evento." }
+
+          - label: "Responsabile"
+            name: "owner"
+            widget: "object"
+            fields:
+              - { label: "Nome", name: "name", widget: "string", required: false }
+              - { label: "Ruoli", name: "roles", widget: "string", required: false }
+              - { label: "Biografia", name: "bio", widget: "text", required: false }
+              - { label: "Foto", name: "photo", widget: "image", required: false }
+
+          - label: "Contatti generali del sito"
+            name: "contacts"
+            widget: "object"
+            fields:
+              - { label: "Nome referente", name: "name", widget: "string", required: false }
+              - { label: "Telefono", name: "phone", widget: "string", required: false }
+              - { label: "WhatsApp per iscrizioni", name: "whatsapp", widget: "string", required: false, hint: "Inserisci il numero una sola volta. Esempio: 393281650082" }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Indirizzo / sede", name: "address", widget: "string", required: false }
+              - { label: "Link Google Maps sede", name: "mapsLink", widget: "string", required: false }
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "YouTube", name: "youtube", widget: "string", required: false }
+              - { label: "TikTok", name: "tiktok", widget: "string", required: false }
+
+          - label: "Località operative"
+            name: "locations"
+            widget: "list"
+            required: false
+            field: { label: "Località", name: "location", widget: "string" }
+
+          - label: "Discipline / Aree operative"
+            name: "disciplines"
+            widget: "list"
+            required: false
+            summary: "{{title}}"
+            fields:
+              - { label: "Visibile", name: "active", widget: "boolean", default: true, required: false }
+              - { label: "In evidenza", name: "featured", widget: "boolean", default: false, required: false }
+              - { label: "Icona", name: "icon", widget: "string", required: false, hint: "Esempio: 🐾, ☠️, 🎓" }
+              - { label: "Immagine", name: "image", widget: "image", required: false }
+              - label: "Adattamento immagine"
+                name: "imageFit"
+                widget: "select"
+                required: false
+                default: "contain"
+                options: ["contain", "cover"]
+              - { label: "Posizione immagine", name: "imagePosition", widget: "string", required: false, default: "center" }
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Descrizione breve", name: "short", widget: "text", required: false }
+              - { label: "Descrizione completa", name: "long", widget: "text", required: false }
+              - { label: "Testo pulsante", name: "buttonText", widget: "string", required: false }
+              - { label: "Link pulsante", name: "buttonLink", widget: "string", required: false }
+
+          - label: "Unità cinofile"
+            name: "dogs"
+            widget: "list"
+            required: false
+            summary: "{{name}}"
+            fields:
+              - { label: "Visibile", name: "active", widget: "boolean", default: true, required: false }
+              - { label: "In evidenza", name: "featured", widget: "boolean", default: false, required: false }
+              - { label: "Nome", name: "name", widget: "string" }
+              - { label: "Foto", name: "photo", widget: "image", required: false }
+              - label: "Adattamento immagine"
+                name: "imageFit"
+                widget: "select"
+                required: false
+                default: "contain"
+                options: ["contain", "cover"]
+              - { label: "Posizione immagine", name: "imagePosition", widget: "string", required: false, default: "center" }
+              - { label: "Razza", name: "breed", widget: "string", required: false }
+              - { label: "Sesso", name: "sex", widget: "string", required: false }
+              - { label: "Data di nascita", name: "birth", widget: "string", required: false }
+              - { label: "Stato operativo", name: "status", widget: "string", required: false }
+              - { label: "Specializzazione", name: "discipline", widget: "string", required: false }
+              - { label: "Livello operativo", name: "operationalLevel", widget: "string", required: false }
+              - { label: "Certificazioni / brevetti", name: "certifications", widget: "text", required: false }
+              - { label: "Descrizione", name: "description", widget: "text", required: false }
+              - { label: "Note operative", name: "notes", widget: "text", required: false }
+
+          - label: "Corsi / Formazione"
+            name: "courses"
+            widget: "list"
+            required: false
+            summary: "{{title}}"
+            fields:
+              - { label: "Visibile", name: "active", widget: "boolean", default: true, required: false }
+              - { label: "In evidenza", name: "featured", widget: "boolean", default: false, required: false }
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Immagine", name: "image", widget: "image", required: false }
+              - { label: "Durata", name: "duration", widget: "string", required: false }
+              - { label: "Data / periodo", name: "date", widget: "string", required: false }
+              - { label: "Luogo", name: "location", widget: "string", required: false }
+              - { label: "Descrizione breve", name: "description", widget: "text", required: false }
+              - { label: "Programma", name: "program", widget: "text", required: false }
+              - { label: "Prerequisiti", name: "requirements", widget: "text", required: false }
+              - { label: "Costo", name: "price", widget: "string", required: false }
+              - { label: "Link iscrizione / informazioni", name: "link", widget: "string", required: false }
+
+          - label: "Galleria"
+            name: "gallery"
+            widget: "list"
+            required: false
+            summary: "{{title}}"
+            fields:
+              - { label: "Visibile", name: "active", widget: "boolean", default: true, required: false }
+              - { label: "Titolo / didascalia", name: "title", widget: "string", required: false }
+              - label: "Tipo"
+                name: "type"
+                widget: "select"
+                required: false
+                default: "image"
+                options: ["image", "video"]
+              - { label: "File o URL", name: "url", widget: "file", required: false }
+              - label: "Adattamento immagine"
+                name: "imageFit"
+                widget: "select"
+                required: false
+                default: "contain"
+                options: ["contain", "cover"]
+              - { label: "Posizione immagine", name: "imagePosition", widget: "string", required: false, default: "center" }
+
+          - label: "Video"
+            name: "videos"
+            widget: "list"
+            required: false
+            summary: "{{title}}"
+            fields:
+              - { label: "Visibile", name: "active", widget: "boolean", default: true, required: false }
+              - { label: "Titolo", name: "title", widget: "string", required: false }
+              - { label: "Descrizione", name: "description", widget: "text", required: false }
+              - { label: "File o URL video", name: "url", widget: "file", required: false }
+
+          - label: "Testimonianze"
+            name: "reviews"
+            widget: "list"
+            required: false
+            summary: "{{name}}"
+            fields:
+              - { label: "Visibile", name: "active", widget: "boolean", default: true, required: false }
+              - { label: "Nome", name: "name", widget: "string", required: false }
+              - { label: "Foto", name: "photo", widget: "image", required: false }
+              - { label: "Recensione", name: "review", widget: "text", required: false }
+
+          - label: "Partner"
+            name: "partners"
+            widget: "list"
+            required: false
+            summary: "{{name}}"
+            fields:
+              - { label: "Visibile", name: "active", widget: "boolean", default: true, required: false }
+              - { label: "In evidenza", name: "featured", widget: "boolean", default: false, required: false }
+              - { label: "Nome", name: "name", widget: "string", required: false }
+              - { label: "Logo", name: "logo", widget: "image", required: false }
+              - { label: "Descrizione", name: "description", widget: "text", required: false }
+              - { label: "Sito web", name: "website", widget: "string", required: false }
+
+          - label: "Documenti"
+            name: "documents"
+            widget: "list"
+            required: false
+            summary: "{{title}}"
+            fields:
+              - { label: "Visibile", name: "active", widget: "boolean", default: true, required: false }
+              - { label: "Titolo", name: "title", widget: "string", required: false }
+              - { label: "Descrizione", name: "description", widget: "text", required: false }
+              - { label: "File", name: "file", widget: "file", required: false }
+
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            required: false
+            summary: "{{question}}"
+            fields:
+              - { label: "Visibile", name: "active", widget: "boolean", default: true, required: false }
+              - { label: "Domanda", name: "question", widget: "string", required: false }
+              - { label: "Risposta", name: "answer", widget: "text", required: false }
+
+          - { label: "Testo footer", name: "footer", widget: "string", required: false }
+
+  - name: "events"
+    label: "Calendario eventi"
+    label_singular: "Evento"
+    folder: "content/events"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    summary: "{{title}} - {{date}}"
+    fields:
+      - { label: "Evento visibile", name: "published", widget: "boolean", default: true }
+      - { label: "Titolo evento", name: "title", widget: "string" }
+
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        required: false
+        options:
+          - "Corso"
+          - "Stage"
+          - "Seminario"
+          - "Workshop"
+          - "Esercitazione"
+          - "Open Day"
+          - "Evento"
+          - "Attività operativa"
+          - "Gara"
+          - "Altro"
+
+      - label: "Stato iscrizioni"
+        name: "status"
+        widget: "select"
+        required: false
+        default: "Iscrizioni aperte"
+        options:
+          - "Iscrizioni aperte"
+          - "Ultimi posti"
+          - "Completo"
+          - "Rinviato"
+          - "Chiuso"
+
+      - { label: "Abilita iscrizione WhatsApp", name: "registrationEnabled", widget: "boolean", default: true, hint: "Usa automaticamente il numero WhatsApp impostato nei Contatti generali del sito." }
+      - { label: "Testo pulsante iscrizione", name: "buttonText", widget: "string", default: "Iscriviti" }
+
+      - { label: "Data evento", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Orario", name: "time", widget: "string", required: false }
+      - { label: "Luogo", name: "location", widget: "string", required: false }
+      - { label: "Link Google Maps", name: "mapsLink", widget: "string", required: false }
+
+      - { label: "Locandina evento", name: "poster", widget: "image", required: false }
+      - { label: "Descrizione breve", name: "description", widget: "text", required: false }
+      - { label: "Descrizione completa", name: "body", widget: "markdown", required: false }
+
+      - label: "Docenti / Referenti"
+        name: "teachers"
+        widget: "list"
+        required: false
+        field: { label: "Nome docente o referente", name: "teacher", widget: "string" }
+
+      - label: "Programma giornata"
+        name: "program"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Orario", name: "time", widget: "string", required: false }
+          - { label: "Attività", name: "activity", widget: "string" }
+
+      - label: "Materiale necessario"
+        name: "materials"
+        widget: "list"
+        required: false
+        field: { label: "Materiale", name: "item", widget: "string" }
+
+      - { label: "Costo", name: "price", widget: "string", required: false }
+      - { label: "Numero massimo partecipanti", name: "maxParticipants", widget: "number", required: false }
+      - { label: "Posti disponibili", name: "availableSeats", widget: "number", required: false }
+
+      - label: "Galleria evento"
+        name: "gallery"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Immagine", name: "image", widget: "image" }
+          - { label: "Didascalia", name: "caption", widget: "string", required: false }
+
+      - label: "Allegati"
+        name: "attachments"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Titolo allegato", name: "title", widget: "string" }
+          - { label: "File", name: "file", widget: "file" }
+
+      - label: "SEO e condivisione"
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Titolo SEO", name: "title", widget: "string", required: false }
+          - { label: "Descrizione SEO", name: "description", widget: "text", required: false }
+          - { label: "Immagine anteprima social", name: "image", widget: "image", required: false }
