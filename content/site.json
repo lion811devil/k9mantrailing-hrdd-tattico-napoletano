@@ -112,7 +112,8 @@
       "duration": "11 ore teoriche • 5 ore pratiche",
       "description": "Percorso formativo dedicato alla gestione professionale e responsabile del cane.",
       "program": "Gestione del cane, sicurezza, comunicazione, bisogni etologici e prevenzione degli incidenti.",
-      "active": true
+      "active": true,
+      "image": "/assets/uploads/1000229299.png"
     }
   ],
   "events": [
