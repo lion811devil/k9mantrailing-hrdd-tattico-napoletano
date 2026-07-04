@@ -1,0 +1,504 @@
+{
+  "heroImage": "/assets/uploads/1000241236.png",
+  "disciplines": [
+    {
+      "imagePosition": "center",
+      "active": true,
+      "buttonLink": "",
+      "imageFit": "contain",
+      "title": "Mantrailing - Ricerca Persone Scomparse",
+      "icon": "🐾",
+      "image": "",
+      "short": "Ricerca della traccia individuale di una persona tramite il lavoro olfattivo del cane.",
+      "long": "Il Mantrailing utilizza la capacità olfattiva del cane per seguire la traccia specifica di una persona, partendo da un riferimento odoroso.",
+      "buttonText": ""
+    },
+    {
+      "imagePosition": "center",
+      "active": true,
+      "buttonLink": "",
+      "imageFit": "contain",
+      "title": "HRDD - Ricerca Resti Umani",
+      "icon": "☠️",
+      "image": "",
+      "short": "Attività specialistica per la ricerca di resti umani e tracce biologiche umane.",
+      "long": "Disciplina specialistica Human Remains Detection Dog.",
+      "buttonText": ""
+    },
+    {
+      "imagePosition": "center",
+      "active": true,
+      "buttonLink": "",
+      "imageFit": "contain",
+      "title": "Educazione cinofila",
+      "icon": "🎓",
+      "image": "",
+      "short": "Percorsi educativi per migliorare relazione e gestione.",
+      "long": "Percorsi educativi personalizzati.",
+      "buttonText": ""
+    }
+  ],
+  "socials": [
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/share/1H1PwjjdQ9/"
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "YouTube",
+      "url": ""
+    }
+  ],
+  "logoSecondary": "/assets/uploads/1000217802.png",
+  "partners": [
+    {
+      "name": "MANTRAILING RAGIÒ DI SOLE",
+      "logo": "/assets/uploads/1000178519.png"
+    }
+  ],
+  "logo": "/assets/uploads/1000241237.png",
+  "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
+  "heroSubtitle": "Unità cinofila specialistica dedicata a ricerca persone scomparse/disperse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
+  "siteName": "K9 NAPOLETANO ACADEMY ",
+  "gallery": [
+    {
+      "type": "image",
+      "title": "Bruss nel ritrovamento e segnalazione del figurante al conduttore ",
+      "url": "/assets/uploads/1000230330.jpg",
+      "imageFit": "contain",
+      "imagePosition": "center"
+    }
+  ],
+  "contacts": {
+    "name": "Napoletano Giovanni",
+    "phone": "3281650082",
+    "email": "napoletano.giovanni.81@gmail.com",
+    "whatsapp": "393281650082",
+    "facebook": "https://www.facebook.com/share/1CerGAE6Es/",
+    "instagram": "https://www.instagram.com/k9.mantrailing.napoletano?igsh=MTIwcjVranp2MXI5ZA==",
+    "youtube": "https://youtube.com/@napoletanogiovannik9?si=0TRw2RJCfb-PqWfj",
+    "tiktok": "https://www.tiktok.com/@k9.mantrailing.na?_r=1&_t=ZN-97aYA9bYRrq"
+  },
+  "owner": {
+    "name": "Napoletano Giovanni",
+    "roles": "Docente, formatore, responsabile dell’unità cinofila e operativo",
+    "bio": "Il progetto K9 Napoletano Academy nasce per presentare attività cinofile specialistiche, formazione operativa e lavoro sul campo con un approccio serio, tecnico e professionale.",
+    "photo": "/assets/uploads/1000233988.jpg"
+  },
+  "faq": [
+    {
+      "question": "Come posso richiedere informazioni sui corsi?",
+      "answer": "Puoi contattare direttamente Napoletano Giovanni tramite telefono, email o WhatsApp."
+    }
+  ],
+  "dogs": [
+    {
+      "name": "Kira",
+      "status": "Operativa in Protezione Civile del Basso Garda",
+      "discipline": "Protezione Civile cinofila / Ricerca",
+      "description": "Operativa in protezione civile in Mantrailing e HRDD ",
+      "photo": "/assets/uploads/1000234967.png",
+      "notes": "Inserire note operative specifiche.",
+      "imageFit": "contain",
+      "imagePosition": "center"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Corso Dogsitter",
+      "duration": "11 ore teoriche • 5 ore pratiche",
+      "description": "Percorso formativo dedicato alla gestione professionale e responsabile del cane.",
+      "program": "Gestione del cane, sicurezza, comunicazione, bisogni etologici e prevenzione degli incidenti.",
+      "active": true,
+      "image": "/assets/uploads/1000229299.png"
+    }
+  ],
+  "events": [
+    {
+      "title": "Stage Mantrailing",
+      "description": "Giornata formativa dedicata al lavoro di traccia.",
+      "active": true
+    },
+    {
+      "title": "Seminario HRDD",
+      "description": "Approfondimento tecnico sulla ricerca HRDD.",
+      "active": true
+    }
+  ],
+  "footer": "© K9 Napoletano Academy - Tutti i diritti riservati.",
+  "heroTitle": "K9 NAPOLETANO ACADEMY ",
+  "locations": [
+    "San Giuliano Milanese (MI)",
+    "Desenzano del Garda, Sirmione, Padenghe (BS)",
+    "Ricerca nazionale e internazionale"
+  ],
+  "k9Studio": {
+    "textElements": [
+      {
+        "active": true,
+        "label": "Titolo principale Hero",
+        "targetId": "heroTitle",
+        "content": "K9 NAPOLETANO ACADEMY "
+      },
+      {
+        "active": true,
+        "label": "Sottotitolo Hero",
+        "targetId": "heroSubtitle",
+        "content": "Unità cinofila specialistica dedicata a ricerca persone scomparse/disperse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali."
+      },
+      {
+        "active": true,
+        "label": "Badge Hero",
+        "targetId": "tagline",
+        "content": "Mantrailing • HRDD • Formazione cinofila operativa"
+      },
+      {
+        "active": true,
+        "label": "Nome nel menu/header",
+        "targetId": "navName",
+        "content": "K9 NAPOLETANO ACADEMY "
+      },
+      {
+        "active": true,
+        "label": "Pulsante WhatsApp Hero",
+        "targetId": "waBtn",
+        "content": "Contatta su WhatsApp"
+      },
+      {
+        "active": true,
+        "label": "Pulsante secondario Hero",
+        "targetId": "heroSecondaryBtn",
+        "content": "Scopri le discipline"
+      },
+      {
+        "active": true,
+        "label": "Titolo social homepage",
+        "targetId": "heroSocialTitle",
+        "content": "Seguici sui social"
+      },
+      {
+        "active": true,
+        "label": "Testo social homepage",
+        "targetId": "heroSocialText",
+        "content": "Resta aggiornato su corsi, stage, addestramenti ed eventi."
+      },
+      {
+        "active": true,
+        "label": "Nome responsabile",
+        "targetId": "ownerName",
+        "content": "Napoletano Giovanni"
+      },
+      {
+        "active": true,
+        "label": "Ruoli responsabile",
+        "targetId": "ownerRoles",
+        "content": "Docente, formatore, responsabile dell’unità cinofila e operativo"
+      },
+      {
+        "active": true,
+        "label": "Biografia responsabile",
+        "targetId": "ownerBio",
+        "content": "Il progetto K9 Napoletano Academy nasce per presentare attività cinofile specialistiche, formazione operativa e lavoro sul campo con un approccio serio, tecnico e professionale."
+      },
+      {
+        "active": true,
+        "label": "Ricerca - etichetta",
+        "targetId": "searchKicker",
+        "content": "Ricerca rapida"
+      },
+      {
+        "active": true,
+        "label": "Ricerca - titolo",
+        "targetId": "searchTitle",
+        "content": "Cerca nel sito"
+      },
+      {
+        "active": true,
+        "label": "Ricerca - testo",
+        "targetId": "searchLead",
+        "content": "Trova rapidamente eventi, corsi, discipline, unità cinofile, documenti e FAQ."
+      },
+      {
+        "active": true,
+        "label": "Discipline - etichetta",
+        "targetId": "disciplinesKicker",
+        "content": "Aree operative e formative"
+      },
+      {
+        "active": true,
+        "label": "Discipline - titolo",
+        "targetId": "disciplinesTitle",
+        "content": "Discipline"
+      },
+      {
+        "active": true,
+        "label": "Discipline - testo",
+        "targetId": "disciplinesLead",
+        "content": "Attività specialistiche, formazione cinofila e preparazione tecnica del binomio."
+      },
+      {
+        "active": true,
+        "label": "Cani - etichetta",
+        "targetId": "dogsKicker",
+        "content": "Unità cinofile"
+      },
+      {
+        "active": true,
+        "label": "Cani - titolo",
+        "targetId": "dogsTitle",
+        "content": "I cani"
+      },
+      {
+        "active": true,
+        "label": "Cani - testo",
+        "targetId": "dogsLead",
+        "content": "Unità cinofile, schede operative e profili aggiornabili."
+      },
+      {
+        "active": true,
+        "label": "Corsi - etichetta",
+        "targetId": "coursesKicker",
+        "content": "Formazione"
+      },
+      {
+        "active": true,
+        "label": "Corsi - titolo",
+        "targetId": "coursesTitle",
+        "content": "Corsi"
+      },
+      {
+        "active": true,
+        "label": "Eventi - etichetta",
+        "targetId": "eventsKicker",
+        "content": "Calendario formativo"
+      },
+      {
+        "active": true,
+        "label": "Eventi - titolo",
+        "targetId": "eventsTitle",
+        "content": "Eventi, corsi e stage"
+      },
+      {
+        "active": true,
+        "label": "Eventi - testo",
+        "targetId": "eventsLead",
+        "content": "Calendario aggiornato delle attività formative e operative."
+      },
+      {
+        "active": true,
+        "label": "Galleria - etichetta",
+        "targetId": "galleryKicker",
+        "content": "Media"
+      },
+      {
+        "active": true,
+        "label": "Galleria - titolo",
+        "targetId": "galleryTitle",
+        "content": "Galleria"
+      },
+      {
+        "active": true,
+        "label": "Partner - titolo",
+        "targetId": "partnersTitle",
+        "content": "Partner"
+      },
+      {
+        "active": true,
+        "label": "FAQ - titolo",
+        "targetId": "faqTitle",
+        "content": "FAQ"
+      },
+      {
+        "active": true,
+        "label": "Contatti - titolo",
+        "targetId": "contactsTitle",
+        "content": "Contatti"
+      },
+      {
+        "active": true,
+        "label": "Box contatti - titolo",
+        "targetId": "contactCardTitle",
+        "content": "Richiedi informazioni"
+      },
+      {
+        "active": true,
+        "label": "Box contatti - testo",
+        "targetId": "contactCardText",
+        "content": "Per attività formative, collaborazione operativa, mantrailing, HRDD e progetti cinofili specializzati."
+      },
+      {
+        "active": true,
+        "label": "Footer - marchio",
+        "targetId": "footerBrand",
+        "content": "K9 NAPOLETANO ACADEMY "
+      },
+      {
+        "active": true,
+        "label": "Footer - copyright",
+        "targetId": "footerText",
+        "content": "© K9 NAPOLETANO ACADEMY  - Tutti i diritti riservati."
+      }
+    ],
+    "autoTextRegistry": [
+      {
+        "active": true,
+        "label": "Disciplina 1 - Titolo",
+        "targetKey": "disciplines.0.title",
+        "content": "Mantrailing - Ricerca Persone Scomparse"
+      },
+      {
+        "active": true,
+        "label": "Disciplina 1 - Testo breve",
+        "targetKey": "disciplines.0.short",
+        "content": "Ricerca della traccia individuale di una persona tramite il lavoro olfattivo del cane."
+      },
+      {
+        "active": true,
+        "label": "Disciplina 1 - Testo completo",
+        "targetKey": "disciplines.0.long",
+        "content": "Il Mantrailing utilizza la capacità olfattiva del cane per seguire la traccia specifica di una persona, partendo da un riferimento odoroso."
+      },
+      {
+        "active": true,
+        "label": "Disciplina 2 - Titolo",
+        "targetKey": "disciplines.1.title",
+        "content": "HRDD - Ricerca Resti Umani"
+      },
+      {
+        "active": true,
+        "label": "Disciplina 2 - Testo breve",
+        "targetKey": "disciplines.1.short",
+        "content": "Attività specialistica per la ricerca di resti umani e tracce biologiche umane."
+      },
+      {
+        "active": true,
+        "label": "Disciplina 2 - Testo completo",
+        "targetKey": "disciplines.1.long",
+        "content": "Disciplina specialistica Human Remains Detection Dog."
+      },
+      {
+        "active": true,
+        "label": "Disciplina 3 - Titolo",
+        "targetKey": "disciplines.2.title",
+        "content": "Educazione cinofila"
+      },
+      {
+        "active": true,
+        "label": "Disciplina 3 - Testo breve",
+        "targetKey": "disciplines.2.short",
+        "content": "Percorsi educativi per migliorare relazione e gestione."
+      },
+      {
+        "active": true,
+        "label": "Disciplina 3 - Testo completo",
+        "targetKey": "disciplines.2.long",
+        "content": "Percorsi educativi personalizzati."
+      },
+      {
+        "active": true,
+        "label": "Cane 1 - Nome",
+        "targetKey": "dogs.0.name",
+        "content": "Kira"
+      },
+      {
+        "active": true,
+        "label": "Cane 1 - Stato",
+        "targetKey": "dogs.0.status",
+        "content": "Operativa in Protezione Civile del Basso Garda"
+      },
+      {
+        "active": true,
+        "label": "Cane 1 - Specializzazione",
+        "targetKey": "dogs.0.discipline",
+        "content": "Protezione Civile cinofila / Ricerca"
+      },
+      {
+        "active": true,
+        "label": "Cane 1 - Descrizione",
+        "targetKey": "dogs.0.description",
+        "content": "Operativa in protezione civile in Mantrailing e HRDD"
+      },
+      {
+        "active": true,
+        "label": "Cane 1 - Note",
+        "targetKey": "dogs.0.notes",
+        "content": "Inserire note operative specifiche."
+      },
+      {
+        "active": true,
+        "label": "Corso 1 - Titolo",
+        "targetKey": "courses.0.title",
+        "content": "Corso Dogsitter"
+      },
+      {
+        "active": true,
+        "label": "Corso 1 - Durata",
+        "targetKey": "courses.0.duration",
+        "content": "11 ore teoriche • 5 ore pratiche"
+      },
+      {
+        "active": true,
+        "label": "Corso 1 - Descrizione",
+        "targetKey": "courses.0.description",
+        "content": "Percorso formativo dedicato alla gestione professionale e responsabile del cane."
+      },
+      {
+        "active": true,
+        "label": "Corso 1 - Programma",
+        "targetKey": "courses.0.program",
+        "content": "Gestione del cane, sicurezza, comunicazione, bisogni etologici e prevenzione degli incidenti."
+      },
+      {
+        "active": true,
+        "label": "Galleria 1 - Didascalia",
+        "targetKey": "gallery.0.title",
+        "content": "Bruss nel ritrovamento e segnalazione del figurante al conduttore"
+      },
+      {
+        "active": true,
+        "label": "Partner 1 - Nome",
+        "targetKey": "partners.0.name",
+        "content": "MANTRAILING RAGIÒ DI SOLE"
+      },
+      {
+        "active": true,
+        "label": "FAQ 1 - Domanda",
+        "targetKey": "faq.0.question",
+        "content": "Come posso richiedere informazioni sui corsi?"
+      },
+      {
+        "active": true,
+        "label": "FAQ 1 - Risposta",
+        "targetKey": "faq.0.answer",
+        "content": "Puoi contattare direttamente Napoletano Giovanni tramite telefono, email o WhatsApp."
+      },
+      {
+        "active": true,
+        "label": "Evento 1 - Titolo",
+        "targetKey": "events.0.title",
+        "content": "Stage Mantrailing"
+      },
+      {
+        "active": true,
+        "label": "Evento 1 - Descrizione",
+        "targetKey": "events.0.description",
+        "content": "Giornata formativa dedicata al lavoro di traccia."
+      },
+      {
+        "active": true,
+        "label": "Evento 2 - Titolo",
+        "targetKey": "events.1.title",
+        "content": "Seminario HRDD"
+      },
+      {
+        "active": true,
+        "label": "Evento 2 - Descrizione",
+        "targetKey": "events.1.description",
+        "content": "Approfondimento tecnico sulla ricerca HRDD."
+      }
+    ]
+  }
+}
