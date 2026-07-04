@@ -1,0 +1,1706 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: assets/uploads
+public_folder: /assets/uploads
+collections:
+- name: site
+  label: K9 Studio
+  files:
+  - file: content/site.json
+    label: Pannello principale
+    name: homepage
+    fields:
+    - label: Nome sito
+      name: siteName
+      widget: string
+    - label: Logo
+      name: logo
+      widget: image
+      required: false
+    - label: Immagine principale
+      name: heroImage
+      widget: image
+      required: false
+    - label: Pulsanti Hero
+      name: heroButtons
+      widget: object
+      required: false
+      fields:
+      - label: Testo pulsante principale
+        name: primaryText
+        widget: string
+        required: false
+        default: Contatta su WhatsApp
+      - label: Testo pulsante secondario
+        name: secondaryText
+        widget: string
+        required: false
+        default: Scopri le discipline
+      - label: Link pulsante secondario
+        name: secondaryLink
+        widget: string
+        required: false
+        default: '#discipline'
+    - label: 📝 K9 Studio - Editor Testi
+      name: k9Studio
+      widget: object
+      required: false
+      fields:
+      - label: Testi principali del sito
+        name: textElements
+        widget: list
+        required: false
+        summary: '{{fields.label}}'
+        fields:
+        - label: Attivo
+          name: active
+          widget: boolean
+          default: true
+          required: false
+        - label: Nome nel menu
+          name: label
+          widget: string
+          required: false
+          hint: 'Esempio: Titolo Hero'
+        - label: Elemento del sito da modificare
+          name: targetId
+          widget: select
+          required: false
+          options:
+          - label: Titolo principale Hero
+            value: heroTitle
+          - label: Sottotitolo Hero
+            value: heroSubtitle
+          - label: Badge Hero
+            value: tagline
+          - label: Nome nel menu/header
+            value: navName
+          - label: Pulsante WhatsApp Hero
+            value: waBtn
+          - label: Pulsante secondario Hero
+            value: heroSecondaryBtn
+          - label: Titolo social homepage
+            value: heroSocialTitle
+          - label: Testo social homepage
+            value: heroSocialText
+          - label: Nome responsabile
+            value: ownerName
+          - label: Ruoli responsabile
+            value: ownerRoles
+          - label: Biografia responsabile
+            value: ownerBio
+          - label: Ricerca - etichetta
+            value: searchKicker
+          - label: Ricerca - titolo
+            value: searchTitle
+          - label: Ricerca - testo
+            value: searchLead
+          - label: Discipline - etichetta
+            value: disciplinesKicker
+          - label: Discipline - titolo
+            value: disciplinesTitle
+          - label: Discipline - testo
+            value: disciplinesLead
+          - label: Cani - etichetta
+            value: dogsKicker
+          - label: Cani - titolo
+            value: dogsTitle
+          - label: Cani - testo
+            value: dogsLead
+          - label: Corsi - etichetta
+            value: coursesKicker
+          - label: Corsi - titolo
+            value: coursesTitle
+          - label: Corsi - testo
+            value: coursesLead
+          - label: Eventi - etichetta
+            value: eventsKicker
+          - label: Eventi - titolo
+            value: eventsTitle
+          - label: Eventi - testo
+            value: eventsLead
+          - label: Galleria - etichetta
+            value: galleryKicker
+          - label: Galleria - titolo
+            value: galleryTitle
+          - label: Partner - titolo
+            value: partnersTitle
+          - label: FAQ - titolo
+            value: faqTitle
+          - label: Contatti - titolo
+            value: contactsTitle
+          - label: Box contatti - titolo
+            value: contactCardTitle
+          - label: Box contatti - testo
+            value: contactCardText
+          - label: Footer - marchio
+            value: footerBrand
+          - label: Footer - copyright
+            value: footerText
+          - label: Nuovo testo libero
+            value: custom
+        - label: Testo
+          name: content
+          widget: text
+          required: false
+        - label: Tag per nuovo testo libero
+          name: htmlTag
+          widget: select
+          required: false
+          options:
+          - p
+          - h2
+          - h3
+          - div
+        - label: Font
+          name: font
+          widget: select
+          required: false
+          options:
+          - ''
+          - Arial
+          - Inter
+          - Montserrat
+          - Poppins
+          - Oswald
+          - Bebas Neue
+          - Anton
+          - Roboto Condensed
+          - League Spartan
+          - Rajdhani
+          - Orbitron
+          - Exo 2
+          - Cinzel
+          - Playfair Display
+          - Georgia
+          - Times New Roman
+          - Courier New
+        - label: Colore testo
+          name: color
+          widget: colorpicker
+          required: false
+        - label: Dimensione
+          name: size
+          widget: string
+          required: false
+          hint: 'Esempio: 42px oppure clamp(42px,12vw,92px)'
+        - label: Peso / grassetto
+          name: weight
+          widget: select
+          required: false
+          options:
+          - ''
+          - '300'
+          - '400'
+          - '500'
+          - '600'
+          - '700'
+          - '800'
+          - '900'
+        - label: Maiuscole / minuscole
+          name: transform
+          widget: select
+          required: false
+          options:
+          - ''
+          - none
+          - uppercase
+          - lowercase
+          - capitalize
+        - label: Allineamento
+          name: align
+          widget: select
+          required: false
+          options:
+          - ''
+          - left
+          - center
+          - right
+        - label: Spaziatura lettere
+          name: letterSpacing
+          widget: string
+          required: false
+          hint: 'Esempio: .04em oppure 2px'
+        - label: Altezza riga
+          name: lineHeight
+          widget: string
+          required: false
+          hint: 'Esempio: .95 oppure 1.2'
+        - label: Gradiente attivo
+          name: gradientActive
+          widget: boolean
+          default: false
+          required: false
+        - label: Gradiente colore 1
+          name: gradientFrom
+          widget: colorpicker
+          required: false
+        - label: Gradiente colore 2
+          name: gradientTo
+          widget: colorpicker
+          required: false
+        - label: Direzione gradiente
+          name: gradientDirection
+          widget: string
+          required: false
+          hint: 'Esempio: 135deg'
+        - label: Ombra attiva
+          name: shadowActive
+          widget: boolean
+          default: false
+          required: false
+        - label: Colore ombra
+          name: shadowColor
+          widget: colorpicker
+          required: false
+        - label: Intensità ombra
+          name: shadowBlur
+          widget: string
+          required: false
+          hint: 'Esempio: 24px'
+        - label: Glow / neon attivo
+          name: glowActive
+          widget: boolean
+          default: false
+          required: false
+        - label: Colore glow
+          name: glowColor
+          widget: colorpicker
+          required: false
+        - label: Intensità glow
+          name: glowBlur
+          widget: string
+          required: false
+          hint: 'Esempio: 32px'
+        - label: Bordo testo colore
+          name: strokeColor
+          widget: colorpicker
+          required: false
+        - label: Bordo testo spessore
+          name: strokeWidth
+          widget: string
+          required: false
+          hint: 'Esempio: 1px'
+        hint: Seleziona il testo da modificare dal menu, cambia contenuto e stile, poi pubblica.
+        collapsed: true
+      hint: Gestisce i testi principali del sito da un unico strumento. I testi dinamici (cani, corsi, discipline, eventi) si modificano nelle rispettive sezioni.
+    - label: 🎨 Theme Studio - Aspetto grafico
+      name: appearance
+      widget: object
+      required: false
+      fields:
+      - label: Colore testo principale
+        name: textColor
+        widget: colorpicker
+        required: false
+        hint: 'Esempio: #fff8ed'
+      - label: Colore testo secondario
+        name: mutedTextColor
+        widget: colorpicker
+        required: false
+        hint: 'Esempio: #d7c7ad'
+      - label: Colore principale / arancio
+        name: primaryColor
+        widget: colorpicker
+        required: false
+        hint: 'Esempio: #ff7a00'
+      - label: Colore accento / oro
+        name: accentColor
+        widget: colorpicker
+        required: false
+        hint: 'Esempio: #f6b739'
+      - label: Colore pulsante WhatsApp
+        name: whatsappColor
+        widget: colorpicker
+        required: false
+        hint: 'Esempio: #22c55e'
+      - label: Colore sfondo base
+        name: backgroundColor
+        widget: colorpicker
+        required: false
+        hint: 'Esempio: #090909'
+      - label: Spaziatura verticale sezioni
+        name: sectionPadding
+        widget: string
+        required: false
+        hint: 'Esempio: 72px oppure 48px'
+      - label: Hero avanzato
+        name: heroAdvanced
+        widget: object
+        required: false
+        fields:
+        - label: Altezza Hero
+          name: height
+          widget: string
+          required: false
+          hint: 'Esempio: calc(100vh - 78px), 680px, auto'
+        - label: Opacità immagine Hero
+          name: bgOpacity
+          widget: number
+          required: false
+          value_type: float
+          min: 0
+          max: 1
+          step: 0.05
+          hint: 'Da 0 a 1. Esempio: 0.76'
+        - label: Allineamento contenuto Hero
+          name: contentAlign
+          widget: select
+          required: false
+          options:
+          - center
+          - start
+          - end
+          - stretch
+      - label: Footer
+        name: footerStyle
+        widget: object
+        required: false
+        fields:
+        - label: Colore sfondo footer
+          name: backgroundColor
+          widget: colorpicker
+          required: false
+      - label: Font del sito
+        name: typography
+        widget: object
+        required: false
+        fields:
+        - label: Font generale
+          name: globalFont
+          widget: select
+          required: false
+          options:
+          - Arial
+          - Montserrat
+          - Poppins
+          - Oswald
+          - Bebas Neue
+          - Anton
+          - Roboto Condensed
+          - Georgia
+          - Times New Roman
+          - Courier New
+        - label: Font titoli sezioni
+          name: headingFont
+          widget: select
+          required: false
+          options:
+          - Arial
+          - Montserrat
+          - Poppins
+          - Oswald
+          - Bebas Neue
+          - Anton
+          - Roboto Condensed
+          - Georgia
+          - Times New Roman
+          - Courier New
+        - label: Font titolo principale Hero
+          name: heroFont
+          widget: select
+          required: false
+          options:
+          - Arial
+          - Montserrat
+          - Poppins
+          - Oswald
+          - Bebas Neue
+          - Anton
+          - Roboto Condensed
+          - Georgia
+          - Times New Roman
+          - Courier New
+        - label: Font pulsanti
+          name: buttonFont
+          widget: select
+          required: false
+          options:
+          - Arial
+          - Montserrat
+          - Poppins
+          - Oswald
+          - Bebas Neue
+          - Anton
+          - Roboto Condensed
+          - Georgia
+          - Times New Roman
+          - Courier New
+        - label: Dimensione base testi
+          name: globalFontSize
+          widget: string
+          required: false
+          hint: 'Esempio: 16px'
+      - label: Titolo principale Hero
+        name: heroTitleStyle
+        widget: object
+        required: false
+        fields:
+        - label: Colore titolo
+          name: color
+          widget: colorpicker
+          required: false
+          hint: 'Esempio: #fff8ed'
+        - label: Dimensione titolo
+          name: size
+          widget: string
+          required: false
+          hint: 'Esempio: clamp(43px,7vw,92px) oppure 64px'
+        - label: Spaziatura lettere
+          name: letterSpacing
+          widget: string
+          required: false
+          hint: 'Esempio: .04em oppure 2px'
+        - label: Altezza riga
+          name: lineHeight
+          widget: string
+          required: false
+          hint: 'Esempio: .94 oppure 1.1'
+        - label: Maiuscole / minuscole
+          name: transform
+          widget: select
+          required: false
+          options:
+          - uppercase
+          - none
+          - capitalize
+          - lowercase
+        - label: Allineamento
+          name: align
+          widget: select
+          required: false
+          options:
+          - left
+          - center
+          - right
+        - label: Ombra titolo attiva
+          name: shadow
+          widget: boolean
+          default: true
+          required: false
+        - label: Colore ombra
+          name: shadowColor
+          widget: colorpicker
+          required: false
+          hint: 'Esempio: #ff7a00'
+        - label: Intensità ombra
+          name: shadowBlur
+          widget: string
+          required: false
+          hint: 'Esempio: 32px'
+      - label: Stile pulsanti
+        name: buttonStyle
+        widget: object
+        required: false
+        fields:
+        - label: Raggio angoli
+          name: radius
+          widget: string
+          required: false
+          hint: 'Esempio: 16px oppure 999px'
+        - label: Dimensione testo
+          name: fontSize
+          widget: string
+          required: false
+          hint: 'Esempio: 16px'
+        - label: Colore testo pulsanti secondari
+          name: textColor
+          widget: colorpicker
+          required: false
+        - label: Colore testo pulsanti principali
+          name: primaryTextColor
+          widget: colorpicker
+          required: false
+        - label: Colore bordo
+          name: borderColor
+          widget: colorpicker
+          required: false
+        - label: Sfondo pulsanti secondari
+          name: secondaryBackground
+          widget: colorpicker
+          required: false
+      - label: Stile card / schede
+        name: cardStyle
+        widget: object
+        required: false
+        fields:
+        - label: Raggio angoli card
+          name: radius
+          widget: string
+          required: false
+          hint: 'Esempio: 28px'
+        - label: Colore bordo card
+          name: borderColor
+          widget: colorpicker
+          required: false
+        - label: Sfondo card
+          name: backgroundColor
+          widget: string
+          required: false
+          hint: 'Esempio: rgba(255,255,255,.05) oppure linear-gradient(...)'
+      - label: Ordine sezioni homepage
+        name: sectionOrder
+        widget: object
+        required: false
+        fields:
+        - label: Hero
+          name: hero
+          widget: number
+          required: false
+          default: 1
+        - label: Banner / avvisi
+          name: announcements
+          widget: number
+          required: false
+          default: 2
+        - label: Profilo responsabile
+          name: owner
+          widget: number
+          required: false
+          default: 3
+        - label: Ricerca
+          name: search
+          widget: number
+          required: false
+          default: 3
+        - label: Discipline
+          name: disciplines
+          widget: number
+          required: false
+          default: 4
+        - label: Unità cinofile
+          name: dogs
+          widget: number
+          required: false
+          default: 5
+        - label: Corsi
+          name: courses
+          widget: number
+          required: false
+          default: 6
+        - label: Eventi
+          name: events
+          widget: number
+          required: false
+          default: 7
+        - label: Galleria
+          name: gallery
+          widget: number
+          required: false
+          default: 8
+        - label: Video
+          name: videos
+          widget: number
+          required: false
+          default: 9
+        - label: Testimonianze
+          name: reviews
+          widget: number
+          required: false
+          default: 10
+        - label: Partner
+          name: partners
+          widget: number
+          required: false
+          default: 11
+        - label: Documenti
+          name: documents
+          widget: number
+          required: false
+          default: 12
+        - label: FAQ
+          name: faq
+          widget: number
+          required: false
+          default: 13
+        - label: Contatti
+          name: contacts
+          widget: number
+          required: false
+          default: 14
+      collapsed: true
+      hint: Impostazioni generali di tema. Usa K9 Studio per modificare testi specifici.
+    - label: 🏷️ Testi sezione - Fallback
+      name: sectionLabels
+      widget: object
+      required: false
+      fields:
+      - label: Ricerca - Etichetta
+        name: searchKicker
+        widget: string
+        required: false
+        default: Ricerca rapida
+      - label: Ricerca - Titolo
+        name: searchTitle
+        widget: string
+        required: false
+        default: Cerca nel sito
+      - label: Ricerca - Testo
+        name: searchLead
+        widget: text
+        required: false
+        default: Trova rapidamente eventi, corsi, discipline, unità cinofile, documenti e FAQ.
+      - label: Aree operative - Etichetta
+        name: disciplinesKicker
+        widget: string
+        required: false
+        default: Aree operative e formative
+      - label: Aree operative - Titolo
+        name: disciplinesTitle
+        widget: string
+        required: false
+        default: Discipline
+      - label: Aree operative - Testo
+        name: disciplinesLead
+        widget: text
+        required: false
+        default: Attività specialistiche, formazione cinofila e preparazione tecnica del binomio.
+      - label: Aree operative - Modalità visualizzazione
+        name: disciplinesDisplayMode
+        widget: select
+        required: false
+        default: accordion
+        options:
+        - label: Accordion / tendina
+          value: accordion
+        - label: Card classiche
+          value: card
+      - label: Aree operative - Testo apertura tendina
+        name: disciplinesAccordionText
+        widget: string
+        required: false
+        default: Scopri la disciplina
+      - label: Unità cinofile - Etichetta
+        name: dogsKicker
+        widget: string
+        required: false
+        default: Unità cinofile
+      - label: Unità cinofile - Titolo
+        name: dogsTitle
+        widget: string
+        required: false
+        default: I cani
+      - label: Unità cinofile - Testo
+        name: dogsLead
+        widget: text
+        required: false
+        default: Unità cinofile, schede operative e profili aggiornabili.
+      - label: Formazione - Etichetta
+        name: coursesKicker
+        widget: string
+        required: false
+        default: Formazione
+      - label: Formazione - Titolo
+        name: coursesTitle
+        widget: string
+        required: false
+        default: Corsi
+      - label: Formazione - Testo
+        name: coursesLead
+        widget: text
+        required: false
+      - label: Eventi - Etichetta
+        name: eventsKicker
+        widget: string
+        required: false
+        default: Calendario formativo
+      - label: Eventi - Titolo
+        name: eventsTitle
+        widget: string
+        required: false
+        default: Eventi, corsi e stage
+      - label: Eventi - Testo
+        name: eventsLead
+        widget: text
+        required: false
+        default: Calendario aggiornato delle attività formative e operative.
+      - label: Galleria - Etichetta
+        name: galleryKicker
+        widget: string
+        required: false
+        default: Media
+      - label: Galleria - Titolo
+        name: galleryTitle
+        widget: string
+        required: false
+        default: Galleria
+      - label: Galleria - Testo
+        name: galleryLead
+        widget: text
+        required: false
+      - label: Partner - Etichetta
+        name: partnersKicker
+        widget: string
+        required: false
+        default: Rete operativa
+      - label: Partner - Titolo
+        name: partnersTitle
+        widget: string
+        required: false
+        default: Partner
+      - label: Partner - Testo
+        name: partnersLead
+        widget: text
+        required: false
+      - label: FAQ - Etichetta
+        name: faqKicker
+        widget: string
+        required: false
+        default: Domande frequenti
+      - label: FAQ - Titolo
+        name: faqTitle
+        widget: string
+        required: false
+        default: FAQ
+      - label: FAQ - Testo
+        name: faqLead
+        widget: text
+        required: false
+      - label: Video - Etichetta
+        name: videosKicker
+        widget: string
+        required: false
+        default: Video
+      - label: Video - Titolo
+        name: videosTitle
+        widget: string
+        required: false
+        default: Video
+      - label: Video - Testo
+        name: videosLead
+        widget: text
+        required: false
+      - label: Testimonianze - Etichetta
+        name: reviewsKicker
+        widget: string
+        required: false
+        default: Feedback
+      - label: Testimonianze - Titolo
+        name: reviewsTitle
+        widget: string
+        required: false
+        default: Testimonianze
+      - label: Testimonianze - Testo
+        name: reviewsLead
+        widget: text
+        required: false
+      - label: Documenti - Etichetta
+        name: documentsKicker
+        widget: string
+        required: false
+        default: Area download
+      - label: Documenti - Titolo
+        name: documentsTitle
+        widget: string
+        required: false
+        default: Documenti
+      - label: Documenti - Testo
+        name: documentsLead
+        widget: text
+        required: false
+      - label: Contatti - Etichetta
+        name: contactsKicker
+        widget: string
+        required: false
+        default: Contatto diretto
+      - label: Contatti - Titolo
+        name: contactsTitle
+        widget: string
+        required: false
+        default: Contatti
+      - label: Box contatto - Titolo
+        name: contactCardTitle
+        widget: string
+        required: false
+        default: Richiedi informazioni
+      - label: Box contatto - Testo
+        name: contactCardText
+        widget: text
+        required: false
+        default: Per attività formative, collaborazione operativa, mantrailing, HRDD e progetti cinofili specializzati.
+      - label: Box contatto - Pulsante
+        name: contactButtonText
+        widget: string
+        required: false
+        default: Scrivi su WhatsApp
+      collapsed: true
+      hint: Campi di compatibilità. Per i testi principali usa K9 Studio.
+    - label: Visibilità sezioni homepage
+      name: sectionVisibility
+      widget: object
+      required: false
+      fields:
+      - label: Mostra profilo responsabile
+        name: owner
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra seguici sui social in homepage
+        name: homeSocials
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra banner / avvisi homepage
+        name: announcements
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra ricerca globale
+        name: search
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra discipline / aree operative
+        name: disciplines
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra unità cinofile
+        name: dogs
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra corsi / formazione
+        name: courses
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra eventi
+        name: events
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra galleria
+        name: gallery
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra video
+        name: videos
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra testimonianze
+        name: reviews
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra partner
+        name: partners
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra documenti
+        name: documents
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra FAQ
+        name: faq
+        widget: boolean
+        default: true
+        required: false
+      - label: Mostra contatti
+        name: contacts
+        widget: boolean
+        default: true
+        required: false
+      collapsed: true
+    - label: Sezione social homepage
+      name: homeSocials
+      widget: object
+      required: false
+      fields:
+      - label: Titolo
+        name: title
+        widget: string
+        required: false
+        default: Seguici sui social
+      - label: Testo
+        name: text
+        widget: text
+        required: false
+        default: Resta aggiornato su corsi, stage, addestramenti ed eventi.
+      collapsed: true
+    - label: Banner e avvisi homepage
+      name: announcements
+      widget: list
+      required: false
+      summary: '{{title}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: Etichetta
+        name: kicker
+        widget: string
+        required: false
+        default: Avviso
+      - label: Titolo
+        name: title
+        widget: string
+        required: false
+      - label: Testo
+        name: text
+        widget: text
+        required: false
+      - label: Testo pulsante
+        name: buttonText
+        widget: string
+        required: false
+      - label: Link pulsante
+        name: buttonLink
+        widget: string
+        required: false
+      collapsed: true
+    - label: SEO globale e anteprima social
+      name: globalSeo
+      widget: object
+      required: false
+      fields:
+      - label: Titolo SEO sito
+        name: title
+        widget: string
+        required: false
+      - label: Descrizione SEO sito
+        name: description
+        widget: text
+        required: false
+      - label: Parole chiave
+        name: keywords
+        widget: string
+        required: false
+      - label: Autore
+        name: author
+        widget: string
+        required: false
+      - label: Immagine anteprima social
+        name: image
+        widget: image
+        required: false
+      collapsed: true
+    - label: Legal / Footer
+      name: legal
+      widget: object
+      required: false
+      fields:
+      - label: Etichetta Privacy
+        name: privacyLabel
+        widget: string
+        required: false
+        default: Privacy Policy
+      - label: Link Privacy
+        name: privacyLink
+        widget: string
+        required: false
+      - label: Etichetta Cookie
+        name: cookieLabel
+        widget: string
+        required: false
+        default: Cookie Policy
+      - label: Link Cookie
+        name: cookieLink
+        widget: string
+        required: false
+      - label: Etichetta Termini
+        name: termsLabel
+        widget: string
+        required: false
+        default: Termini
+      - label: Link Termini
+        name: termsLink
+        widget: string
+        required: false
+      collapsed: true
+    - label: Centro distribuzione
+      name: distribution
+      widget: object
+      required: false
+      fields:
+      - label: Hashtag predefiniti
+        name: hashtags
+        widget: string
+        required: false
+        default: '#Mantrailing #HRDD #Cinofilia #K9 #RicercaPersone'
+      - label: Testo introduttivo
+        name: intro
+        widget: text
+        required: false
+        default: Tutte le informazioni e l'iscrizione sono disponibili nella scheda evento.
+      collapsed: true
+    - label: Responsabile
+      name: owner
+      widget: object
+      fields:
+      - label: Nome
+        name: name
+        widget: string
+        required: false
+      - label: Ruoli
+        name: roles
+        widget: string
+        required: false
+      - label: Biografia
+        name: bio
+        widget: text
+        required: false
+      - label: Foto
+        name: photo
+        widget: image
+        required: false
+      collapsed: true
+    - label: Contatti generali del sito
+      name: contacts
+      widget: object
+      fields:
+      - label: Nome referente
+        name: name
+        widget: string
+        required: false
+      - label: Telefono
+        name: phone
+        widget: string
+        required: false
+      - label: WhatsApp per iscrizioni
+        name: whatsapp
+        widget: string
+        required: false
+        hint: 'Inserisci il numero una sola volta. Esempio: 393281650082'
+      - label: Email
+        name: email
+        widget: string
+        required: false
+      - label: Indirizzo / sede
+        name: address
+        widget: string
+        required: false
+      - label: Link Google Maps sede
+        name: mapsLink
+        widget: string
+        required: false
+      - label: Facebook
+        name: facebook
+        widget: string
+        required: false
+      - label: Instagram
+        name: instagram
+        widget: string
+        required: false
+      - label: YouTube
+        name: youtube
+        widget: string
+        required: false
+      - label: TikTok
+        name: tiktok
+        widget: string
+        required: false
+      collapsed: true
+    - label: Località operative
+      name: locations
+      widget: list
+      required: false
+      field:
+        label: Località
+        name: location
+        widget: string
+      collapsed: true
+    - label: Discipline / Aree operative
+      name: disciplines
+      widget: list
+      required: false
+      summary: '{{title}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: In evidenza
+        name: featured
+        widget: boolean
+        default: false
+        required: false
+      - label: Aperta di default
+        name: openByDefault
+        widget: boolean
+        default: false
+        required: false
+      - label: Icona
+        name: icon
+        widget: string
+        required: false
+        hint: 'Esempio: 🐾, ☠️, 🎓'
+      - label: Immagine
+        name: image
+        widget: image
+        required: false
+      - label: Adattamento immagine
+        name: imageFit
+        widget: select
+        required: false
+        default: contain
+        options:
+        - contain
+        - cover
+      - label: Posizione immagine
+        name: imagePosition
+        widget: string
+        required: false
+        default: center
+      - label: Titolo
+        name: title
+        widget: string
+      - label: Descrizione breve
+        name: short
+        widget: text
+        required: false
+      - label: Descrizione completa
+        name: long
+        widget: text
+        required: false
+      - label: Testo pulsante
+        name: buttonText
+        widget: string
+        required: false
+      - label: Link pulsante
+        name: buttonLink
+        widget: string
+        required: false
+      collapsed: true
+    - label: Unità cinofile
+      name: dogs
+      widget: list
+      required: false
+      summary: '{{name}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: In evidenza
+        name: featured
+        widget: boolean
+        default: false
+        required: false
+      - label: Nome
+        name: name
+        widget: string
+      - label: Foto
+        name: photo
+        widget: image
+        required: false
+      - label: Adattamento immagine
+        name: imageFit
+        widget: select
+        required: false
+        default: contain
+        options:
+        - contain
+        - cover
+      - label: Posizione immagine
+        name: imagePosition
+        widget: string
+        required: false
+        default: center
+      - label: Razza
+        name: breed
+        widget: string
+        required: false
+      - label: Sesso
+        name: sex
+        widget: string
+        required: false
+      - label: Data di nascita
+        name: birth
+        widget: string
+        required: false
+      - label: Stato operativo
+        name: status
+        widget: string
+        required: false
+      - label: Specializzazione
+        name: discipline
+        widget: string
+        required: false
+      - label: Livello operativo
+        name: operationalLevel
+        widget: string
+        required: false
+      - label: Certificazioni / brevetti
+        name: certifications
+        widget: text
+        required: false
+      - label: Descrizione
+        name: description
+        widget: text
+        required: false
+      - label: Note operative
+        name: notes
+        widget: text
+        required: false
+      - label: Galleria personale
+        name: gallery
+        widget: list
+        required: false
+        field:
+          label: Foto
+          name: image
+          widget: image
+      - label: Video
+        name: videos
+        widget: list
+        required: false
+        fields:
+        - label: Titolo
+          name: title
+          widget: string
+          required: false
+        - label: URL video
+          name: url
+          widget: string
+          required: false
+      - label: Documenti / brevetti PDF
+        name: documents
+        widget: list
+        required: false
+        fields:
+        - label: Titolo
+          name: title
+          widget: string
+          required: false
+        - label: File
+          name: file
+          widget: file
+          required: false
+      collapsed: true
+    - label: Corsi / Formazione
+      name: courses
+      widget: list
+      required: false
+      summary: '{{title}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: In evidenza
+        name: featured
+        widget: boolean
+        default: false
+        required: false
+      - label: Titolo
+        name: title
+        widget: string
+      - label: Immagine
+        name: image
+        widget: image
+        required: false
+      - label: Durata
+        name: duration
+        widget: string
+        required: false
+      - label: Data / periodo
+        name: date
+        widget: string
+        required: false
+      - label: Luogo
+        name: location
+        widget: string
+        required: false
+      - label: Descrizione breve
+        name: description
+        widget: text
+        required: false
+      - label: Programma
+        name: program
+        widget: text
+        required: false
+      - label: Prerequisiti
+        name: requirements
+        widget: text
+        required: false
+      - label: Istruttore / docente
+        name: teacher
+        widget: string
+        required: false
+      - label: Costo
+        name: price
+        widget: string
+        required: false
+      - label: Posti disponibili
+        name: availableSeats
+        widget: number
+        required: false
+      - label: Link iscrizione / informazioni
+        name: link
+        widget: string
+        required: false
+      - label: Allegati corso
+        name: attachments
+        widget: list
+        required: false
+        fields:
+        - label: Titolo
+          name: title
+          widget: string
+          required: false
+        - label: File
+          name: file
+          widget: file
+          required: false
+      collapsed: true
+    - label: Galleria
+      name: gallery
+      widget: list
+      required: false
+      summary: '{{title}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: Titolo / didascalia
+        name: title
+        widget: string
+        required: false
+      - label: Descrizione
+        name: description
+        widget: text
+        required: false
+      - label: Categoria
+        name: category
+        widget: string
+        required: false
+      - label: Testo ALT SEO
+        name: alt
+        widget: string
+        required: false
+      - label: Autore / fonte
+        name: author
+        widget: string
+        required: false
+      - label: Copyright
+        name: copyright
+        widget: string
+        required: false
+      - label: Tipo
+        name: type
+        widget: select
+        required: false
+        default: image
+        options:
+        - image
+        - video
+      - label: File o URL
+        name: url
+        widget: file
+        required: false
+      - label: Adattamento immagine
+        name: imageFit
+        widget: select
+        required: false
+        default: contain
+        options:
+        - contain
+        - cover
+      - label: Posizione immagine
+        name: imagePosition
+        widget: string
+        required: false
+        default: center
+      collapsed: true
+    - label: Video
+      name: videos
+      widget: list
+      required: false
+      summary: '{{title}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: Titolo
+        name: title
+        widget: string
+        required: false
+      - label: Descrizione
+        name: description
+        widget: text
+        required: false
+      - label: File o URL video
+        name: url
+        widget: file
+        required: false
+      collapsed: true
+    - label: Testimonianze
+      name: reviews
+      widget: list
+      required: false
+      summary: '{{name}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: Nome
+        name: name
+        widget: string
+        required: false
+      - label: Foto
+        name: photo
+        widget: image
+        required: false
+      - label: Recensione
+        name: review
+        widget: text
+        required: false
+      collapsed: true
+    - label: Partner
+      name: partners
+      widget: list
+      required: false
+      summary: '{{name}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: In evidenza
+        name: featured
+        widget: boolean
+        default: false
+        required: false
+      - label: Nome
+        name: name
+        widget: string
+        required: false
+      - label: Logo
+        name: logo
+        widget: image
+        required: false
+      - label: Descrizione
+        name: description
+        widget: text
+        required: false
+      - label: Sito web
+        name: website
+        widget: string
+        required: false
+      collapsed: true
+    - label: Documenti
+      name: documents
+      widget: list
+      required: false
+      summary: '{{title}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: Titolo
+        name: title
+        widget: string
+        required: false
+      - label: Descrizione
+        name: description
+        widget: text
+        required: false
+      - label: File
+        name: file
+        widget: file
+        required: false
+      collapsed: true
+    - label: FAQ
+      name: faq
+      widget: list
+      required: false
+      summary: '{{question}}'
+      fields:
+      - label: Visibile
+        name: active
+        widget: boolean
+        default: true
+        required: false
+      - label: Domanda
+        name: question
+        widget: string
+        required: false
+      - label: Risposta
+        name: answer
+        widget: text
+        required: false
+      collapsed: true
+    - label: Testo footer
+      name: footer
+      widget: string
+      required: false
+- name: events
+  label: Calendario eventi
+  label_singular: Evento
+  folder: content/events
+  create: true
+  slug: '{{slug}}'
+  extension: json
+  format: json
+  summary: '{{title}} - {{date}}'
+  fields:
+  - label: Evento visibile
+    name: published
+    widget: boolean
+    default: true
+  - label: Titolo evento
+    name: title
+    widget: string
+  - label: Categoria
+    name: category
+    widget: select
+    required: false
+    options:
+    - Corso
+    - Stage
+    - Seminario
+    - Workshop
+    - Esercitazione
+    - Open Day
+    - Evento
+    - Attività operativa
+    - Gara
+    - Altro
+  - label: Stato iscrizioni
+    name: status
+    widget: select
+    required: false
+    default: Iscrizioni aperte
+    options:
+    - Iscrizioni aperte
+    - Ultimi posti
+    - Completo
+    - Rinviato
+    - Chiuso
+  - label: Abilita iscrizione WhatsApp
+    name: registrationEnabled
+    widget: boolean
+    default: true
+    hint: Usa automaticamente il numero WhatsApp impostato nei Contatti generali del sito.
+  - label: Testo pulsante iscrizione
+    name: buttonText
+    widget: string
+    default: Iscriviti
+  - label: Data evento
+    name: date
+    widget: datetime
+    format: YYYY-MM-DD
+  - label: Orario
+    name: time
+    widget: string
+    required: false
+  - label: Luogo
+    name: location
+    widget: string
+    required: false
+  - label: Link Google Maps
+    name: mapsLink
+    widget: string
+    required: false
+  - label: Locandina evento
+    name: poster
+    widget: image
+    required: false
+  - label: Descrizione breve
+    name: description
+    widget: text
+    required: false
+  - label: Descrizione completa
+    name: body
+    widget: markdown
+    required: false
+  - label: Docenti / Referenti
+    name: teachers
+    widget: list
+    required: false
+    field:
+      label: Nome docente o referente
+      name: teacher
+      widget: string
+  - label: Programma giornata
+    name: program
+    widget: list
+    required: false
+    fields:
+    - label: Orario
+      name: time
+      widget: string
+      required: false
+    - label: Attività
+      name: activity
+      widget: string
+  - label: Materiale necessario
+    name: materials
+    widget: list
+    required: false
+    field:
+      label: Materiale
+      name: item
+      widget: string
+  - label: Costo
+    name: price
+    widget: string
+    required: false
+  - label: Numero massimo partecipanti
+    name: maxParticipants
+    widget: number
+    required: false
+  - label: Posti disponibili
+    name: availableSeats
+    widget: number
+    required: false
+  - label: Galleria evento
+    name: gallery
+    widget: list
+    required: false
+    fields:
+    - label: Immagine
+      name: image
+      widget: image
+    - label: Didascalia
+      name: caption
+      widget: string
+      required: false
+  - label: Allegati
+    name: attachments
+    widget: list
+    required: false
+    fields:
+    - label: Titolo allegato
+      name: title
+      widget: string
+    - label: File
+      name: file
+      widget: file
+  - label: SEO e condivisione
+    name: seo
+    widget: object
+    required: false
+    fields:
+    - label: Titolo SEO
+      name: title
+      widget: string
+      required: false
+    - label: Descrizione SEO
+      name: description
+      widget: text
+      required: false
+    - label: Immagine anteprima social
+      name: image
+      widget: image
+      required: false
