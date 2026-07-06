@@ -1,0 +1,1790 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>K9 Napoletano Academy</title>
+<meta name="description" content="Mantrailing, HRDD, ricerca persone, formazione cinofila e unità operative con Napoletano Giovanni."/>
+<meta name="theme-color" content="#ff7a00"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+<link rel="icon" href="/logo.png"/>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<style>
+:root{
+  --text:#fff8ed;
+  --muted:#d7c7ad;
+  --gold:#f6b739;
+  --orange:#ff7a00;
+  --green:#22c55e;
+  --line:rgba(255,255,255,.14);
+  --shadow:0 30px 90px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at 18% 0%,rgba(255,122,0,.30),transparent 32%),
+    radial-gradient(circle at 90% 12%,rgba(246,183,57,.12),transparent 28%),
+    linear-gradient(180deg,#090909 0%,#020202 62%,#050505 100%);
+  color:var(--text);
+  line-height:1.6;
+}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1180px,92vw);margin:auto}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(4,4,4,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+  min-width:0;
+}
+.brand img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  border-radius:12px;
+  flex:0 0 auto;
+  background:#fff;
+}
+.brand span{
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.045em;
+  font-size:clamp(15px,2.5vw,22px);
+  line-height:1.25;
+}
+.links{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.links a{
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:800;
+  font-size:14px;
+}
+.links a:hover{color:var(--gold)}
+
+.hero{
+  position:relative;
+  min-height:calc(100vh - 78px);
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  isolation:isolate;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.64),rgba(0,0,0,.88)),
+    var(--hero-bg,url('/logo.png')) center/cover no-repeat;
+  opacity:.76;
+  z-index:-2;
+  filter:saturate(1.05) contrast(1.08);
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 18% 36%,rgba(255,122,0,.30),transparent 36%),
+    linear-gradient(180deg,transparent 70%,rgba(0,0,0,.86));
+  z-index:-1;
+}
+.heroInner{
+  padding:68px 0;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:34px;
+  align-items:center;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 15px;
+  border-radius:999px;
+  border:1px solid rgba(246,183,57,.55);
+  background:rgba(246,183,57,.09);
+  color:var(--gold);
+  font-weight:900;
+}
+h1{
+  margin:20px 0 18px;
+  font-size:clamp(43px,7vw,92px);
+  line-height:.94;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  text-shadow:0 0 32px rgba(255,122,0,.38);
+}
+.lead{
+  font-size:clamp(20px,2.25vw,28px);
+  max-width:780px;
+  color:var(--muted);
+  margin:0;
+}
+.cta{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:15px 20px;
+  border-radius:16px;
+  text-decoration:none;
+  font-weight:900;
+  border:1px solid var(--line);
+  background:#151515;
+  color:var(--text);
+  cursor:pointer;
+}
+.btn.primary{
+  background:linear-gradient(135deg,var(--orange),var(--gold));
+  color:#120800;
+  border:0;
+}
+.heroCard{
+  background:linear-gradient(145deg,rgba(255,122,0,.20),rgba(255,255,255,.04));
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+.heroCard img{
+  width:100%;
+  height:auto;
+  max-height:640px;
+  object-fit:contain;
+  border-radius:24px;
+  background:#111;
+}
+
+section{
+  padding:72px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.sectionHead{margin-bottom:26px}
+.kicker{
+  color:var(--gold);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:13px;
+}
+h2{
+  font-size:clamp(36px,5vw,64px);
+  line-height:1.02;
+  margin:8px 0 10px;
+}
+.sectionLead{
+  color:var(--muted);
+  font-size:20px;
+  max-width:860px;
+  margin:0;
+}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:26px;
+  box-shadow:0 20px 60px rgba(0,0,0,.22);
+}
+.card h3{
+  margin:0 0 10px;
+  color:var(--gold);
+  font-size:26px;
+}
+.muted{color:var(--muted)}
+
+.cms-text{
+  color:var(--text);
+  white-space:normal;
+}
+.cms-text p{
+  margin:0 0 1.05em;
+}
+.cms-text p:last-child{margin-bottom:0}
+.cms-text h4{
+  color:var(--gold);
+  font-size:clamp(22px,3vw,34px);
+  line-height:1.18;
+  margin:1.35em 0 .55em;
+}
+.cms-text h4:first-child{margin-top:0}
+.cms-text ul{
+  margin:.25em 0 1.15em;
+  padding-left:1.25em;
+}
+.cms-text li{
+  margin:.35em 0;
+}
+.cms-text hr{
+  border:0;
+  border-top:1px solid rgba(255,255,255,.18);
+  margin:1.35em 0;
+}
+.cms-text .plain-line{
+  display:block;
+}
+.profile{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  gap:20px;
+  align-items:stretch;
+}
+.profilePhoto{
+  min-height:360px;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:radial-gradient(circle at center,rgba(255,122,0,.18),transparent 55%),#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.profilePhoto.hasPhoto img{
+  width:100%;
+  height:100%;
+  min-height:360px;
+  object-fit:contain;
+  background:#111;
+}
+.profilePhoto.noPhoto{
+  padding:26px;
+  text-align:center;
+  color:var(--muted);
+}
+
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.discipline,.dogs,.gallery,.reviews,.partners,.courses,.events,.documents,.faqGrid{
+  display:grid;
+  gap:20px;
+}
+.discipline,.dogs,.gallery,.reviews,.courses,.events,.faqGrid{grid-template-columns:repeat(3,1fr)}
+.partners,.documents{grid-template-columns:repeat(4,1fr)}
+
+.discipline img,.dog img,.course img,.event img,.gallery img,.review img,.partner img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:22px;
+  margin-bottom:18px;
+  background:#111;
+}
+.discipline .discTop{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:18px;
+  align-items:center;
+  margin-bottom:16px;
+}
+.discipline .icon{
+  display:inline-flex;
+  width:74px;
+  height:74px;
+  border-radius:18px;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,122,0,.16);
+  border:1px solid rgba(255,122,0,.35);
+  font-size:32px;
+  overflow:hidden;
+}
+.discipline .icon img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  margin:0;
+  border-radius:18px;
+}
+.status{font-weight:900;color:var(--text)}
+.meta{color:var(--gold);font-weight:900;margin:0 0 8px}
+.gallery figure{
+  margin:0;
+  background:#111;
+  border:1px solid var(--line);
+  border-radius:28px;
+  overflow:hidden;
+}
+figcaption{padding:18px;color:var(--muted)}
+figcaption b{color:var(--text)}
+.empty{
+  border:1px dashed rgba(255,255,255,.24);
+  border-radius:22px;
+  padding:24px;
+  color:var(--muted);
+  background:rgba(255,255,255,.025);
+}
+.contact{
+  background:
+    radial-gradient(circle at 85% 30%,rgba(26,143,69,.22),transparent 30%),
+    linear-gradient(135deg,rgba(255,122,0,.16),rgba(246,183,57,.06));
+}
+.contactBox{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  align-items:center;
+}
+.contactLine{
+  font-size:22px;
+  margin:12px 0;
+  color:var(--muted);
+}
+.contactLine b{color:var(--text)}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.socials a,.socials span{
+  text-decoration:none;
+  padding:10px 13px;
+  border-radius:999px;
+  background:rgba(255,255,255,.07);
+  border:1px solid var(--line);
+  color:var(--muted);
+  font-weight:900;
+}
+
+
+
+.disciplineGroups{
+  display:grid;
+  gap:34px;
+}
+.disciplineGroup{
+  padding:0;
+}
+.disciplineGroupHead{
+  margin:0 0 18px;
+  padding:22px 24px;
+  border-radius:28px;
+  border:1px solid rgba(246,183,57,.22);
+  background:
+    radial-gradient(circle at 12% 20%,rgba(255,122,0,.18),transparent 34%),
+    linear-gradient(135deg,rgba(255,122,0,.10),rgba(255,255,255,.025));
+}
+.disciplineGroupHead h3{
+  margin:0;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.055em;
+  font-size:clamp(24px,4vw,42px);
+  line-height:1.08;
+}
+.disciplineGroupHead p{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:18px;
+}
+
+.disciplineGroupHead{
+  cursor:pointer;
+  position:relative;
+}
+.disciplineGroupHead::after{
+  content:"▾";
+  position:absolute;
+  right:22px;
+  top:24px;
+  color:var(--gold);
+  font-size:28px;
+  transition:transform .2s ease;
+}
+.disciplineGroupHead.open::after{
+  transform:rotate(180deg);
+}
+.disciplineGroupGrid{
+  display:none;
+  margin-top:20px;
+}
+.disciplineGroupGrid.open{
+  display:grid;
+}
+.categoryToggleBtn{
+  margin-top:14px;
+  width:100%;
+}
+
+.disciplineGroupGrid{
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+@media(max-width:900px){
+  .disciplineGroupGrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .disciplineGroupGrid{grid-template-columns:1fr}
+  .disciplineGroupHead{padding:18px}
+}
+
+.disciplineHero{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:24px;
+  overflow:hidden;
+  background:radial-gradient(circle at center,rgba(255,122,0,.18),transparent 55%),#111;
+  border:1px solid rgba(255,255,255,.12);
+  margin-bottom:20px;
+}
+.disciplineHero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  margin:0;
+  border-radius:0;
+  background:#111;
+}
+.disciplineNoImage{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:24px;
+  background:
+    radial-gradient(circle at center,rgba(255,122,0,.25),transparent 58%),
+    linear-gradient(135deg,rgba(255,122,0,.12),rgba(246,183,57,.08)),
+    #111;
+  border:1px solid rgba(255,255,255,.12);
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:54px;
+}
+.disciplineTitleRow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+.disciplineTitleIcon{
+  display:inline-flex;
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,122,0,.16);
+  border:1px solid rgba(255,122,0,.35);
+  font-size:24px;
+  flex:0 0 auto;
+}
+.disciplineTitleRow h3{
+  margin:0;
+}
+
+.disciplineDetails{
+  margin-top:16px;
+  display:none;
+}
+.disciplineDetails.open{
+  display:block;
+}
+.disciplineToggle{
+  margin-top:14px;
+}
+
+.eventActions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.eventClosed{
+  display:inline-flex;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  color:var(--muted);
+  font-weight:900;
+  background:rgba(255,255,255,.05);
+}
+.footer{padding:34px 0;color:var(--muted);font-size:15px;background:#030303}
+
+.modalOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.78);
+  z-index:120;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.modalOverlay.active{display:flex}
+.modalBox{
+  width:min(720px,96vw);
+  max-height:92vh;
+  overflow:auto;
+  background:#0b0b0b;
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:24px;
+  box-shadow:var(--shadow);
+}
+.modalHead{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:flex-start;
+  margin-bottom:18px;
+}
+.modalClose{
+  border:1px solid var(--line);
+  background:#151515;
+  color:var(--text);
+  border-radius:999px;
+  width:42px;
+  height:42px;
+  font-size:24px;
+  cursor:pointer;
+}
+.formGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.formField{display:flex;flex-direction:column;gap:6px}
+.formField.full{grid-column:1/-1}
+.formField label{
+  color:var(--gold);
+  font-weight:900;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.formField input,.formField textarea{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#141414;
+  color:var(--text);
+  padding:13px 14px;
+  font:inherit;
+}
+.formField textarea{min-height:110px;resize:vertical}
+.formNote{color:var(--muted);font-size:14px;margin-top:12px}
+
+@media(max-width:900px){
+  .links{display:none}
+  .heroInner,.profile,.contactBox,.grid2{grid-template-columns:1fr}
+  .discipline,.dogs,.gallery,.reviews,.courses,.events,.faqGrid{grid-template-columns:1fr 1fr}
+  .partners,.documents{grid-template-columns:1fr 1fr}
+  .hero{min-height:auto}
+}
+@media(max-width:560px){
+  .wrap{width:min(100% - 28px,1180px)}
+  .nav{min-height:74px}
+  .brand img{width:54px;height:54px}
+  .heroInner{padding:54px 0 38px}
+  h1{font-size:clamp(42px,14vw,62px)}
+  .lead{font-size:20px}
+  .discipline,.dogs,.gallery,.reviews,.courses,.events,.faqGrid,.partners,.documents{grid-template-columns:1fr}
+  section{padding:54px 0}
+  .heroCard{padding:18px;border-radius:26px}
+  .floatWA{width:64px;height:64px;right:16px;bottom:16px}
+  .formGrid{grid-template-columns:1fr}
+}
+
+/* === RELEASE PREMIUM: quick actions, next event, counters, lightbox === */
+.nextEventBox{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:18px;
+  align-items:center;
+}
+.nextEventBox img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:22px;
+  background:#111;
+}
+.nextEventBadge{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border-radius:999px;
+  color:#120800;
+  background:linear-gradient(135deg,var(--orange),var(--gold));
+  font-weight:900;
+  margin-bottom:10px;
+}
+.statsGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.statCard{
+  text-align:center;
+}
+.statNumber{
+  color:var(--gold);
+  font-size:clamp(34px,5vw,58px);
+  line-height:1;
+  font-weight:900;
+}
+.statLabel{
+  color:var(--muted);
+  font-weight:800;
+  margin-top:8px;
+}
+.gallery figure{
+  cursor:pointer;
+}
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:150;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.88);
+  padding:20px;
+}
+.lightbox.active{
+  display:flex;
+}
+.lightboxInner{
+  width:min(1100px,96vw);
+  max-height:92vh;
+}
+.lightbox img{
+  max-height:78vh;
+  width:100%;
+  object-fit:contain;
+  border-radius:22px;
+  background:#111;
+}
+.lightboxCaption{
+  color:var(--text);
+  margin-top:12px;
+  font-weight:900;
+}
+.lightboxClose{
+  position:fixed;
+  top:18px;
+  right:18px;
+  width:48px;
+  height:48px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  background:#111;
+  color:white;
+  font-size:30px;
+}
+@media(max-width:700px){
+  .nextEventBox{
+    grid-template-columns:1fr;
+  }
+  .statsGrid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+
+/* === RELEASE ORDINATA: correzioni layout mobile e blocchi confusi === */
+@media(max-width:560px){
+  .hero{
+    min-height:auto;
+  }
+  .heroInner{
+    padding:42px 0 34px;
+    gap:22px;
+  }
+  h1{
+    font-size:clamp(38px,13vw,56px);
+    line-height:1.02;
+  }
+  .lead{
+    font-size:19px;
+    line-height:1.55;
+  }
+  .cta .btn{
+    width:100%;
+  }
+  .heroCard{
+    margin-top:8px;
+  }
+  .heroCard img{
+    max-height:360px;
+    object-fit:contain;
+  }
+  section{
+    padding:46px 0;
+  }
+  .sectionHead{
+    margin-bottom:22px;
+  }
+  .kicker{
+    font-size:12px;
+    letter-spacing:.1em;
+  }
+  h2{
+    font-size:clamp(34px,11vw,50px);
+  }
+  .sectionLead{
+    font-size:19px;
+    line-height:1.55;
+  }
+  .card{
+    border-radius:26px;
+    padding:22px;
+  }
+  .profile{
+    gap:16px;
+  }
+  .profilePhoto{
+    min-height:auto;
+    border-radius:26px;
+  }
+  .profilePhoto.hasPhoto img{
+    max-height:520px;
+    object-fit:cover;
+    object-position:center;
+  }
+  .profile .card h3{
+    font-size:34px;
+    line-height:1.12;
+  }
+  #ownerRoles{
+    font-size:22px;
+    line-height:1.25;
+    color:var(--gold);
+    font-weight:900;
+  }
+  .disciplineGroupHead{
+    padding:20px 18px;
+    border-radius:26px;
+  }
+  .disciplineGroupHead h3{
+    font-size:clamp(24px,9vw,34px);
+    letter-spacing:.05em;
+    padding-right:28px;
+  }
+  .disciplineGroupHead p{
+    font-size:18px;
+    line-height:1.55;
+  }
+  .categoryToggleBtn{
+    margin-top:16px;
+  }
+  .disciplineHero,
+  .disciplineNoImage{
+    aspect-ratio:4/3;
+    border-radius:22px;
+  }
+  .disciplineHero img{
+    object-fit:cover;
+  }
+  .disciplineTitleRow{
+    align-items:flex-start;
+  }
+  .disciplineTitleRow h3{
+    font-size:31px;
+    line-height:1.22;
+  }
+  .dogs .card img,
+  .course img,
+  .event img,
+  .gallery img,
+  .partner img{
+    max-height:520px;
+    object-fit:cover;
+    object-position:center;
+  }
+  .dog h3,
+  .course h3,
+  .event h3,
+  .partner h3{
+    font-size:32px;
+    line-height:1.2;
+  }
+  .courses .card,
+  .events .card,
+  .dogs .card{
+    padding:22px;
+  }
+  .eventActions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:18px;
+  }
+  .eventActions .btn,
+  .course .btn,
+  .event .btn{
+    flex:1 1 160px;
+  }
+  .gallery figure{
+    border-radius:26px;
+  }
+  figcaption{
+    font-size:18px;
+    line-height:1.45;
+  }
+  .contactBox{
+    gap:18px;
+  }
+  .contactLine{
+    font-size:20px;
+    line-height:1.45;
+    word-break:break-word;
+  }
+}
+@media(min-width:901px){
+  .heroInner{
+    align-items:center;
+  }
+  .disciplineGroupGrid .card,
+  .dogs .card,
+  .courses .card,
+  .events .card{
+    height:100%;
+  }
+}
+
+
+/* === RELEASE 1.0 PROFESSIONAL UI === */
+:root{
+  --surface:rgba(17,17,17,.82);
+  --surface2:rgba(255,255,255,.045);
+  --radius:30px;
+}
+body{
+  background:
+    radial-gradient(circle at 18% 0%,rgba(255,122,0,.22),transparent 30%),
+    radial-gradient(circle at 88% 14%,rgba(246,183,57,.10),transparent 28%),
+    linear-gradient(180deg,#050505 0%,#020202 58%,#060606 100%);
+}
+.topbar{
+  background:rgba(0,0,0,.94);
+}
+.nav{
+  min-height:74px;
+}
+.brand img{
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
+}
+.hero{
+  min-height:auto;
+}
+.heroInner{
+  min-height:calc(88vh - 74px);
+  padding:54px 0;
+}
+.hero::before{
+  opacity:.50;
+  filter:saturate(1.1) contrast(1.05);
+}
+.hero::after{
+  background:
+    radial-gradient(circle at 18% 36%,rgba(255,122,0,.22),transparent 36%),
+    linear-gradient(180deg,rgba(0,0,0,.10),rgba(0,0,0,.88));
+}
+.badge{
+  max-width:100%;
+  border-color:rgba(246,183,57,.42);
+}
+h1{
+  letter-spacing:-.025em;
+}
+.lead{
+  max-width:720px;
+}
+.btn{
+  min-height:54px;
+  border-radius:18px;
+  transition:transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.btn:hover{
+  transform:translateY(-1px);
+  border-color:rgba(246,183,57,.42);
+}
+.heroCard{
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  border-radius:var(--radius);
+}
+section{
+  padding:64px 0;
+}
+.sectionHead{
+  max-width:900px;
+}
+.kicker{
+  color:var(--gold);
+}
+.sectionLead{
+  line-height:1.55;
+}
+.card,
+.gallery figure{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:var(--radius);
+  box-shadow:0 22px 70px rgba(0,0,0,.22);
+}
+.card h3{
+  line-height:1.18;
+}
+.profilePhoto{
+  border-radius:var(--radius);
+  background:#0c0c0c;
+}
+.profilePhoto.hasPhoto img{
+  border-radius:var(--radius);
+}
+.socials span,
+.socials a{
+  background:rgba(255,255,255,.075);
+  border-color:rgba(255,255,255,.12);
+}
+.disciplineGroups{
+  gap:26px;
+}
+.disciplineGroupHead{
+  border-radius:var(--radius);
+  border:1px solid rgba(246,183,57,.26);
+  background:
+    radial-gradient(circle at 10% 20%,rgba(255,122,0,.18),transparent 35%),
+    linear-gradient(135deg,rgba(255,122,0,.10),rgba(255,255,255,.025));
+}
+.disciplineGroupHead h3{
+  font-weight:900;
+}
+.disciplineGroupGrid{
+  gap:18px;
+}
+.disciplineHero,
+.disciplineNoImage{
+  border-radius:24px;
+  background:
+    radial-gradient(circle at center,rgba(255,122,0,.18),transparent 55%),
+    #101010;
+}
+.disciplineTitleIcon{
+  margin-top:2px;
+}
+.disciplineToggle,
+.categoryToggleBtn{
+  width:100%;
+}
+.disciplineDetails{
+  border-top:1px solid rgba(255,255,255,.10);
+  padding-top:18px;
+}
+.cms-text p:first-child{
+  margin-top:0;
+}
+.cms-text p:last-child{
+  margin-bottom:0;
+}
+.dog img,
+.course img,
+.event img,
+.gallery img,
+.review img,
+.partner img{
+  border-radius:24px;
+  background:#111;
+}
+.eventActions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:18px;
+}
+.eventActions .btn{
+  flex:1 1 160px;
+}
+.contact{
+  background:
+    radial-gradient(circle at 88% 28%,rgba(34,197,94,.16),transparent 28%),
+    linear-gradient(135deg,rgba(255,122,0,.10),rgba(246,183,57,.04));
+}
+.contactBox{
+  align-items:start;
+}
+.contactLine{
+  word-break:break-word;
+}
+.footer{
+  border-top:1px solid rgba(255,255,255,.10);
+}
+@media(max-width:900px){
+  .heroInner{
+    min-height:auto;
+  }
+}
+@media(max-width:560px){
+  .wrap{
+    width:calc(100% - 30px);
+  }
+  .nav{
+    min-height:72px;
+  }
+  .brand{
+    gap:12px;
+  }
+  .brand img{
+    width:56px;
+    height:56px;
+    border-radius:14px;
+  }
+  .brand span{
+    font-size:20px;
+    line-height:1.18;
+    letter-spacing:.02em;
+  }
+  .heroInner{
+    padding:34px 0 36px;
+  }
+  .badge{
+    width:100%;
+    justify-content:center;
+    padding:12px 15px;
+    text-align:center;
+    line-height:1.35;
+  }
+  h1{
+    font-size:clamp(38px,13.5vw,58px);
+    line-height:1.02;
+    margin:22px 0 16px;
+  }
+  .lead{
+    font-size:19px;
+    line-height:1.58;
+  }
+  .cta{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .cta .btn{
+    width:100%;
+  }
+  .heroCard{
+    padding:16px;
+    margin-top:4px;
+  }
+  .heroCard img{
+    max-height:310px;
+  }
+  section{
+    padding:48px 0;
+  }
+  .sectionHead{
+    margin-bottom:20px;
+  }
+  .kicker{
+    font-size:12px;
+    letter-spacing:.11em;
+  }
+  h2{
+    font-size:clamp(36px,12vw,52px);
+    line-height:1.04;
+  }
+  .sectionLead{
+    font-size:19px;
+  }
+  .card{
+    padding:22px;
+    border-radius:28px;
+  }
+  .profilePhoto.hasPhoto img{
+    max-height:460px;
+    object-fit:cover;
+    object-position:center;
+  }
+  .profile .card h3{
+    font-size:32px;
+  }
+  #ownerRoles{
+    font-size:21px;
+  }
+  .disciplineGroupHead{
+    padding:20px 18px;
+  }
+  .disciplineGroupHead h3{
+    font-size:clamp(25px,9vw,36px);
+    padding-right:34px;
+  }
+  .disciplineGroupHead p{
+    font-size:18px;
+  }
+  .disciplineHero,
+  .disciplineNoImage{
+    aspect-ratio:4/3;
+  }
+  .disciplineTitleRow{
+    gap:10px;
+  }
+  .disciplineTitleRow h3{
+    font-size:30px;
+  }
+  .dogs .card img,
+  .course img,
+  .event img,
+  .gallery img,
+  .partner img{
+    max-height:420px;
+    object-fit:cover;
+    object-position:center;
+  }
+  .dog h3,
+  .course h3,
+  .event h3,
+  .partner h3{
+    font-size:31px;
+  }
+  .course .btn,
+  .event .btn,
+  .eventActions .btn{
+    width:100%;
+  }
+  .contactLine{
+    font-size:20px;
+  }
+  .contactBox .card .btn{
+    width:100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<div class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img id="navLogo" src="/logo.png" alt="Logo K9">
+      <span id="navName">K9 Napoletano Academy</span>
+    </a>
+    <div class="links">
+      <a href="#chi">Giovanni</a>
+      <a href="#discipline">Discipline</a>
+      <a href="#cani">Cani</a>
+      <a href="#corsi">Corsi</a>
+      <a href="#eventi">Eventi</a>
+      <a href="#contatti">Contatti</a>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+<header class="hero" id="hero">
+  <div class="wrap heroInner">
+    <div>
+      <div class="badge" id="tagline"></div>
+      <h1 id="heroTitle">K9 Napoletano Academy</h1>
+      <div class="lead cms-text" id="heroSubtitle"></div>
+      <div class="cta">
+        <a class="btn primary" id="waBtn" href="#">Contatta su WhatsApp</a>
+        <a class="btn" href="#discipline">Scopri le discipline</a>
+      </div>
+    </div>
+    <div class="heroCard">
+      <img id="heroImage" src="/logo.png" alt="Immagine principale">
+    </div>
+  </div>
+</header>
+
+
+
+
+
+<section id="chi">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div class="kicker">Responsabile operativo</div>
+      <h2 id="ownerName">Napoletano Giovanni</h2>
+    </div>
+    <div class="profile">
+      <div class="profilePhoto noPhoto" id="ownerPhotoBox"></div>
+      <div class="card">
+        <h3>Profilo professionale</h3>
+        <div class="muted cms-text" id="ownerRoles"></div>
+        <div class="cms-text" id="ownerBio"></div>
+        <div id="locationList" class="socials"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="discipline"><div class="wrap"><div class="sectionHead"><div class="kicker">Aree operative e formative</div><h2>Discipline</h2><p class="sectionLead">Attività specialistiche, formazione cinofila e preparazione tecnica del binomio.</p></div><div class="disciplineGroups" id="disciplines"></div></div></section>
+<section id="cani"><div class="wrap"><div class="sectionHead"><div class="kicker">Unità cinofile</div><h2>I cani</h2><p class="sectionLead">Unità cinofile, schede operative e profili aggiornabili.</p></div><div class="dogs" id="dogs"></div></div></section>
+<section id="corsi"><div class="wrap"><div class="sectionHead"><div class="kicker">Formazione</div><h2>Corsi</h2></div><div class="courses" id="courses"></div></div></section>
+<section id="eventi"><div class="wrap"><div class="sectionHead"><div class="kicker">Calendario operativo</div><h2>Eventi e stage</h2></div><div class="events" id="events"></div></div></section>
+<section id="galleria"><div class="wrap"><div class="sectionHead"><div class="kicker">Media</div><h2>Galleria</h2></div><div class="gallery" id="gallery"></div></div></section>
+<section id="video"><div class="wrap"><div class="sectionHead"><div class="kicker">Video</div><h2>Video</h2></div><div class="grid2" id="videos"></div></div></section>
+<section id="recensioni"><div class="wrap"><div class="sectionHead"><div class="kicker">Feedback</div><h2>Testimonianze</h2></div><div class="reviews" id="reviews"></div></div></section>
+<section id="partner"><div class="wrap"><div class="sectionHead"><div class="kicker">Rete operativa</div><h2>Partner</h2></div><div class="partners" id="partners"></div></div></section>
+<section id="documenti"><div class="wrap"><div class="sectionHead"><div class="kicker">Area download</div><h2>Documenti</h2></div><div class="documents" id="documents"></div></div></section>
+<section id="faq"><div class="wrap"><div class="sectionHead"><div class="kicker">Domande frequenti</div><h2>FAQ</h2></div><div class="faqGrid" id="faqList"></div></div></section>
+
+<section id="contatti" class="contact">
+  <div class="wrap contactBox">
+    <div>
+      <div class="kicker">Contatto diretto</div>
+      <h2>Contatti</h2>
+      <p class="contactLine"><b>Referente:</b> <span id="contactName"></span></p>
+      <p class="contactLine"><b>Telefono:</b> <span id="phone"></span></p>
+      <p class="contactLine"><b>Email:</b> <span id="email"></span></p>
+      <div id="socials" class="socials"></div>
+    </div>
+    <div class="card">
+      <h3>Richiedi informazioni</h3>
+      <div class="muted cms-text">Per attività formative, collaborazione operativa, mantrailing, HRDD e progetti cinofili specializzati.</div>
+      <a class="btn primary" id="waBtn2" href="#">Scrivi su WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="modalOverlay" id="registrationModal" aria-hidden="true">
+  <div class="modalBox">
+    <div class="modalHead">
+      <div>
+        <div class="kicker">Modulo iscrizione corso/evento</div>
+        <h2 id="registrationTitle" style="font-size:clamp(30px,5vw,48px);margin:6px 0 0">Iscrizione</h2>
+      </div>
+      <button class="modalClose" type="button" onclick="closeRegistrationModal()" aria-label="Chiudi">×</button>
+    </div>
+
+    <form name="iscrizione-corso-evento" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="iscrizione-corso-evento">
+      <input type="hidden" name="corso_o_evento" id="formEvento">
+      <input type="hidden" name="data_corso_o_evento" id="formDataEvento">
+      <p style="display:none"><label>Non compilare: <input name="bot-field"></label></p>
+
+      <div class="formGrid">
+        <div class="formField"><label>Nome</label><input name="nome" required></div>
+        <div class="formField"><label>Cognome</label><input name="cognome" required></div>
+        <div class="formField"><label>Telefono</label><input name="telefono" required></div>
+        <div class="formField"><label>Email</label><input name="email" type="email" required></div>
+        <div class="formField full"><label>Nome del cane</label><input name="nome_cane"></div>
+        <div class="formField full"><label>Note</label><textarea name="note" placeholder="Scrivi eventuali informazioni utili"></textarea></div>
+      </div>
+
+      <div class="eventActions">
+        <button class="btn primary" type="submit">Invia iscrizione</button>
+        <button class="btn" type="button" onclick="closeRegistrationModal()">Annulla</button>
+      </div>
+      <p class="formNote">La richiesta verrà registrata dal sito. Riceverai le iscrizioni nei form Netlify e puoi attivare la notifica email da Netlify.</p>
+    </form>
+  </div>
+</div>
+
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightboxClose" type="button" onclick="closeLightbox()">×</button>
+  <div class="lightboxInner" onclick="event.stopPropagation()">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightboxCaption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<footer class="footer"><div class="wrap"><span id="footerText">© K9 Napoletano Academy - Tutti i diritti riservati.</span></div></footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const esc=value=>String(value??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+function show(id){const el=$(id); if(el) el.style.display='block'}
+function hide(id){const el=$(id); if(el) el.style.display='none'}
+function fit(v){return v==='cover'?'cover':'contain'}
+function pos(v){return v||'center'}
+function mediaPath(src){
+  if(!src) return '';
+  src=String(src).trim();
+  if(src.startsWith('http://')||src.startsWith('https://')||src.startsWith('data:')) return src;
+  if(src.startsWith('/')) return src;
+  return '/' + src.replace(/^\.\//,'');
+}
+function imgTag(src,alt,fitMode='contain',position='center'){
+  const path=mediaPath(src);
+  if(!path) return '';
+  return `<img src="${esc(path)}" alt="${esc(alt)}" loading="lazy" style="object-fit:${fit(fitMode)};object-position:${esc(pos(position))};">`;
+}
+function setText(id,value){const el=$(id); if(el) el.textContent=value||''}
+function setFormatted(id,value){const el=$(id); if(el) el.innerHTML=formatText(value||'')}
+function isShortHeading(line){
+  const t=line.trim();
+  if(!t) return false;
+  if(t.length>72) return false;
+  if(/[.!?:;]$/.test(t)) return false;
+  if(t.startsWith('-')) return false;
+  return true;
+}
+function formatText(value){
+  const raw=String(value??'').replace(/\r\n/g,'\n').replace(/\r/g,'\n');
+  if(!raw.trim()) return '';
+  const lines=raw.split('\n');
+  let html='';
+  let paragraph=[];
+  let list=[];
+
+  const flushParagraph=()=>{
+    if(paragraph.length){
+      html += `<p>${paragraph.map(esc).join('<br>')}</p>`;
+      paragraph=[];
+    }
+  };
+  const flushList=()=>{
+    if(list.length){
+      html += `<ul>${list.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+      list=[];
+    }
+  };
+
+  for(const original of lines){
+    const line=original.trim();
+    if(!line){
+      flushParagraph();
+      flushList();
+      continue;
+    }
+    if(line==='---' || line==='___' || line==='***'){
+      flushParagraph();
+      flushList();
+      html += '<hr>';
+      continue;
+    }
+    if(line.startsWith('- ') || line.startsWith('• ')){
+      flushParagraph();
+      list.push(line.replace(/^[-•]\s+/,''));
+      continue;
+    }
+    flushList();
+    if(isShortHeading(line)){
+      flushParagraph();
+      html += `<h4>${esc(line)}</h4>`;
+    }else{
+      paragraph.push(line);
+    }
+  }
+  flushParagraph();
+  flushList();
+  return html;
+}
+function setWhatsApp(number){
+  const clean=String(number||'').replace(/\D/g,'');
+  const href=clean?`https://wa.me/${clean}`:'#contatti';
+  ['waBtn','waBtn2','waFloat'].forEach(id=>{if($(id))$(id).href=href});
+}
+function renderLinkButton(text,href){
+  return href?`<a class="btn" href="${esc(mediaPath(href))}" target="_blank" rel="noopener">${esc(text||'Apri')}</a>`:'';
+}
+
+
+function toggleDisciplineGroup(id,head,btn){
+  const grid=$(id);
+  if(!grid) return;
+  const isOpen=grid.classList.toggle('open');
+  if(head) head.classList.toggle('open',isOpen);
+  if(btn) btn.textContent=isOpen?'Chiudi sezione':'Apri sezione';
+}
+
+function toggleDiscipline(id,btn){
+  const box=$(id);
+  if(!box) return;
+  const isOpen=box.classList.toggle('open');
+  if(btn){
+    btn.textContent=isOpen?(btn.dataset.openText||'Chiudi'):(btn.dataset.closedText||'Scopri disciplina');
+  }
+}
+
+function openRegistrationModal(eventTitle,eventDate){
+  setText('registrationTitle',eventTitle||'Iscrizione');
+  const eventInput=$('formEvento');
+  const dateInput=$('formDataEvento');
+  if(eventInput) eventInput.value=eventTitle||'';
+  if(dateInput) dateInput.value=eventDate||'';
+  const modal=$('registrationModal');
+  if(modal){
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden','false');
+  }
+}
+function closeRegistrationModal(){
+  const modal=$('registrationModal');
+  if(modal){
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden','true');
+  }
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeRegistrationModal();});
+
+
+function openLightbox(src,title){
+  const lb=$('lightbox');
+  if(!lb || !src) return;
+  $('lightboxImg').src=mediaPath(src);
+  $('lightboxCaption').textContent=title||'';
+  lb.classList.add('active');
+}
+function closeLightbox(){
+  const lb=$('lightbox');
+  if(lb) lb.classList.remove('active');
+}
+async function loadSite(){
+  const res=await fetch('/content/site.json?v=' + Date.now(),{cache:'no-store'});
+  if(!res.ok) throw new Error('Errore caricamento content/site.json');
+  const d=await res.json();
+
+  const siteName=d.siteName||d.brand?.name||'K9 Napoletano Academy';
+  const logo=mediaPath(d.logo||d.brand?.logo||'/logo.png');
+  const heroImage=mediaPath(d.heroImage||d.homepage?.hero_image||logo);
+
+  document.title=d.heroTitle||d.homepage?.title||siteName;
+  const metaDesc=document.querySelector('meta[name="description"]');
+  if(metaDesc) metaDesc.setAttribute('content',d.seo?.description||d.heroSubtitle||d.brand?.description||'');
+
+  if($('navLogo')) $('navLogo').src=logo;
+  setText('navName',siteName);
+  setText('tagline',d.tagline||d.brand?.tagline||'');
+  setText('heroTitle',d.heroTitle||d.homepage?.title||siteName);
+  setFormatted('heroSubtitle',d.heroSubtitle||d.homepage?.subtitle||d.brand?.description||'');
+  if($('heroImage')) $('heroImage').src=heroImage;
+  if($('hero')) $('hero').style.setProperty('--hero-bg',`url("${heroImage}")`);
+  const heroCard=$('heroImage')?.closest('.heroCard');
+  if(heroCard && (heroImage===logo || heroImage===(mediaPath(d.logoSecondary||'')))) heroCard.style.display='none';
+  setText('footerText',d.footer||`© ${siteName} - Tutti i diritti riservati.`);
+
+  setText('ownerName',d.owner?.name||'Napoletano Giovanni');
+  setFormatted('ownerRoles',d.owner?.roles||'');
+  setFormatted('ownerBio',d.owner?.bio||'');
+
+  const ownerPhoto=mediaPath(d.owner?.photo||'');
+  const box=$('ownerPhotoBox');
+  if(box){
+    if(ownerPhoto){
+      box.className='profilePhoto hasPhoto';
+      box.innerHTML=imgTag(ownerPhoto,d.owner?.name||'Napoletano Giovanni','contain','center');
+    }else{
+      box.className='profilePhoto noPhoto';
+      box.innerHTML='';
+    }
+  }
+
+  const locations=d.locations||[];
+  if($('locationList')) $('locationList').innerHTML=locations.map(x=>`<span>${esc(x)}</span>`).join('');
+
+  const disciplines=(d.disciplines||d.services||[]).filter(x=>x.active!==false);
+  if(disciplines.length){
+    show('discipline');
+
+    const categoryInfo={
+      'Discipline olfattive':'Discipline dedicate allo sviluppo e all’impiego delle capacità olfattive del cane.',
+      'Unità cinofile specialistiche':'Attività operative e specialistiche per ricerca, supporto e scenari complessi.',
+      'Educazione e comportamento':'Percorsi per relazione, gestione quotidiana, equilibrio e competenze del cane.',
+      'Formazione professionale':'Corsi, stage, seminari e percorsi tecnici per operatori e proprietari.',
+      'Altro':'Altre attività cinofile aggiornabili dal CMS.'
+    };
+
+    const order=[
+      'Discipline olfattive',
+      'Unità cinofile specialistiche',
+      'Educazione e comportamento',
+      'Formazione professionale',
+      'Altro'
+    ];
+
+    function normalizeCategory(value){
+      const raw=String(value||'').trim();
+      const v=raw.toLowerCase();
+      if(!v) return '';
+      if(v.includes('olfatt')) return 'Discipline olfattive';
+      if(v.includes('special') || v.includes('unit')) return 'Unità cinofile specialistiche';
+      if(v.includes('educ') || v.includes('comport')) return 'Educazione e comportamento';
+      if(v.includes('formaz') || v.includes('professional')) return 'Formazione professionale';
+      if(v.includes('altro')) return 'Altro';
+      return raw;
+    }
+
+    function autoCategory(item){
+      const manual=normalizeCategory(item.category||item.categoria);
+      if(manual && manual !== 'Altro') return manual;
+
+      const text=String(`${item.title||''} ${item.short||''} ${item.long||''}`).toLowerCase();
+
+      if(
+        text.includes('mantrailing') ||
+        text.includes('detection') ||
+        text.includes('scent') ||
+        text.includes('olfattiv') ||
+        text.includes('discriminazione') ||
+        text.includes('ricerca ludica')
+      ) return 'Discipline olfattive';
+
+      if(
+        text.includes('hrdd') ||
+        text.includes('resti umani') ||
+        text.includes('persone disperse') ||
+        text.includes('persone scomparse') ||
+        text.includes('protezione civile') ||
+        text.includes('unità cinofila') ||
+        text.includes('unita cinofila')
+      ) return 'Unità cinofile specialistiche';
+
+      if(
+        text.includes('educazione') ||
+        text.includes('puppy') ||
+        text.includes('problem solving') ||
+        text.includes('comportament') ||
+        text.includes('rieducazione') ||
+        text.includes('acqua')
+      ) return 'Educazione e comportamento';
+
+      if(
+        text.includes('dogsitter') ||
+        text.includes('dog sitter') ||
+        text.includes('dog walker') ||
+        text.includes('operatori') ||
+        text.includes('istruttori') ||
+        text.includes('stage') ||
+        text.includes('seminari') ||
+        text.includes('workshop') ||
+        text.includes('formazione')
+      ) return 'Formazione professionale';
+
+      return manual || 'Altro';
+    }
+
+    const groups={};
+
+    disciplines.forEach((x,i)=>{
+      const cat=autoCategory(x);
+      if(!groups[cat]) groups[cat]=[];
+      groups[cat].push({...x,_index:i});
+    });
+
+    const renderDisciplineCard=(x)=>{
+      const detailsId=`disciplineDetails_${x._index}`;
+      const hasLong=!!(x.long||x.description);
+      const buttonText=x.buttonText||'Scopri disciplina';
+      const imagePosition=x.imagePosition||'center';
+      return `
+      <article class="card discipline">
+        ${x.image
+          ? `<div class="disciplineHero"><img src="${esc(mediaPath(x.image))}" alt="${esc(x.title)}" loading="lazy" style="object-fit:${fit(x.imageFit||'cover')};object-position:${esc(pos(imagePosition))};"></div>`
+          : `<div class="disciplineNoImage">${esc(x.icon||'🐾')}</div>`}
+        <div class="disciplineTitleRow">
+          <span class="disciplineTitleIcon">${esc(x.icon||'🐾')}</span>
+          <h3>${esc(x.title)}</h3>
+        </div>
+        ${x.short?`<div class="muted cms-text">${formatText(x.short)}</div>`:''}
+        ${hasLong?`
+          <button class="btn primary disciplineToggle" type="button" onclick="toggleDiscipline('${detailsId}', this)" data-open-text="Chiudi" data-closed-text="${esc(buttonText)}">${esc(buttonText)}</button>
+          <div class="disciplineDetails cms-text" id="${detailsId}">${formatText(x.long||x.description)}</div>
+        `:''}
+        ${x.buttonLink?renderLinkButton(x.buttonText||'Apri',x.buttonLink):''}
+      </article>`;
+    };
+
+    const categories=[
+      ...order.filter(cat=>groups[cat]),
+      ...Object.keys(groups).filter(cat=>!order.includes(cat))
+    ];
+
+    $('disciplines').innerHTML=categories.map((cat,catIndex)=>{
+      const groupId=`disciplineGroupGrid_${catIndex}`;
+      return `
+      <div class="disciplineGroup">
+        <div class="disciplineGroupHead" onclick="toggleDisciplineGroup('${groupId}', this, this.querySelector('.categoryToggleBtn'))">
+          <h3>${esc(cat)}</h3>
+          ${categoryInfo[cat]?`<p>${esc(categoryInfo[cat])}</p>`:''}
+          <button class="btn primary categoryToggleBtn" type="button">Apri sezione</button>
+        </div>
+        <div class="disciplineGroupGrid" id="${groupId}">
+          ${groups[cat].map(renderDisciplineCard).join('')}
+        </div>
+      </div>`;
+    }).join('');
+  }else hide('discipline');
+
+  const dogs=d.dogs||[];
+  if(dogs.length){
+    show('cani');
+    $('dogs').innerHTML=dogs.map(x=>`
+      <article class="card dog">
+        ${imgTag(x.photo||x.image,x.name,x.imageFit,x.imagePosition)}
+        <h3>${esc(x.name)}</h3>
+        ${x.breed?`<div class="muted cms-text">${formatText(x.breed)}</div>`:''}
+        ${x.sex?`<div class="muted cms-text">${formatText(x.sex)}</div>`:''}
+        ${x.birth||x.age?`<div class="muted cms-text">${formatText(x.birth||x.age)}</div>`:''}
+        ${x.status?`<div class="status cms-text">${formatText(x.status)}</div>`:''}
+        ${x.discipline?`<div class="meta cms-text">${formatText(x.discipline)}</div>`:''}
+        ${x.operationalLevel?`<div class="muted cms-text">${formatText(x.operationalLevel)}</div>`:''}
+        ${x.certifications?`<div class="muted cms-text">${formatText(x.certifications)}</div>`:''}
+        ${x.description?`<div class="cms-text">${formatText(x.description)}</div>`:''}
+        ${x.notes?`<div class="muted cms-text">${formatText(x.notes)}</div>`:''}
+      </article>`).join('');
+  }else hide('cani');
+
+  const courses=(d.courses||[]).filter(x=>x.active!==false);
+  if(courses.length){
+    show('corsi');
+    $('courses').innerHTML=courses.map(x=>{
+      const open=x.registrationOpen!==false;
+      const waText=`Ciao Giovanni, vorrei informazioni/iscrivermi al corso ${x.title||''}${x.date?' del '+x.date:''}.`;
+      const waNumber=String(d.contacts?.whatsapp||d.contacts?.phone||'').replace(/\D/g,'');
+      const waHref=waNumber?`https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`:'#contatti';
+      return `
+      <article class="card course">
+        ${imgTag(x.image,x.title,'contain','center')}
+        <h3>${esc(x.title)}</h3>
+        ${x.date?`<p class="meta">📅 ${esc(x.date)}${x.time?' • '+esc(x.time):''}</p>`:''}
+        ${x.location?`<div class="muted cms-text">${formatText('📍 '+x.location)}</div>`:''}
+        ${x.duration?`<div class="muted cms-text">${formatText('Durata: '+x.duration)}</div>`:''}
+        ${x.places?`<p class="muted">Posti disponibili: <b>${esc(x.places)}</b></p>`:''}
+        ${x.description?`<div class="cms-text">${formatText(x.description)}</div>`:''}
+        ${x.program?`<div class="muted cms-text">${formatText(x.program)}</div>`:''}
+        ${x.registrationNote?`<div class="muted cms-text">${formatText(x.registrationNote)}</div>`:''}
+        <div class="eventActions">
+          ${open?`<button class="btn primary" type="button" onclick="openRegistrationModal('${esc(x.title)}','${esc(x.date||'')}')">Iscriviti</button>`:`<span class="eventClosed">Iscrizioni chiuse</span>`}
+          ${open?`<a class="btn" href="${esc(waHref)}" target="_blank" rel="noopener">WhatsApp</a>`:''}
+          ${x.link?`<a class="btn" href="${esc(mediaPath(x.link))}" target="_blank" rel="noopener">Link esterno</a>`:''}
+        </div>
+      </article>`;
+    }).join('');
+  }else hide('corsi');
+
+  const events=(d.events||[]).filter(x=>x.active!==false);
+  if(events.length){
+    show('eventi');
+    $('events').innerHTML=events.map(x=>{
+      const open=x.registrationOpen!==false;
+      const waText=`Ciao Giovanni, vorrei iscrivermi all'evento ${x.title||''}${x.date?' del '+x.date:''}.`;
+      const waNumber=String(d.contacts?.whatsapp||d.contacts?.phone||'').replace(/\D/g,'');
+      const waHref=waNumber?`https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`:'#contatti';
+      return `
+      <article class="card event">
+        ${imgTag(x.image,x.title,'contain','center')}
+        <h3>${esc(x.title)}</h3>
+        ${x.date?`<p class="meta">📅 ${esc(x.date)}${x.time?' • '+esc(x.time):''}</p>`:''}
+        ${x.location?`<div class="muted cms-text">${formatText('📍 '+x.location)}</div>`:''}
+        ${x.places?`<p class="muted">Posti disponibili: <b>${esc(x.places)}</b></p>`:''}
+        ${x.description?`<div class="cms-text">${formatText(x.description)}</div>`:''}
+        ${x.registrationNote?`<div class="muted cms-text">${formatText(x.registrationNote)}</div>`:''}
+        <div class="eventActions">
+          ${open?`<button class="btn primary" type="button" onclick="openRegistrationModal('${esc(x.title)}','${esc(x.date||'')}')">Iscriviti</button>`:`<span class="eventClosed">Iscrizioni chiuse</span>`}
+          ${open?`<a class="btn" href="${esc(waHref)}" target="_blank" rel="noopener">WhatsApp</a>`:''}
+        </div>
+      </article>`;
+    }).join('');
+  }else hide('eventi');
+
+  const gallery=(d.gallery||[]).filter(x=>x.url||x.image);
+  if(gallery.length){
+    show('galleria');
+    $('gallery').innerHTML=gallery.map(x=>`
+      <figure>
+        ${x.type==='video'
+          ? `<div class="card"><h3>${esc(x.title)}</h3><a class="btn primary" href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener">Apri video</a></div>`
+          : `<div onclick="openLightbox('${esc(x.url||x.image)}','${esc(x.title)}')">${imgTag(x.url||x.image,x.title,x.imageFit,x.imagePosition)}</div>`}
+        <figcaption><b>${esc(x.title)}</b>${x.caption?`<div class="cms-text">${formatText(x.caption)}</div>`:''}</figcaption>
+      </figure>`).join('');
+  }else hide('galleria');
+
+  const videos=(d.videos||[]).filter(x=>x.url);
+  if(videos.length){
+    show('video');
+    $('videos').innerHTML=videos.map(x=>`
+      <article class="card">
+        <h3>${esc(x.title||'Video')}</h3>
+        ${x.description||x.caption?`<div class="muted cms-text">${formatText(x.description||x.caption)}</div>`:''}
+        <a class="btn primary" href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener">Apri video</a>
+      </article>`).join('');
+  }else hide('video');
+
+  const reviews=(d.reviews||d.testimonials||[]).filter(x=>x.name||x.review);
+  if(reviews.length){
+    show('recensioni');
+    $('reviews').innerHTML=reviews.map(x=>`
+      <article class="card review">
+        ${imgTag(x.photo,x.name,'contain','center')}
+        <h3>${esc(x.name)}</h3>
+        ${x.review?`<div class="muted cms-text">${formatText(x.review)}</div>`:''}
+      </article>`).join('');
+  }else hide('recensioni');
+
+  const partners=(d.partners||[]).filter(x=>x.name||x.logo);
+  if(partners.length){
+    show('partner');
+    $('partners').innerHTML=partners.map(x=>`
+      <article class="card partner">
+        ${imgTag(x.logo,x.name,'contain','center')}
+        <h3>${esc(x.name)}</h3>
+        ${x.description?`<div class="muted cms-text">${formatText(x.description)}</div>`:''}
+        ${renderLinkButton('Sito web',x.website)}
+      </article>`).join('');
+  }else hide('partner');
+
+  const documents=(d.documents||[]).filter(x=>x.file);
+  if(documents.length){
+    show('documenti');
+    $('documents').innerHTML=documents.map(x=>`
+      <article class="card">
+        <h3>${esc(x.title)}</h3>
+        ${x.description?`<div class="muted cms-text">${formatText(x.description)}</div>`:''}
+        <a class="btn primary" href="${esc(mediaPath(x.file))}" target="_blank" rel="noopener">Apri documento</a>
+      </article>`).join('');
+  }else hide('documenti');
+
+  const faq=(d.faq||[]).filter(x=>x.question||x.answer);
+  if(faq.length){
+    show('faq');
+    $('faqList').innerHTML=faq.map(x=>`
+      <article class="card">
+        <h3>${esc(x.question)}</h3>
+        ${x.answer?`<div class="muted cms-text">${formatText(x.answer)}</div>`:''}
+      </article>`).join('');
+  }else hide('faq');
+
+  setText('contactName',d.contacts?.name||d.contacts?.referente||'');
+  setText('phone',d.contacts?.phone||'');
+  setText('email',d.contacts?.email||'');
+  setWhatsApp(d.contacts?.whatsapp||d.contacts?.phone);
+
+  const socials=(d.socials||[]).filter(x=>x.url);
+  if($('socials')) $('socials').innerHTML=socials.map(x=>`<a href="${esc(mediaPath(x.url))}" target="_blank" rel="noopener">${esc(x.label)}</a>`).join('');
+}
+
+loadSite().catch(err=>{
+  console.error(err);
+  document.body.insertAdjacentHTML('afterbegin','<div style="padding:14px;background:#7a0000;color:white;text-align:center">Errore caricamento dati CMS. Controlla content/site.json.</div>');
+});
+if('serviceWorker'in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}))}
+if(window.netlifyIdentity){window.netlifyIdentity.on('init',user=>{if(!user&&window.location.hash.includes('invite_token'))window.netlifyIdentity.open('signup')})}
+</script>
+</body>
+</html>
