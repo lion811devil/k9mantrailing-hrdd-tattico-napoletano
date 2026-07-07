@@ -1,0 +1,37 @@
+{
+  "owner": {
+    "name": "Napoletano Giovanni",
+    "roles": "Docente, formatore, responsabile dell’unità cinofila e operativo",
+    "bio": "Il progetto K9 Napoletano Academy nasce per presentare attività cinofile specialistiche, formazione operativa e lavoro sul campo con un approccio serio, tecnico e professionale.",
+    "photo": "/assets/uploads/1000233988.jpg"
+  },
+  "contacts": {
+    "name": "Napoletano Giovanni",
+    "phone": "3281650082",
+    "email": "napoletano.giovanni.81@gmail.com",
+    "whatsapp": "393281650082",
+    "facebook": "https://www.facebook.com/share/1CerGAE6Es/",
+    "instagram": "https://www.instagram.com/k9.mantrailing.napoletano?igsh=MTIwcjVranp2MXI5ZA==",
+    "youtube": "https://youtube.com/@napoletanogiovannik9?si=0TRw2RJCfb-PqWfj",
+    "tiktok": "https://www.tiktok.com/@k9.mantrailing.na?_r=1&_t=ZN-97aYA9bYRrq"
+  },
+  "locations": [
+    "San Giuliano Milanese (MI)",
+    "Desenzano del Garda, Sirmione, Padenghe (BS)",
+    "Ricerca nazionale e internazionale"
+  ],
+  "socials": [
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/share/1H1PwjjdQ9/"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/k9.mantrailing.napoletano?igsh=MTIwcjVranp2MXI5ZA=="
+    },
+    {
+      "label": "YouTube",
+      "url": "https://youtube.com/@napoletanogiovannik9?si=v_o_1I_g5XlI_TPw"
+    }
+  ]
+}

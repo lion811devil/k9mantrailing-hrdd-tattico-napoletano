@@ -1,0 +1,43 @@
+{
+  "disciplines": [
+    {
+      "imagePosition": "center",
+      "active": true,
+      "buttonLink": "",
+      "imageFit": "contain",
+      "title": "Mantrailing - Ricerca Persone Scomparse",
+      "icon": "🐾",
+      "image": "/assets/uploads/1000230281.jpg",
+      "short": "Ricerca della traccia individuale di una persona tramite il lavoro olfattivo del cane.",
+      "long": "MANTRAILING\n\nL'olfatto che guida, il legame che unisce. Il MANTRAILING è una disciplina cinofila che valorizza la straordinaria capacità olfattiva del cane, insegnandogli a seguire l'odore specifico di una persona. Attraverso un percorso progressivo e strutturato, il cane impara a utilizzare il proprio olfatto in modo naturale, mentre il conduttore acquisisce le competenze necessarie per comprenderne il linguaggio e accompagnarlo nella ricerca.\n\nPiù che una semplice attività, il Mantrailing rappresenta un'esperienza condivisa che rafforza il rapporto tra cane e proprietario, stimolando fiducia, collaborazione e crescita reciproca.\n\n---\n\nA chi è rivolto\n\nIl Mantrailing è adatto a:\n\n- cuccioli e cani adulti;\n- cani di qualsiasi razza o meticci;\n- proprietari alle prime esperienze;\n- binomi già esperti;\n- cani particolarmente energici;\n- cani timidi o insicuri;\n- chi desidera svolgere un'attività mentale altamente stimolante.\n\n---\n\nBenefici principali\n\n- Sviluppa le naturali capacità olfattive.\n- Migliora concentrazione e autocontrollo.\n- Aumenta sicurezza e autostima.\n- Rafforza il rapporto tra cane e conduttore.\n- Favorisce il benessere psicofisico.\n- Riduce stress e noia.\n- Migliora la gestione delle emozioni.\n- Stimola problem solving e autonomia.\n\n---\n\nCome si svolgono le lezioni\n\nLe lezioni sono pratiche e personalizzate.\n\nIl percorso inizia con esercizi semplici, aumentando progressivamente la difficoltà in funzione delle capacità del binomio.\n\nGli allenamenti si svolgono in differenti contesti:\n\n- aree urbane;\n- parchi;\n- boschi;\n- campagne;\n- ambienti misti.\n\nOgni esercizio è progettato per rispettare il benessere del cane e valorizzarne le capacità naturali.\n\n---\n\nRequisiti per partecipare\n\n- Cane in buona salute.\n- Vaccinazioni in regola.\n- Pettorina idonea.\n- Guinzaglio lungo da lavoro.\n- Voglia di imparare insieme al proprio cane.\n\nNon è richiesta alcuna esperienza precedente.\n\n---\n\nObiettivi del percorso\n\nDurante il percorso il binomio imparerà a:\n\n- interpretare il linguaggio del cane durante la ricerca;\n- gestire correttamente il guinzaglio;\n- riconoscere le variazioni della traccia;\n- affrontare scenari sempre più complessi;\n- migliorare precisione, collaborazione e autonomia.\n\n---\n\nDomande frequenti\n\nServe una razza particolare?\n\nNo. Tutti i cani possiedono capacità olfattive straordinarie e possono praticare il Mantrailing.\n\nÈ un'attività faticosa?\n\nÈ prevalentemente un lavoro mentale, molto appagante e meno stressante rispetto a molte attività esclusivamente fisiche.\n\nPuò praticarlo un cane anziano?\n\nSì, purché le condizioni di salute lo consentano. Il percorso viene adattato alle caratteristiche di ogni cane.\n\nIl cane deve essere già addestrato?\n\nNo. Il percorso è aperto anche a chi parte da zero.\n\n---\n\nPrenota la tua esperienza\n\nScopri il mondo del Mantrailing insieme al tuo cane.\n\nContattaci per una prova conoscitiva e inizia un percorso fatto di fiducia, emozioni e collaborazione, dove il protagonista sarà il suo straordinario olfatto.",
+      "category": "Discipline olfattive",
+      "buttonText": ""
+    },
+    {
+      "imagePosition": "center",
+      "active": true,
+      "buttonLink": "",
+      "imageFit": "contain",
+      "title": "HRDD - Ricerca Resti Umani",
+      "icon": "☠️",
+      "image": "",
+      "short": "Attività specialistica per la ricerca di resti umani e tracce biologiche umane.",
+      "long": "Disciplina specialistica Human Remains Detection Dog.",
+      "category": "Unità cinofile specialistiche",
+      "buttonText": ""
+    },
+    {
+      "imagePosition": "center",
+      "active": true,
+      "buttonLink": "",
+      "imageFit": "contain",
+      "title": "Educazione cinofila",
+      "icon": "🎓",
+      "image": "",
+      "short": "Percorsi educativi per migliorare relazione e gestione.",
+      "long": "Percorsi educativi personalizzati.",
+      "category": "Educazione e comportamento",
+      "buttonText": ""
+    }
+  ]
+}

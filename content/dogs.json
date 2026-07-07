@@ -1,0 +1,14 @@
+{
+  "dogs": [
+    {
+      "name": "Kira",
+      "status": "Operativa in Protezione Civile del Basso Garda",
+      "discipline": "Protezione Civile cinofila / Ricerca",
+      "description": "Operativa in protezione civile in Mantrailing e HRDD ",
+      "photo": "/assets/uploads/1000234967.png",
+      "notes": "Inserire note operative specifiche.",
+      "imageFit": "contain",
+      "imagePosition": "center"
+    }
+  ]
+}
