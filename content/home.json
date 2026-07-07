@@ -1,12 +1,8 @@
 {
-  "siteName": "K9 NAPOLETANO ACADEMY ",
-  "logo": "/assets/uploads/1000241237.png",
-  "logoSecondary": "/assets/uploads/1000217802.png",
-  "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
-  "heroTitle": "K9 NAPOLETANO ACADEMY ",
-  "heroSubtitle": "Unità cinofila specialistica dedicata a ricerca persone scomparse/disperse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
   "heroImage": "/assets/uploads/1000241236.png",
-  "footer": "© K9 Napoletano Academy - Tutti i diritti riservati.",
+  "settings": {
+    "themeMode": "light"
+  },
   "k9Studio": {
     "textElements": [
       {
@@ -214,5 +210,12 @@
         "content": "© K9 NAPOLETANO ACADEMY  - Tutti i diritti riservati."
       }
     ]
-  }
+  },
+  "logoSecondary": "/assets/uploads/1000217802.png",
+  "logo": "/assets/uploads/1000241237.png",
+  "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
+  "heroSubtitle": "Unità cinofila specialistica dedicata a ricerca persone scomparse/disperse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
+  "siteName": "K9 NAPOLETANO ACADEMY ",
+  "footer": "### © K9 Napoletano Academy - Tutti i diritti riservati.",
+  "heroTitle": "K9 NAPOLETANO ACADEMY "
 }
