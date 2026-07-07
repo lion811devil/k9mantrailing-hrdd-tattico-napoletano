@@ -1,0 +1,47 @@
+RELEASE 2.0 - CMS ORGANIZZATO
+
+Scopo:
+- Separare il CMS in schermate dedicate.
+- Superare il limite del solo documento "Contenuti principali".
+- Mantenere i contenuti già presenti.
+
+FILE DA SOSTITUIRE:
+- index.html
+- admin/config.yml
+- sw.js
+
+FILE DA AGGIUNGERE nella cartella content:
+- content/home.json
+- content/profile-contacts.json
+- content/disciplines.json
+- content/dogs.json
+- content/courses.json
+- content/events.json
+- content/media.json
+- content/network.json
+- content/faq.json
+- content/builder.json
+
+FILE DA NON TOCCARE:
+- content/site.json va lasciato presente come archivio/fallback.
+- assets/uploads non va modificata.
+- logo.png non va modificato.
+- manifest.webmanifest non va modificato.
+- netlify.toml non va modificato se hai già caricato quello della Release 1.0 Stable.
+
+COSA CAMBIA NEL CMS:
+- 01 Home, Hero e Tema
+- 02 Profilo e Contatti
+- 03 Discipline
+- 04 Unità Cinofile
+- 05 Corsi
+- 06 Eventi e Stage
+- 07 Media, Galleria e Video
+- 08 Partner, Recensioni e Documenti
+- 09 FAQ
+- 10 Page Builder e Form
+
+Verifiche eseguite:
+- YAML config.yml: OK
+- JavaScript index.html: OK
+- JSON contenuti: OK
