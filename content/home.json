@@ -1,0 +1,371 @@
+{
+  "heroImage": "/assets/uploads/1000241236.png",
+  "settings": {
+    "themeMode": "light"
+  },
+  "k9Studio": {
+    "textElements": [
+      {
+        "active": true,
+        "label": "Titolo principale Hero",
+        "targetId": "heroTitle",
+        "content": "K9 NAPOLETANO ACADEMY "
+      },
+      {
+        "active": true,
+        "label": "Sottotitolo Hero",
+        "targetId": "heroSubtitle",
+        "content": "Unità cinofila specialistica dedicata a ricerca persone scomparse/disperse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali."
+      },
+      {
+        "active": true,
+        "label": "Badge Hero",
+        "targetId": "tagline",
+        "content": "Mantrailing • HRDD • Formazione cinofila operativa"
+      },
+      {
+        "active": true,
+        "label": "Nome nel menu/header",
+        "targetId": "navName",
+        "content": "K9 NAPOLETANO ACADEMY "
+      },
+      {
+        "active": true,
+        "label": "Pulsante WhatsApp Hero",
+        "targetId": "waBtn",
+        "content": "Contatta su WhatsApp"
+      },
+      {
+        "active": true,
+        "label": "Pulsante secondario Hero",
+        "targetId": "heroSecondaryBtn",
+        "content": "Scopri le discipline"
+      },
+      {
+        "active": true,
+        "label": "Titolo social homepage",
+        "targetId": "heroSocialTitle",
+        "content": "Seguici sui social"
+      },
+      {
+        "active": true,
+        "label": "Testo social homepage",
+        "targetId": "heroSocialText",
+        "content": "Resta aggiornato su corsi, stage, addestramenti ed eventi."
+      },
+      {
+        "active": true,
+        "label": "Nome responsabile",
+        "targetId": "ownerName",
+        "content": "Napoletano Giovanni"
+      },
+      {
+        "active": true,
+        "label": "Ruoli responsabile",
+        "targetId": "ownerRoles",
+        "content": "Docente, formatore, responsabile dell’unità cinofila e operativo"
+      },
+      {
+        "active": true,
+        "label": "Biografia responsabile",
+        "targetId": "ownerBio",
+        "content": "Il progetto K9 Napoletano Academy nasce per presentare attività cinofile specialistiche, formazione operativa e lavoro sul campo con un approccio serio, tecnico e professionale."
+      },
+      {
+        "active": true,
+        "label": "Ricerca - etichetta",
+        "targetId": "searchKicker",
+        "content": "Ricerca rapida"
+      },
+      {
+        "active": true,
+        "label": "Ricerca - titolo",
+        "targetId": "searchTitle",
+        "content": "Cerca nel sito"
+      },
+      {
+        "active": true,
+        "label": "Ricerca - testo",
+        "targetId": "searchLead",
+        "content": "Trova rapidamente eventi, corsi, discipline, unità cinofile, documenti e FAQ."
+      },
+      {
+        "active": true,
+        "label": "Discipline - etichetta",
+        "targetId": "disciplinesKicker",
+        "content": "Aree operative e formative"
+      },
+      {
+        "active": true,
+        "label": "Discipline - titolo",
+        "targetId": "disciplinesTitle",
+        "content": "Discipline"
+      },
+      {
+        "active": true,
+        "label": "Discipline - testo",
+        "targetId": "disciplinesLead",
+        "content": "Attività specialistiche, formazione cinofila e preparazione tecnica del binomio."
+      },
+      {
+        "active": true,
+        "label": "Cani - etichetta",
+        "targetId": "dogsKicker",
+        "content": "Unità cinofile"
+      },
+      {
+        "active": true,
+        "label": "Cani - titolo",
+        "targetId": "dogsTitle",
+        "content": "I cani"
+      },
+      {
+        "active": true,
+        "label": "Cani - testo",
+        "targetId": "dogsLead",
+        "content": "Unità cinofile, schede operative e profili aggiornabili."
+      },
+      {
+        "active": true,
+        "label": "Corsi - etichetta",
+        "targetId": "coursesKicker",
+        "content": "Formazione"
+      },
+      {
+        "active": true,
+        "label": "Corsi - titolo",
+        "targetId": "coursesTitle",
+        "content": "Corsi"
+      },
+      {
+        "active": true,
+        "label": "Eventi - etichetta",
+        "targetId": "eventsKicker",
+        "content": "Calendario formativo"
+      },
+      {
+        "active": true,
+        "label": "Eventi - titolo",
+        "targetId": "eventsTitle",
+        "content": "Eventi, corsi e stage"
+      },
+      {
+        "active": true,
+        "label": "Eventi - testo",
+        "targetId": "eventsLead",
+        "content": "Calendario aggiornato delle attività formative e operative."
+      },
+      {
+        "active": true,
+        "label": "Galleria - etichetta",
+        "targetId": "galleryKicker",
+        "content": "Media"
+      },
+      {
+        "active": true,
+        "label": "Galleria - titolo",
+        "targetId": "galleryTitle",
+        "content": "Galleria"
+      },
+      {
+        "active": true,
+        "label": "Partner - titolo",
+        "targetId": "partnersTitle",
+        "content": "Partner"
+      },
+      {
+        "active": true,
+        "label": "FAQ - titolo",
+        "targetId": "faqTitle",
+        "content": "FAQ"
+      },
+      {
+        "active": true,
+        "label": "Contatti - titolo",
+        "targetId": "contactsTitle",
+        "content": "Contatti"
+      },
+      {
+        "active": true,
+        "label": "Box contatti - titolo",
+        "targetId": "contactCardTitle",
+        "content": "Richiedi informazioni"
+      },
+      {
+        "active": true,
+        "label": "Box contatti - testo",
+        "targetId": "contactCardText",
+        "content": "Per attività formative, collaborazione operativa, mantrailing, HRDD e progetti cinofili specializzati."
+      },
+      {
+        "active": true,
+        "label": "Footer - marchio",
+        "targetId": "footerBrand",
+        "content": "K9 NAPOLETANO ACADEMY "
+      },
+      {
+        "active": true,
+        "label": "Footer - copyright",
+        "targetId": "footerText",
+        "content": "© K9 NAPOLETANO ACADEMY  - Tutti i diritti riservati."
+      }
+    ]
+  },
+  "logoSecondary": "/assets/uploads/1000217802.png",
+  "logo": "/assets/uploads/1000241237.png",
+  "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
+  "heroSubtitle": "Unità cinofila specialistica dedicata a ricerca persone scomparse/disperse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
+  "siteName": "K9 NAPOLETANO ACADEMY ",
+  "footer": "### © K9 Napoletano Academy - Tutti i diritti riservati.",
+  "heroTitle": "K9 NAPOLETANO ACADEMY ",
+  "activeTheme": "Nero e Oro",
+  "themes": [
+    {
+      "name": "Nero e Oro",
+      "active": true,
+      "primaryColor": "#D4AF37",
+      "secondaryColor": "#F2C94C",
+      "siteBackground": "#0B0B0B",
+      "cardBackground": "#1A1A1A",
+      "headerBackground": "#050505",
+      "footerBackground": "#050505",
+      "textColor": "#FFFFFF",
+      "mutedTextColor": "#CFCFCF",
+      "buttonBackground": "linear-gradient(135deg,#D4AF37,#F2C94C)",
+      "buttonTextColor": "#120800",
+      "borderColor": "#3A321C",
+      "titleFont": "Arial, Helvetica, sans-serif",
+      "bodyFont": "Arial, Helvetica, sans-serif",
+      "buttonFont": "Arial, Helvetica, sans-serif",
+      "cardRadius": "30px",
+      "buttonRadius": "18px",
+      "cardShadow": true
+    },
+    {
+      "name": "Arancione Academy",
+      "active": true,
+      "primaryColor": "#FF6A00",
+      "secondaryColor": "#FF9E40",
+      "siteBackground": "#100A06",
+      "cardBackground": "#201200",
+      "headerBackground": "#080503",
+      "footerBackground": "#080503",
+      "textColor": "#FFFFFF",
+      "mutedTextColor": "#FFD9BD",
+      "buttonBackground": "linear-gradient(135deg,#FF6A00,#FF9E40)",
+      "buttonTextColor": "#160900",
+      "borderColor": "#5B2B00",
+      "titleFont": "Arial, Helvetica, sans-serif",
+      "bodyFont": "Arial, Helvetica, sans-serif",
+      "buttonFont": "Arial, Helvetica, sans-serif",
+      "cardRadius": "30px",
+      "buttonRadius": "18px",
+      "cardShadow": true
+    },
+    {
+      "name": "Verde Operativo",
+      "active": true,
+      "primaryColor": "#6FAF3A",
+      "secondaryColor": "#B8D86F",
+      "siteBackground": "#0B1008",
+      "cardBackground": "#151C10",
+      "headerBackground": "#070A05",
+      "footerBackground": "#070A05",
+      "textColor": "#FFFFFF",
+      "mutedTextColor": "#D5E5C8",
+      "buttonBackground": "linear-gradient(135deg,#6FAF3A,#B8D86F)",
+      "buttonTextColor": "#071000",
+      "borderColor": "#2C451C",
+      "titleFont": "Arial, Helvetica, sans-serif",
+      "bodyFont": "Arial, Helvetica, sans-serif",
+      "buttonFont": "Arial, Helvetica, sans-serif",
+      "cardRadius": "24px",
+      "buttonRadius": "16px",
+      "cardShadow": true
+    },
+    {
+      "name": "Blu Acciaio",
+      "active": true,
+      "primaryColor": "#2F6B8A",
+      "secondaryColor": "#74A9C7",
+      "siteBackground": "#071019",
+      "cardBackground": "#101E2A",
+      "headerBackground": "#040B11",
+      "footerBackground": "#040B11",
+      "textColor": "#FFFFFF",
+      "mutedTextColor": "#C7D9E3",
+      "buttonBackground": "linear-gradient(135deg,#2F6B8A,#74A9C7)",
+      "buttonTextColor": "#031018",
+      "borderColor": "#234458",
+      "titleFont": "Arial, Helvetica, sans-serif",
+      "bodyFont": "Arial, Helvetica, sans-serif",
+      "buttonFont": "Arial, Helvetica, sans-serif",
+      "cardRadius": "26px",
+      "buttonRadius": "16px",
+      "cardShadow": true
+    },
+    {
+      "name": "Bianco Moderno",
+      "active": true,
+      "primaryColor": "#D86A00",
+      "secondaryColor": "#A67C00",
+      "siteBackground": "#F5F6F7",
+      "cardBackground": "#FFFFFF",
+      "headerBackground": "#FFFFFF",
+      "footerBackground": "#E9ECEF",
+      "textColor": "#151515",
+      "mutedTextColor": "#5F6368",
+      "buttonBackground": "linear-gradient(135deg,#D86A00,#F0A23A)",
+      "buttonTextColor": "#FFFFFF",
+      "borderColor": "#DADCE0",
+      "titleFont": "Arial, Helvetica, sans-serif",
+      "bodyFont": "Arial, Helvetica, sans-serif",
+      "buttonFont": "Arial, Helvetica, sans-serif",
+      "cardRadius": "24px",
+      "buttonRadius": "16px",
+      "cardShadow": true
+    },
+    {
+      "name": "Grigio Tecnico",
+      "active": true,
+      "primaryColor": "#A6A6A6",
+      "secondaryColor": "#E0E0E0",
+      "siteBackground": "#141619",
+      "cardBackground": "#22262B",
+      "headerBackground": "#0C0E10",
+      "footerBackground": "#0C0E10",
+      "textColor": "#FFFFFF",
+      "mutedTextColor": "#C4C7CB",
+      "buttonBackground": "linear-gradient(135deg,#8F969E,#D7DADF)",
+      "buttonTextColor": "#101214",
+      "borderColor": "#41474E",
+      "titleFont": "Arial, Helvetica, sans-serif",
+      "bodyFont": "Arial, Helvetica, sans-serif",
+      "buttonFont": "Arial, Helvetica, sans-serif",
+      "cardRadius": "20px",
+      "buttonRadius": "14px",
+      "cardShadow": true
+    },
+    {
+      "name": "Personalizzato",
+      "active": true,
+      "primaryColor": "#FF7A00",
+      "secondaryColor": "#F6B739",
+      "siteBackground": "#050505",
+      "cardBackground": "#111111",
+      "headerBackground": "#040404",
+      "footerBackground": "#030303",
+      "textColor": "#FFF8ED",
+      "mutedTextColor": "#D7C7AD",
+      "buttonBackground": "linear-gradient(135deg,#FF7A00,#F6B739)",
+      "buttonTextColor": "#120800",
+      "borderColor": "#363636",
+      "titleFont": "Arial, Helvetica, sans-serif",
+      "bodyFont": "Arial, Helvetica, sans-serif",
+      "buttonFont": "Arial, Helvetica, sans-serif",
+      "cardRadius": "30px",
+      "buttonRadius": "18px",
+      "cardShadow": true
+    }
+  ]
+}
