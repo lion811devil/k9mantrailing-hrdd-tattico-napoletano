@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://k9mantrailing-hrdd-tattico-napoletano.netlify.app/sitemap.xml
