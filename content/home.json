@@ -481,6 +481,7 @@
     "textAlign": "center",
     "fontWeight": "600",
     "fontFamily": "Merriweather, Georgia, serif",
-    "autoFit": true
+    "autoFit": false,
+    "fontSize": "18"
   }
 }
