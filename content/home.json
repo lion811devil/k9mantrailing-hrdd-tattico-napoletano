@@ -118,7 +118,7 @@
       "cardRadius": "20px",
       "buttonRadius": "14px",
       "buttonTextColor": "#101214",
-      "active": true,
+      "active": false,
       "titleFont": "Arial, Helvetica, sans-serif",
       "footerBackground": "#0C0E10",
       "mutedTextColor": "#C4C7CB",
