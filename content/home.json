@@ -12,7 +12,7 @@
       "primaryColor": "#D4AF37",
       "buttonFont": "Arial, Helvetica, sans-serif",
       "cardRadius": "30px",
-      "mode": "dark",
+      "mode": "light",
       "buttonRadius": "18px",
       "buttonTextColor": "#120800",
       "active": true,
