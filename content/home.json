@@ -476,5 +476,9 @@
     "hero": false
   },
   "footer": "### © K9 **Napoletano** Academy - Tutti i diritti riservati.",
-  "heroTitle": "K9 NAPOLETANO ACADEMY "
+  "heroTitle": "K9 NAPOLETANO ACADEMY ",
+  "siteNameStyle": {
+    "textAlign": "center",
+    "fontWeight": "600"
+  }
 }
