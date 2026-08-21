@@ -1,0 +1,25 @@
+K9 NAPOLETANO ACADEMY — RELEASE MASTER FIX 6.0
+
+GESTIONE RAPIDA
+1. Apri /admin/
+2. Scegli una delle 6 aree.
+3. Modifica il contenuto.
+4. Premi Salva.
+5. Premi Pubblica.
+
+CAMBIO TEMA
+01 HOME E ASPETTO > Tema del sito.
+Scegli il tema dal menu: non scrivere codici o nomi manualmente.
+Poi Salva e Pubblica.
+
+PERSONALIZZAZIONE AVANZATA
+La sezione Temi e colori personalizzati resta disponibile ma è avanzata.
+Usala solo per modificare colori, caratteri, bordi e stile di un tema.
+
+FOTO E FILE
+I campi immagine/file usano la libreria media nativa del CMS.
+Puoi caricare nuovi file o riutilizzare quelli già presenti.
+
+NOTA MOBILE
+La release 6.0 non applica più CSS che modificano la struttura interna di Decap CMS.
+Il CMS usa il responsive nativo della versione Decap CMS 3.15.1.

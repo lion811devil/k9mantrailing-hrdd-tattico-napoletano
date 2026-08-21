@@ -1935,8 +1935,8 @@ function applyItemStyleClass(){
 
 
 function applyVisualTheme(d){
-  const themes=(d.themes||[]).filter(theme=>theme && theme.active!==false);
-  const selected=themes.find(theme=>theme.name===d.activeTheme) || themes[0] || {};
+  const themes=(d.themes||[]).filter(Boolean);
+  const selected=themes.find(theme=>theme.name===d.activeTheme) || themes.find(theme=>theme.active!==false) || themes[0] || {};
   const settings=d.settings||{};
   const root=document.documentElement;
 
@@ -1986,6 +1986,10 @@ function applyVisualTheme(d){
     if(settings.cardShadow===false) root.style.setProperty('--card-shadow','none');
     if(settings.themeMode==='light' || settings.themeMode==='dark') mode=settings.themeMode;
   }
+
+  // Impostazioni di copertina: erano presenti nel CMS ma prima non venivano applicate.
+  if(settings.heroHeight) set('--hero-height',settings.heroHeight);
+  if(settings.heroOverlayOpacity) set('--hero-opacity',settings.heroOverlayOpacity);
 
   document.body.classList.toggle('cms-theme-light', mode==='light');
 
@@ -2327,7 +2331,7 @@ function setupAdvancedFooter(d){
 
 async function loadJsonIfExists(path){
   try{
-    const res=await fetch(path+'?v='+Date.now(),{cache:'no-store'});
+    const res=await fetch(path,{cache:'no-store'});
     if(!res.ok) return {};
     return await res.json();
   }catch(e){
