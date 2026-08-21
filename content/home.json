@@ -472,6 +472,9 @@
   "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
   "heroSubtitle": "Unità cinofila specialistica dedicata al MANTRAILING - ricerca persone scomparse/disperse, HRDD - ricerca resti umani, formazione operativa e attività cinofile professionali.",
   "siteName": "K9 NAPOLETANO ACADEMY ",
-  "footer": "### © K9 Napoletano Academy - Tutti i diritti riservati.",
+  "sectionVisibility": {
+    "hero": false
+  },
+  "footer": "### © K9 **Napoletano** Academy - Tutti i diritti riservati.",
   "heroTitle": "K9 NAPOLETANO ACADEMY "
 }
