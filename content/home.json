@@ -4,7 +4,7 @@
     "themeMode": "auto",
     "useManualThemeOverrides": false
   },
-  "activeTheme": "Protezione Civile",
+  "activeTheme": "Arancione Academy",
   "logoSecondary": "/assets/uploads/1000217802.png",
   "themes": [
     {
@@ -380,7 +380,7 @@
       "primaryColor": "#B66A3C",
       "buttonFont": "Arial, Helvetica, sans-serif",
       "cardRadius": "22px",
-      "mode": "dark",
+      "mode": "light",
       "buttonRadius": "13px",
       "buttonTextColor": "#1B0C04",
       "active": true,
