@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>Gestione sito - K9 Napoletano Academy</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+html,body{margin:0;min-height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+#k9HelpBtn{position:fixed;right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));z-index:999999;border:0;border-radius:999px;padding:10px 14px;font:700 12px Arial,sans-serif;background:#111;color:#fff;box-shadow:0 6px 20px #0004}
+#k9Help{display:none;position:fixed;inset:0;z-index:1000000;background:#0009;padding:12px;overflow:auto}
+#k9Help.open{display:flex;align-items:flex-start;justify-content:center}
+#k9HelpCard{width:min(560px,100%);max-height:calc(100vh - 24px);overflow:auto;background:#fff;color:#111;border-radius:16px;padding:18px;box-sizing:border-box;font:15px/1.5 Arial,sans-serif}
+#k9HelpCard h2{margin:0 0 10px}#k9HelpCard h3{margin:18px 0 4px}
+#k9HelpCard button{width:100%;margin-top:16px;padding:12px;border:0;border-radius:10px;background:#111;color:#fff;font-weight:700}
+#k9HelpCard a{color:#0645ad}#k9HelpCard ol{padding-left:22px}
+@media(max-width:600px){#k9HelpBtn{right:8px;bottom:max(8px,env(safe-area-inset-bottom));padding:9px 11px;font-size:11px;max-width:42vw}}
+</style>
+</head>
+<body>
+<script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
+
+<button id="k9HelpBtn" type="button">GUIDA RAPIDA</button>
+<div id="k9Help" aria-hidden="true"><div id="k9HelpCard">
+<h2>Gestione semplice del sito</h2>
+<ol>
+<li>Apri una delle 6 aree del CMS.</li>
+<li>Modifica testo, foto, file o impostazioni.</li>
+<li>Premi <b>Salva</b>.</li>
+<li>Premi <b>Pubblica</b>.</li>
+</ol>
+<h3>Cambiare tema</h3>
+<p>Apri <b>01 HOME E ASPETTO</b>. Il campo <b>Tema del sito</b> è tra i primi: scegli il tema dal menu, salva e pubblica.</p>
+<h3>Colori e personalizzazione</h3>
+<p>Usa <b>Temi e colori personalizzati</b> solo se vuoi modificare un tema pronto. Il selettore colore è quello nativo del CMS.</p>
+<h3>Foto e loghi</h3>
+<p>Nei campi immagine puoi caricare una nuova foto oppure scegliere un file già presente nella libreria media.</p>
+<h3>Documenti</h3>
+<p>Apri <b>05 FOTO, VIDEO, FILE E PARTNER</b> per documenti, media, partner e contenuti collegati.</p>
+<h3>Sezioni aggiuntive</h3>
+<p>Apri <b>06 FAQ, SEZIONI EXTRA E MODULI</b>: puoi aggiungere contenuti senza modificare il codice.</p>
+<p><a href="/" target="_blank" rel="noopener">Apri il sito pubblico</a></p>
+<button id="k9HelpClose" type="button">CHIUDI</button>
+</div></div>
+<script>
+(function(){
+  var btn=document.getElementById('k9HelpBtn');
+  var modal=document.getElementById('k9Help');
+  var close=document.getElementById('k9HelpClose');
+  btn.addEventListener('click',function(){modal.classList.add('open');modal.setAttribute('aria-hidden','false');});
+  close.addEventListener('click',function(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');});
+  modal.addEventListener('click',function(e){if(e.target===modal)close.click();});
+})();
+</script>
+</body>
+</html>
