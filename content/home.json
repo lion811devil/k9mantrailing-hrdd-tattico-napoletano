@@ -4,7 +4,7 @@
     "themeMode": "auto",
     "useManualThemeOverrides": false
   },
-  "activeTheme": "Verde Bosco",
+  "activeTheme": "Ghiaccio",
   "logoSecondary": "/assets/uploads/1000217802.png",
   "themes": [
     {
@@ -480,8 +480,8 @@
   "siteNameStyle": {
     "textAlign": "center",
     "fontWeight": "600",
-    "fontFamily": "Merriweather, Georgia, serif",
-    "autoFit": false,
+    "fontFamily": "Garamond, \"Times New Roman\", serif",
+    "autoFit": true,
     "fontSize": "18"
   }
 }
