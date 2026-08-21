@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#111111">
+  <title>Gestione sito - K9 Napoletano Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bangers&family=Bebas+Neue&family=Black+Ops+One&family=Bungee&family=Caveat:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&family=Great+Vibes&family=Lato:wght@400;500;600;700;800;900&family=Lobster&family=Luckiest+Guy&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&family=Russo+One&family=Special+Elite&display=swap" rel="stylesheet">
+
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    /* =========================================================
+       FIX MOBILE DECEM/DECAP CMS
+       ---------------------------------------------------------
+       Regole limitate esclusivamente ai contenitori strutturali
+       del CMS. Nessuna regola generica su main, div o "*".
+       ========================================================= */
+    @media (max-width: 799px) {
+
+      /* Contenitore generale e barra superiore */
+      [class*="AppHeaderContent"],
+      [class*="AppMainContainer"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+      }
+
+      [class*="AppHeaderContent"] {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        gap: 4px !important;
+      }
+
+      /* Nell'editor mobile il link col dominio occupa spazio inutile:
+         "Guarda Live" rimane disponibile. */
+      [class*="AppHeaderSiteLink"],
+      [class*="BackCollection"] {
+        display: none !important;
+      }
+
+      [class*="AppHeaderButton"] {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        min-width: 0 !important;
+      }
+
+      [class*="PublishedToolbarButton"] {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        min-width: 0 !important;
+      }
+
+      [class*="PublishedToolbarButton"]::after {
+        display: none !important;
+      }
+
+      [class*="ToolbarSubSectionFirst"] {
+        display: flex !important;
+        flex-direction: row !important;
+        min-width: 0 !important;
+      }
+
+      [class*="ViewControls"] {
+        position: initial !important;
+      }
+
+      /* CUORE DEL FIX:
+         Decap assegna min-width desktop al contenitore editor.
+         Su telefono lo azzeriamo SOLTANTO su editor e toolbar. */
+      [class*="EditorContainer"],
+      [class*="ToolbarContainer"] {
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+      }
+
+      [class*="EditorContainer"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* Pannello dei campi */
+      [class*="ControlPaneContainer"],
+      [class*="PreviewPaneContainer-ControlPaneContainer"] {
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+
+      /* Barra degli strumenti degli editor Markdown */
+      [class*="EditorControlBar"] [class*="ToolbarContainer"] {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+      }
+
+      /* Dropdown Decap: visibili dentro la viewport */
+      [class*="DropdownList"] {
+        position: fixed !important;
+        left: 5vw !important;
+        right: 5vw !important;
+        width: 90vw !important;
+        max-width: 90vw !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Finestre Media Library */
+      [class*="StyledModal"] {
+        width: 92vw !important;
+        max-width: 92vw !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      [class*="LibraryTitle"] {
+        display: none !important;
+      }
+
+      [class*="LibraryTop"] {
+        overflow-x: auto !important;
+        height: auto !important;
+      }
+
+      /* Liste/collections */
+      [class*="CollectionContainer"] {
+        display: flex !important;
+        flex-direction: column !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+      }
+
+      [class*="SidebarContainer"] {
+        position: initial !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      [class*="CollectionMain"] {
+        padding-left: 0 !important;
+        margin-top: 12px !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* Pulsante guida: non interferisce con il CMS */
+      #k9HelpBtn {
+        right: 8px !important;
+        bottom: max(8px, env(safe-area-inset-bottom)) !important;
+        padding: 9px 11px !important;
+        font-size: 11px !important;
+        max-width: 42vw !important;
+      }
+    }
+
+    #k9HelpBtn {
+      position: fixed;
+      right: 10px;
+      bottom: max(10px, env(safe-area-inset-bottom));
+      z-index: 999999;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font: 700 12px Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      box-shadow: 0 6px 20px #0004;
+    }
+
+    #k9Help {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000000;
+      background: #0009;
+      padding: 12px;
+      overflow: auto;
+    }
+
+    #k9Help.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    #k9HelpCard {
+      width: min(560px, 100%);
+      max-height: calc(100vh - 24px);
+      overflow: auto;
+      background: #fff;
+      color: #111;
+      border-radius: 16px;
+      padding: 18px;
+      box-sizing: border-box;
+      font: 15px/1.5 Arial, sans-serif;
+    }
+
+    #k9HelpCard button {
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px;
+      border: 0;
+      border-radius: 10px;
+      background: #111;
+      color: #fff;
+      font-weight: 700;
+    }
+
+
+    /* ===== CONTROLLI TESTO CON ANTEPRIMA REALE ===== */
+    .k9-style-control { width:100%; box-sizing:border-box; }
+    .k9-style-select {
+      width:100%; min-height:48px; box-sizing:border-box;
+      border:1px solid #cfd4da; border-radius:8px;
+      background:#fff; color:#252b32; padding:10px 38px 10px 12px;
+      font-size:16px;
+    }
+    .k9-font-preview {
+      margin-top:10px; border:2px dashed #adb5bd; border-radius:10px;
+      background:#fff; padding:10px; overflow:hidden; box-sizing:border-box;
+    }
+    .k9-font-preview-label {
+      font:700 11px/1.3 Arial,sans-serif; color:#616975; margin-bottom:7px;
+      text-transform:uppercase; letter-spacing:.04em;
+    }
+    .k9-font-preview-box {
+      width:100%; min-height:74px; max-height:190px; overflow:auto;
+      box-sizing:border-box; padding:10px;
+      border:1px solid #e0e3e7; border-radius:8px; background:#f8f9fa;
+    }
+    .k9-font-preview-text {
+      display:block; width:100%; max-width:100%; line-height:1.12;
+      overflow-wrap:anywhere; white-space:normal; box-sizing:border-box;
+    }
+    .k9-font-preview-meta {
+      margin-top:7px; font:12px/1.35 Arial,sans-serif; color:#5d6570;
+    }
+    .k9-font-preview-status {
+      margin-top:5px; font:700 12px/1.35 Arial,sans-serif;
+    }
+    .k9-font-preview-status.ok { color:#176b35; }
+    .k9-font-preview-status.warn { color:#9a3d00; }
+    .k9-size-demo {
+      margin-top:7px; min-height:42px; max-height:100px; overflow:auto;
+      border:1px dashed #c1c6cc; border-radius:8px; padding:8px;
+      background:#fafafa; box-sizing:border-box; line-height:1.1;
+      overflow-wrap:anywhere;
+    }
+    @media (max-width:799px){
+      .k9-style-select{font-size:16px;min-height:50px;}
+      .k9-font-preview-box{max-height:160px;}
+    }
+
+  
+    /* ===== PALETTA COLORE TESTO ===== */
+    .k9-color-control{width:100%;box-sizing:border-box}
+    .k9-color-panel{
+      margin-top:8px;padding:10px;border:1px solid #cfd3da;border-radius:10px;
+      background:#f7f8fa;box-sizing:border-box
+    }
+    .k9-color-label{font:700 12px/1.3 Arial,sans-serif;color:#505864;margin-bottom:8px}
+    .k9-color-swatches{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px}
+    .k9-color-swatch{
+      width:34px;height:34px;min-width:34px;border-radius:8px;border:2px solid #fff;
+      outline:1px solid #b9bec6;padding:0;cursor:pointer
+    }
+    .k9-color-swatch.active{outline:3px solid #20242a}
+    .k9-color-row{display:grid;grid-template-columns:56px 1fr auto;gap:8px;align-items:center}
+    .k9-color-picker{
+      width:56px;height:42px;padding:2px;border:1px solid #c8cdd4;border-radius:8px;background:#fff
+    }
+    .k9-color-input{
+      width:100%;min-width:0;height:42px;border:1px solid #c8cdd4;border-radius:8px;
+      padding:0 10px;box-sizing:border-box;font:15px Arial,sans-serif;text-transform:uppercase
+    }
+    .k9-color-reset{
+      height:42px;border:0;border-radius:8px;padding:0 10px;font:700 12px Arial,sans-serif;
+      background:#e8ebef;color:#252a30
+    }
+    .k9-color-demo{
+      margin-top:10px;min-height:54px;border:1px dashed #adb4be;border-radius:8px;
+      background:#202124;padding:10px;box-sizing:border-box;display:flex;align-items:center;
+      overflow-wrap:anywhere
+    }
+    @media(max-width:799px){
+      .k9-color-row{grid-template-columns:52px 1fr}
+      .k9-color-reset{grid-column:1/-1;width:100%}
+    }
+
+  </style>
+</head>
+<body>
+
+  <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
+
+  <script>
+  (function(){
+    var STYLE_EVENT='k9-text-style-change';
+
+    function asArray(v){
+      if(!v) return [];
+      if(typeof v.toJS==='function') return v.toJS();
+      if(Array.isArray(v)) return v;
+      return [];
+    }
+    function getField(field,key,fallback){
+      if(field && typeof field.get==='function'){
+        var v=field.get(key); return v===undefined?fallback:v;
+      }
+      return field && field[key]!==undefined ? field[key] : fallback;
+    }
+    function groupKey(forID,name){
+      var s=String(forID||'');
+      var n=String(name||'');
+      if(n && s.toLowerCase().endsWith(n.toLowerCase())) s=s.slice(0,-n.length);
+      return s.replace(/[._-]+$/,'');
+    }
+    function optionValue(opt){ return typeof opt==='string'?opt:(opt && opt.value!==undefined?String(opt.value):''); }
+    function optionLabel(opt){ return typeof opt==='string'?opt:(opt && opt.label!==undefined?String(opt.label):optionValue(opt)); }
+    function fontDisplay(v){
+      if(!v || v==='inherit') return 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      return v;
+    }
+    function px(v,fallback){ var n=parseFloat(v); return isFinite(n)?n:fallback; }
+    function findAssociatedText(node){
+      try{
+        var scope=node && node.closest ? (node.closest('[class*="ObjectWidget"]') || node.closest('[class*="ListItem"]')) : null;
+        var root=scope || document;
+        var fields=Array.prototype.slice.call(root.querySelectorAll('input[type="text"], textarea, [contenteditable="true"]'));
+        var before=[];
+        fields.forEach(function(el){
+          if(node===el || el.closest('.k9-style-control')) return;
+          var rel=el.compareDocumentPosition(node);
+          if(rel & Node.DOCUMENT_POSITION_FOLLOWING){
+            var val=(el.value!==undefined?el.value:el.textContent||'').trim();
+            if(val && val.length<600) before.push(val);
+          }
+        });
+        if(before.length) return before[before.length-1].replace(/[#*_>`~\[\]\(\)]/g,'').replace(/\s+/g,' ').trim();
+      }catch(e){}
+      return 'Anteprima del testo';
+    }
+    window.__k9TextStyleState=window.__k9TextStyleState||{};
+    function stateFor(group){
+      return window.__k9TextStyleState[group]||(window.__k9TextStyleState[group]={font:'inherit',desktop:'inherit',mobile:'inherit',weight:'400',align:'left',color:'inherit',autoFit:false});
+    }
+    function publish(group,key,value){
+      var st=stateFor(group); st[key]=value;
+      window.dispatchEvent(new CustomEvent(STYLE_EVENT,{detail:{group:group,key:key,value:value}}));
+    }
+
+    var FontPreviewControl=createClass({
+      getInitialState:function(){
+        var name=getField(this.props.field,'name','fontFamily');
+        var group=groupKey(this.props.forID,name);
+        var value=this.props.value || getField(this.props.field,'default','inherit') || 'inherit';
+        var st=stateFor(group); st.font=value;
+        return {group:group,value:value,version:0};
+      },
+      componentDidMount:function(){
+        var self=this;
+        this._listener=function(e){ if(e.detail && e.detail.group===self.state.group) self.setState(function(prev){return {version:prev.version+1};}); };
+        window.addEventListener(STYLE_EVENT,this._listener);
+        setTimeout(function(){self.setState(function(prev){return {version:prev.version+1};});},250);
+      },
+      componentWillUnmount:function(){ window.removeEventListener(STYLE_EVENT,this._listener); },
+      handleChange:function(e){
+        var v=e.target.value; this.setState({value:v}); this.props.onChange(v); publish(this.state.group,'font',v);
+      },
+      render:function(){
+        var opts=asArray(getField(this.props.field,'options',[]));
+        var st=stateFor(this.state.group); st.font=this.state.value;
+        var mobileSize=px(st.mobile, px(st.desktop,24));
+        var desktopSize=px(st.desktop, mobileSize);
+        var node=this._root;
+        var txt=findAssociatedText(node);
+        var font=fontDisplay(st.font);
+        var weight=st.weight||'400';
+        var align=st.align==='inherit'?'left':(st.align||'left');
+        var color=(!st.color || st.color==='inherit')?'#ffffff':st.color;
+        var fontLabel=(st.font==='inherit'?'Carattere del tema':optionLabel(opts.find(function(o){return optionValue(o)===st.font;})||st.font));
+        var self=this;
+        setTimeout(function(){
+          if(!self._mobileSample || !self._mobileBox || !self._status) return;
+          var overflow=self._mobileSample.scrollWidth>self._mobileBox.clientWidth+1 || self._mobileSample.scrollHeight>self._mobileBox.clientHeight+1;
+          self._status.className='k9-font-preview-status '+(overflow?'warn':'ok');
+          self._status.textContent=overflow?'ATTENZIONE: su smartphone il testo supera il riquadro con queste impostazioni.':'OK: su smartphone il testo rientra nel riquadro.';
+        },0);
+        return h('div',{className:'k9-style-control k9-font-control',ref:function(r){self._root=r;},'data-k9-group':this.state.group},
+          h('select',{id:this.props.forID,className:'k9-style-select',value:this.state.value,onChange:this.handleChange},
+            opts.map(function(o,i){return h('option',{key:i,value:optionValue(o),style:{fontFamily:fontDisplay(optionValue(o))}},optionLabel(o));})
+          ),
+          h('div',{className:'k9-font-preview'},
+            h('div',{className:'k9-font-preview-label'},'ANTEPRIMA REALE — FONT + GRANDEZZA'),
+            h('div',{className:'k9-font-preview-meta'},fontLabel+' · Smartphone '+Math.round(mobileSize)+' px · Computer '+Math.round(desktopSize)+' px'),
+            h('div',{className:'k9-font-preview-label',style:{marginTop:'8px'}},'SMARTPHONE'),
+            h('div',{className:'k9-font-preview-box',ref:function(r){self._mobileBox=r;}},
+              h('div',{className:'k9-font-preview-text',ref:function(r){self._mobileSample=r;},style:{fontFamily:font,fontSize:mobileSize+'px',fontWeight:weight,textAlign:align,color:color}},txt)
+            ),
+            h('div',{className:'k9-font-preview-label',style:{marginTop:'8px'}},'COMPUTER'),
+            h('div',{className:'k9-font-preview-box'},
+              h('div',{className:'k9-font-preview-text',style:{fontFamily:font,fontSize:desktopSize+'px',fontWeight:weight,textAlign:align,color:color}},txt)
+            ),
+            h('div',{className:'k9-font-preview-status',ref:function(r){self._status=r;}},'')
+          )
+        );
+      }
+    });
+
+    var SizePreviewControl=createClass({
+      getInitialState:function(){
+        var name=getField(this.props.field,'name','fontSize');
+        var group=groupKey(this.props.forID,name);
+        var value=this.props.value || getField(this.props.field,'default','inherit') || 'inherit';
+        var key=/mobile/i.test(name)?'mobile':'desktop';
+        stateFor(group)[key]=value;
+        return {group:group,value:value,key:key,version:0};
+      },
+      componentDidMount:function(){
+        var self=this;
+        this._listener=function(e){ if(e.detail && e.detail.group===self.state.group) self.setState(function(prev){return {version:prev.version+1};}); };
+        window.addEventListener(STYLE_EVENT,this._listener);
+      },
+      componentWillUnmount:function(){ window.removeEventListener(STYLE_EVENT,this._listener); },
+      handleChange:function(e){
+        var v=e.target.value; this.setState({value:v}); this.props.onChange(v); publish(this.state.group,this.state.key,v);
+      },
+      render:function(){
+        var opts=asArray(getField(this.props.field,'options',[]));
+        var self=this;
+        var st=stateFor(this.state.group);
+        var n=px(this.state.value,24);
+        var txt=findAssociatedText(this._root);
+        var font=fontDisplay(st.font);
+        var weight=st.weight||'400';
+        var align=st.align==='inherit'?'left':(st.align||'left');
+        var color=(!st.color || st.color==='inherit')?'#ffffff':st.color;
+        return h('div',{className:'k9-style-control k9-size-control',ref:function(r){self._root=r;},'data-k9-group':this.state.group},
+          h('select',{id:this.props.forID,className:'k9-style-select',value:this.state.value,onChange:this.handleChange},
+            opts.map(function(o,i){return h('option',{key:i,value:optionValue(o)},optionLabel(o));})
+          ),
+          h('div',{className:'k9-size-demo',style:{fontFamily:font,fontSize:n+'px',fontWeight:weight,textAlign:align,color:color}},
+            this.state.value==='inherit'?'Dimensione attuale — '+txt:txt
+          )
+        );
+      }
+    });
+
+
+    var K9_TEXT_PALETTE=[
+      '#FFFFFF','#111111','#FF7A00','#F6B739','#C7D36F','#2E7D32',
+      '#1976D2','#00ACC1','#D32F2F','#8E24AA','#E91E63','#795548',
+      '#9E9E9E','#F5E6CC'
+    ];
+
+    function normalizeColor(v){
+      if(!v || v==='inherit') return 'inherit';
+      var s=String(v).trim();
+      if(/^#[0-9a-fA-F]{6}$/.test(s)) return s.toUpperCase();
+      if(/^#[0-9a-fA-F]{3}$/.test(s)){
+        return ('#'+s.slice(1).split('').map(function(x){return x+x;}).join('')).toUpperCase();
+      }
+      return s;
+    }
+
+    var ColorPaletteControl=createClass({
+      getInitialState:function(){
+        var name=getField(this.props.field,'name','color');
+        var group=groupKey(this.props.forID,name);
+        var value=normalizeColor(this.props.value || 'inherit');
+        stateFor(group).color=value;
+        return {group:group,value:value,version:0};
+      },
+      componentDidMount:function(){
+        var self=this;
+        this._listener=function(e){
+          if(e.detail && e.detail.group===self.state.group){
+            self.setState(function(prev){return {version:prev.version+1};});
+          }
+        };
+        window.addEventListener(STYLE_EVENT,this._listener);
+      },
+      componentWillUnmount:function(){
+        window.removeEventListener(STYLE_EVENT,this._listener);
+      },
+      setColor:function(v){
+        v=normalizeColor(v);
+        this.setState({value:v});
+        this.props.onChange(v==='inherit'?'':v);
+        publish(this.state.group,'color',v);
+      },
+      onHex:function(e){
+        var v=e.target.value.trim();
+        this.setState({value:v});
+        if(/^#[0-9a-fA-F]{6}$/.test(v)){
+          this.props.onChange(v.toUpperCase());
+          publish(this.state.group,'color',v.toUpperCase());
+        }
+      },
+      render:function(){
+        var self=this;
+        var st=stateFor(this.state.group);
+        st.color=this.state.value || 'inherit';
+
+        var txt=findAssociatedText(this._root);
+        var font=fontDisplay(st.font);
+        var size=px(st.mobile,px(st.desktop,24));
+        var weight=st.weight||'400';
+        var align=st.align==='inherit'?'left':(st.align||'left');
+        var displayColor=(!this.state.value || this.state.value==='inherit')?'#FFFFFF':this.state.value;
+        var valid=/^#[0-9a-fA-F]{6}$/.test(displayColor);
+
+        return h('div',{
+            className:'k9-style-control k9-color-control',
+            ref:function(r){self._root=r;},
+            'data-k9-group':this.state.group
+          },
+          h('div',{className:'k9-color-panel'},
+            h('div',{className:'k9-color-label'},
+              this.state.value==='inherit' || !this.state.value
+                ? 'COLORE ORIGINALE DEL SITO — nessuna modifica'
+                : 'COLORE SCELTO: '+String(this.state.value).toUpperCase()
+            ),
+            h('div',{className:'k9-color-swatches'},
+              K9_TEXT_PALETTE.map(function(c){
+                return h('button',{
+                  key:c,type:'button',title:c,
+                  className:'k9-color-swatch '+(String(self.state.value).toUpperCase()===c?'active':''),
+                  style:{background:c},
+                  onClick:function(){self.setColor(c);}
+                });
+              })
+            ),
+            h('div',{className:'k9-color-row'},
+              h('input',{
+                type:'color',className:'k9-color-picker',
+                value:valid?displayColor:'#FFFFFF',
+                onChange:function(e){self.setColor(e.target.value);}
+              }),
+              h('input',{
+                type:'text',className:'k9-color-input',
+                value:this.state.value==='inherit'?'':this.state.value,
+                placeholder:'#FFFFFF',onChange:this.onHex
+              }),
+              h('button',{
+                type:'button',className:'k9-color-reset',
+                onClick:function(){self.setColor('inherit');}
+              },'COLORE ORIGINALE')
+            ),
+            h('div',{
+              className:'k9-color-demo',
+              style:{
+                color:displayColor,fontFamily:font,fontSize:size+'px',
+                fontWeight:weight,textAlign:align
+              }
+            },txt)
+          )
+        );
+      }
+    });
+
+    CMS.registerWidget('fontpreview',FontPreviewControl);
+    CMS.registerWidget('sizepreview',SizePreviewControl);
+    CMS.registerWidget('colorpalette',ColorPaletteControl);
+
+    /* Aggiorna la preview font anche quando cambiano i select Decap standard
+       Spessore / Allineamento e il boolean Adatta automaticamente. */
+    document.addEventListener('change',function(e){
+      var el=e.target; if(!el || !el.closest) return;
+      var obj=el.closest('[class*="ObjectWidget"]') || el.parentElement;
+      if(!obj) return;
+      var font=obj.querySelector('.k9-font-control'); if(!font) return;
+      var group=font.getAttribute('data-k9-group'); if(!group) return;
+      var txt=(obj.innerText||'').toLowerCase();
+      if(el.tagName==='SELECT'){
+        var val=el.value;
+        if(/spessore/.test(txt) && /^[4-9]00$/.test(val)) publish(group,'weight',val);
+        if(/allineamento/.test(txt) && ['left','center','right','inherit'].indexOf(val)!==-1) publish(group,'align',val);
+      }
+      if(el.type==='checkbox' && /adatta automaticamente/.test(txt)) publish(group,'autoFit',!!el.checked);
+    },true);
+  }());
+  </script>
+
+
+  <button id="k9HelpBtn" type="button">GUIDA RAPIDA</button>
+
+  <div id="k9Help" aria-hidden="true">
+    <div id="k9HelpCard">
+      <h2>Gestione sito</h2>
+      <p>Apri la sezione, modifica i campi necessari, salva e pubblica.</p>
+      <p>Le configurazioni del CMS non vengono eliminate né nascoste da questo file.</p>
+      <button id="k9HelpClose" type="button">CHIUDI</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('k9HelpBtn');
+      var modal = document.getElementById('k9Help');
+      var close = document.getElementById('k9HelpClose');
+
+      btn.addEventListener('click', function () {
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+
+      close.addEventListener('click', function () {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      });
+
+      modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+          close.click();
+        }
+      });
+    }());
+  </script>
+
+
+  <script>
+  (function(){
+    let ownerPwaEnabled=false;
+
+    function enableOwnerPwa(user){
+      if(!user || ownerPwaEnabled) return;
+      ownerPwaEnabled=true;
+
+      if(!document.querySelector('link[rel="manifest"][data-k9-owner]')){
+        const manifest=document.createElement('link');
+        manifest.rel='manifest';
+        manifest.href='/manifest.webmanifest?v=owner';
+        manifest.setAttribute('data-k9-owner','1');
+        document.head.appendChild(manifest);
+      }
+
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      }
+    }
+
+    if(window.netlifyIdentity){
+      window.netlifyIdentity.on('init',function(user){
+        if(user) enableOwnerPwa(user);
+      });
+      window.netlifyIdentity.on('login',function(user){
+        enableOwnerPwa(user);
+      });
+
+      const current=window.netlifyIdentity.currentUser && window.netlifyIdentity.currentUser();
+      if(current) enableOwnerPwa(current);
+    }
+  }());
+  </script>
+
+</body>
+</html>
