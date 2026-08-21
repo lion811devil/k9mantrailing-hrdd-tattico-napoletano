@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#111111">
+  <title>Gestione sito - K9 Napoletano Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;500;600;700;800&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    /* =========================================================
+       FIX MOBILE DECEM/DECAP CMS
+       ---------------------------------------------------------
+       Regole limitate esclusivamente ai contenitori strutturali
+       del CMS. Nessuna regola generica su main, div o "*".
+       ========================================================= */
+    @media (max-width: 799px) {
+
+      /* Contenitore generale e barra superiore */
+      [class*="AppHeaderContent"],
+      [class*="AppMainContainer"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+      }
+
+      [class*="AppHeaderContent"] {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        gap: 4px !important;
+      }
+
+      /* Nell'editor mobile il link col dominio occupa spazio inutile:
+         "Guarda Live" rimane disponibile. */
+      [class*="AppHeaderSiteLink"],
+      [class*="BackCollection"] {
+        display: none !important;
+      }
+
+      [class*="AppHeaderButton"] {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        min-width: 0 !important;
+      }
+
+      [class*="PublishedToolbarButton"] {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        min-width: 0 !important;
+      }
+
+      [class*="PublishedToolbarButton"]::after {
+        display: none !important;
+      }
+
+      [class*="ToolbarSubSectionFirst"] {
+        display: flex !important;
+        flex-direction: row !important;
+        min-width: 0 !important;
+      }
+
+      [class*="ViewControls"] {
+        position: initial !important;
+      }
+
+      /* CUORE DEL FIX:
+         Decap assegna min-width desktop al contenitore editor.
+         Su telefono lo azzeriamo SOLTANTO su editor e toolbar. */
+      [class*="EditorContainer"],
+      [class*="ToolbarContainer"] {
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+      }
+
+      [class*="EditorContainer"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* Pannello dei campi */
+      [class*="ControlPaneContainer"],
+      [class*="PreviewPaneContainer-ControlPaneContainer"] {
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+
+      /* Barra degli strumenti degli editor Markdown */
+      [class*="EditorControlBar"] [class*="ToolbarContainer"] {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+      }
+
+      /* Dropdown Decap: visibili dentro la viewport */
+      [class*="DropdownList"] {
+        position: fixed !important;
+        left: 5vw !important;
+        right: 5vw !important;
+        width: 90vw !important;
+        max-width: 90vw !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Finestre Media Library */
+      [class*="StyledModal"] {
+        width: 92vw !important;
+        max-width: 92vw !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      [class*="LibraryTitle"] {
+        display: none !important;
+      }
+
+      [class*="LibraryTop"] {
+        overflow-x: auto !important;
+        height: auto !important;
+      }
+
+      /* Liste/collections */
+      [class*="CollectionContainer"] {
+        display: flex !important;
+        flex-direction: column !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+      }
+
+      [class*="SidebarContainer"] {
+        position: initial !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      [class*="CollectionMain"] {
+        padding-left: 0 !important;
+        margin-top: 12px !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* Pulsante guida: non interferisce con il CMS */
+      #k9HelpBtn {
+        right: 8px !important;
+        bottom: max(8px, env(safe-area-inset-bottom)) !important;
+        padding: 9px 11px !important;
+        font-size: 11px !important;
+        max-width: 42vw !important;
+      }
+    }
+
+    #k9HelpBtn {
+      position: fixed;
+      right: 10px;
+      bottom: max(10px, env(safe-area-inset-bottom));
+      z-index: 999999;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font: 700 12px Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      box-shadow: 0 6px 20px #0004;
+    }
+
+    #k9Help {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000000;
+      background: #0009;
+      padding: 12px;
+      overflow: auto;
+    }
+
+    #k9Help.open {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    #k9HelpCard {
+      width: min(560px, 100%);
+      max-height: calc(100vh - 24px);
+      overflow: auto;
+      background: #fff;
+      color: #111;
+      border-radius: 16px;
+      padding: 18px;
+      box-sizing: border-box;
+      font: 15px/1.5 Arial, sans-serif;
+    }
+
+    #k9HelpCard button {
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px;
+      border: 0;
+      border-radius: 10px;
+      background: #111;
+      color: #fff;
+      font-weight: 700;
+    }
+  
+    /* ===== ANTEPRIMA TESTO LIVE - non modifica il layout Decap ===== */
+    #k9TextPreview {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: max(12px, env(safe-area-inset-bottom));
+      z-index: 1000001;
+      display: none;
+      max-width: 760px;
+      margin: 0 auto;
+      background: #ffffff;
+      color: #161616;
+      border: 1px solid #cfd3da;
+      border-radius: 14px;
+      box-shadow: 0 10px 34px rgba(0,0,0,.24);
+      padding: 12px;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    #k9TextPreview.open { display: block; }
+
+    #k9TextPreviewHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    #k9TextPreviewTitle {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: #3e4652;
+    }
+
+    #k9TextPreviewClose {
+      border: 0;
+      border-radius: 8px;
+      padding: 6px 9px;
+      background: #eef1f5;
+      color: #222;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    #k9TextPreviewMeta {
+      font: 12px/1.35 Arial, sans-serif;
+      color: #626b76;
+      margin-bottom: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    #k9TextPreviewBox {
+      width: 100%;
+      min-height: 72px;
+      max-height: 210px;
+      overflow: auto;
+      border: 2px dashed #aeb5bf;
+      border-radius: 10px;
+      padding: 12px;
+      box-sizing: border-box;
+      background:
+        linear-gradient(45deg,#f7f7f7 25%,transparent 25%),
+        linear-gradient(-45deg,#f7f7f7 25%,transparent 25%),
+        linear-gradient(45deg,transparent 75%,#f7f7f7 75%),
+        linear-gradient(-45deg,transparent 75%,#f7f7f7 75%);
+      background-size: 16px 16px;
+      background-position: 0 0,0 8px,8px -8px,-8px 0;
+    }
+
+    #k9TextPreviewSample {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-wrap: anywhere;
+      word-break: normal;
+      white-space: normal;
+      line-height: 1.15;
+    }
+
+    #k9TextPreviewStatus {
+      margin-top: 8px;
+      font: 700 12px/1.35 Arial, sans-serif;
+    }
+
+    #k9TextPreviewStatus.ok { color: #176b35; }
+    #k9TextPreviewStatus.warn { color: #a44800; }
+
+    #k9TextPreviewModes {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    #k9TextPreviewModes button {
+      border: 1px solid #cdd2d8;
+      background: #f4f6f8;
+      color: #252a30;
+      border-radius: 8px;
+      padding: 7px 9px;
+      font: 700 12px Arial, sans-serif;
+    }
+
+    #k9TextPreviewModes button.active {
+      background: #23272d;
+      color: #fff;
+      border-color: #23272d;
+    }
+
+    @media (max-width: 799px) {
+      #k9TextPreview {
+        left: 8px;
+        right: 8px;
+        bottom: max(8px, env(safe-area-inset-bottom));
+        padding: 10px;
+      }
+      #k9TextPreviewBox { max-height: 170px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
+
+
+  <div id="k9TextPreview" aria-live="polite">
+    <div id="k9TextPreviewHeader">
+      <div id="k9TextPreviewTitle">Anteprima testo</div>
+      <button id="k9TextPreviewClose" type="button">CHIUDI</button>
+    </div>
+    <div id="k9TextPreviewMeta">Seleziona carattere o grandezza: l'anteprima si aggiorna prima di salvare.</div>
+    <div id="k9TextPreviewBox">
+      <div id="k9TextPreviewSample">Anteprima del testo</div>
+    </div>
+    <div id="k9TextPreviewStatus"></div>
+    <div id="k9TextPreviewModes">
+      <button type="button" data-mode="mobile" class="active">SMARTPHONE</button>
+      <button type="button" data-mode="desktop">DESKTOP</button>
+    </div>
+  </div>
+
+  <button id="k9HelpBtn" type="button">GUIDA RAPIDA</button>
+
+  <div id="k9Help" aria-hidden="true">
+    <div id="k9HelpCard">
+      <h2>Gestione sito</h2>
+      <p>Apri la sezione, modifica i campi necessari, salva e pubblica.</p>
+      <p>Le configurazioni del CMS non vengono eliminate né nascoste da questo file.</p>
+      <button id="k9HelpClose" type="button">CHIUDI</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('k9HelpBtn');
+      var modal = document.getElementById('k9Help');
+      var close = document.getElementById('k9HelpClose');
+
+      btn.addEventListener('click', function () {
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+
+      close.addEventListener('click', function () {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      });
+
+      modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+          close.click();
+        }
+      });
+    }());
+  </script>
+
+
+  <script>
+  (function () {
+    var panel = document.getElementById('k9TextPreview');
+    var sample = document.getElementById('k9TextPreviewSample');
+    var meta = document.getElementById('k9TextPreviewMeta');
+    var status = document.getElementById('k9TextPreviewStatus');
+    var closeBtn = document.getElementById('k9TextPreviewClose');
+    var modeButtons = Array.prototype.slice.call(document.querySelectorAll('#k9TextPreviewModes button'));
+
+    var knownFonts = [
+      'Arial','Arial Black','Verdana','Tahoma','Trebuchet','Georgia','Garamond',
+      'Impact','Roboto','Montserrat','Poppins','Oswald','Raleway','Nunito','Lato',
+      'Merriweather','Playfair Display','Bebas Neue','system-ui','sans-serif','serif'
+    ];
+
+    var state = {
+      text: 'Anteprima del testo',
+      fontFamily: 'Arial',
+      desktopSize: '32',
+      mobileSize: '24',
+      weight: '400',
+      align: 'left',
+      autoFit: false,
+      mode: 'mobile'
+    };
+
+    function cleanText(value) {
+      if (!value) return '';
+      return String(value)
+        .replace(/[#*_>`~\[\]\(\)]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    function fieldContext(el) {
+      var node = el;
+      var parts = [];
+      for (var i = 0; i < 6 && node; i++, node = node.parentElement) {
+        if (node.innerText) {
+          var t = node.innerText.replace(/\s+/g, ' ').trim();
+          if (t && t.length < 450) parts.push(t);
+        }
+      }
+      return parts.join(' | ');
+    }
+
+    function nearestPreviousText(el) {
+      var all = Array.prototype.slice.call(
+        document.querySelectorAll('input[type="text"], input:not([type]), textarea, [contenteditable="true"]')
+      );
+      var best = '';
+      for (var i = 0; i < all.length; i++) {
+        var n = all[i];
+        if (n === el) continue;
+        var pos = n.compareDocumentPosition(el);
+        if (pos & Node.DOCUMENT_POSITION_FOLLOWING) {
+          var val = cleanText(n.value !== undefined ? n.value : n.innerText);
+          if (val && val.length > 1 && val.length < 500) best = val;
+        }
+      }
+      return best;
+    }
+
+    function normalizeFont(v, label) {
+      var raw = (v || label || '').replace(/["']/g, '').trim();
+      for (var i = 0; i < knownFonts.length; i++) {
+        if (raw.toLowerCase().indexOf(knownFonts[i].toLowerCase()) !== -1) {
+          return knownFonts[i];
+        }
+      }
+      return raw || 'Arial';
+    }
+
+    function currentSize() {
+      var desktop = parseFloat(state.desktopSize);
+      var mobile = parseFloat(state.mobileSize);
+      if (!isFinite(desktop)) desktop = 32;
+      if (!isFinite(mobile)) mobile = Math.min(desktop, 24);
+
+      if (!state.autoFit) {
+        return state.mode === 'mobile' ? mobile : desktop;
+      }
+
+      /* Anteprima realistica del comando "Adatta automaticamente":
+         usa una dimensione fluida compresa tra mobile e desktop. */
+      var vw = state.mode === 'mobile' ? 390 : 1200;
+      var min = Math.min(mobile, desktop);
+      var max = Math.max(mobile, desktop);
+      var fluid = min + (max - min) * Math.max(0, Math.min(1, (vw - 390) / (1200 - 390)));
+      return fluid;
+    }
+
+    function render() {
+      var text = cleanText(state.text) || 'Anteprima del testo';
+      var size = currentSize();
+
+      sample.textContent = text;
+      sample.style.fontFamily = '"' + state.fontFamily + '", Arial, sans-serif';
+      sample.style.fontSize = size + 'px';
+      sample.style.fontWeight = state.weight || '400';
+      sample.style.textAlign = state.align === 'inherit' ? 'left' : (state.align || 'left');
+
+      if (state.mode === 'mobile') {
+        panel.style.maxWidth = '430px';
+      } else {
+        panel.style.maxWidth = '760px';
+      }
+
+      meta.textContent =
+        state.fontFamily + ' · ' + Math.round(size) + ' px' +
+        (state.autoFit ? ' · adattamento automatico attivo' : '') +
+        ' · anteprima ' + (state.mode === 'mobile' ? 'smartphone' : 'desktop');
+
+      requestAnimationFrame(function () {
+        var box = document.getElementById('k9TextPreviewBox');
+        var tooWide = sample.scrollWidth > box.clientWidth + 1;
+        var tooTall = sample.scrollHeight > box.clientHeight + 1;
+
+        status.className = '';
+        if (tooWide || tooTall) {
+          status.textContent = 'ATTENZIONE: con queste impostazioni il testo supera il riquadro di anteprima.';
+          status.classList.add('warn');
+        } else {
+          status.textContent = 'OK: il testo rientra nel riquadro di anteprima.';
+          status.classList.add('ok');
+        }
+      });
+    }
+
+    function openPreview() {
+      panel.classList.add('open');
+      render();
+    }
+
+    function updateFromControl(el) {
+      var ctx = fieldContext(el).toLowerCase();
+      var value = el.value;
+      var label = '';
+
+      if (el.tagName === 'SELECT' && el.selectedIndex >= 0) {
+        label = el.options[el.selectedIndex].textContent.trim();
+      }
+
+      if (el.tagName === 'SELECT') {
+        var fontGuess = normalizeFont(value, label);
+        var isFont = knownFonts.some(function (f) {
+          return (value + ' ' + label).toLowerCase().indexOf(f.toLowerCase()) !== -1;
+        });
+
+        if (isFont || ctx.indexOf('carattere') !== -1 || ctx.indexOf('font') !== -1) {
+          state.fontFamily = fontGuess;
+        }
+
+        if (ctx.indexOf('grandezza su smartphone') !== -1 ||
+            ctx.indexOf('dimensione su smartphone') !== -1 ||
+            ctx.indexOf('mobile') !== -1 && ctx.indexOf('px') !== -1) {
+          if (value !== 'inherit' && isFinite(parseFloat(value))) state.mobileSize = value;
+        } else if (ctx.indexOf('grandezza') !== -1 ||
+                   ctx.indexOf('dimensione') !== -1 ||
+                   ctx.indexOf('px') !== -1) {
+          if (value !== 'inherit' && isFinite(parseFloat(value))) state.desktopSize = value;
+        }
+
+        if (ctx.indexOf('spessore') !== -1 && /^[4-9]00$/.test(value)) {
+          state.weight = value;
+        }
+
+        if (ctx.indexOf('allineamento') !== -1 &&
+            ['left','center','right','inherit'].indexOf(value) !== -1) {
+          state.align = value;
+        }
+
+        var nearby = nearestPreviousText(el);
+        if (nearby) state.text = nearby;
+
+        openPreview();
+        return;
+      }
+
+      if (el.type === 'checkbox' && ctx.indexOf('adatta automaticamente') !== -1) {
+        state.autoFit = !!el.checked;
+        var nearby2 = nearestPreviousText(el);
+        if (nearby2) state.text = nearby2;
+        openPreview();
+      }
+    }
+
+    document.addEventListener('input', function (event) {
+      var el = event.target;
+      if (!el) return;
+
+      if (el.matches('input[type="text"], input:not([type]), textarea, [contenteditable="true"]')) {
+        var val = cleanText(el.value !== undefined ? el.value : el.innerText);
+        if (val && val.length < 500) {
+          state.text = val;
+          if (panel.classList.contains('open')) render();
+        }
+      }
+    }, true);
+
+    document.addEventListener('change', function (event) {
+      var el = event.target;
+      if (!el) return;
+      if (el.tagName === 'SELECT' || el.type === 'checkbox') {
+        updateFromControl(el);
+      }
+    }, true);
+
+    document.addEventListener('focusin', function (event) {
+      var el = event.target;
+      if (!el) return;
+      if (el.matches('input[type="text"], input:not([type]), textarea, [contenteditable="true"]')) {
+        var val = cleanText(el.value !== undefined ? el.value : el.innerText);
+        if (val && val.length < 500) state.text = val;
+      }
+    }, true);
+
+    modeButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.mode = btn.getAttribute('data-mode');
+        modeButtons.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        render();
+      });
+    });
+
+    closeBtn.addEventListener('click', function () {
+      panel.classList.remove('open');
+    });
+  }());
+  </script>
+
+</body>
+</html>
