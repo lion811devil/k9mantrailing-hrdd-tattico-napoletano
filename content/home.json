@@ -6,7 +6,11 @@
   },
   "activeTheme": "Arancione Academy",
   "logoSecondary": "/assets/uploads/loghi/1000263001.png",
-  "sectionOrder": [],
+  "sectionOrder": [
+    {
+      "section": "owner"
+    }
+  ],
   "themes": [
     {
       "buttonBackground": "linear-gradient(135deg,#D4AF37,#F2C94C)",
