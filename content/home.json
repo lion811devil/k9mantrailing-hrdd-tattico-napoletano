@@ -6,11 +6,7 @@
   },
   "activeTheme": "Arancione Academy",
   "logoSecondary": "/assets/uploads/loghi/1000263001.png",
-  "sectionOrder": [
-    {
-      "section": "owner"
-    }
-  ],
+  "sectionOrder": [],
   "themes": [
     {
       "buttonBackground": "linear-gradient(135deg,#D4AF37,#F2C94C)",
@@ -479,7 +475,7 @@
     "title": "Unisciti alla K9 NAPOLETANO ACADEMY "
   },
   "tagline": "Mantrailing • HRDD • Formazione cinofila operativa",
-  "heroSubtitle": "Unità cinofila specialistica dedicata al \n\nMANTRAILING - ricerca persone scomparse/disperse e recupero comportamentale\n\nTecnico in MANTRAILING \n\nHRDD - ricerca resti umani\n\nTecnico/Tattico con specializzazione internazionale in HRDD \n\nRecupero di comportamenti problematici in acqua come canale di comunicazione\n\nFormazione operativa e attività cinofile professionali per Protezione Civile\n\nServizi DOGSITTER",
+  "heroSubtitle": "Unità cinofila specialistica dedicata al \n\nMANTRAILING - ricerca persone scomparse/disperse e recupero comportamentale\n\nTecnico in MANTRAILING\n\nDETECTION - discriminazione olfattiva su più sostanze\n\nHRDD - ricerca resti umani\n\nTecnico/Tattico con specializzazione internazionale in HRDD \n\nRecupero di comportamenti problematici in acqua come canale di comunicazione\n\nFormazione operativa e attività cinofile professionali per Protezione Civile\n\nServizi DOGSITTER",
   "siteName": "K9 NAPOLETANO ACADEMY ",
   "sectionVisibility": {
     "hero": false
